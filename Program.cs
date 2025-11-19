@@ -41,7 +41,8 @@ namespace WrongWriteCodePartTwo
          int rows = Convert.ToInt32(Console.ReadLine());
          int columns = Convert.ToInt32(Console.ReadLine());
          int[,] array = new int[rows, columns];
-         void FillArray()                                   // метод заполнгения массива
+         // Метод заполнения массива
+         void FillArray()
          {
             Random rand = new Random();
             for (int i = 0; i < rows; i++)
@@ -53,7 +54,8 @@ namespace WrongWriteCodePartTwo
             }
          }
 
-         void PrintArray()                                // метод вывода массива
+         // Метод вывода массива
+         void PrintArray()
          {
             for (int i = 0; i < rows; i++)
             {
@@ -66,7 +68,8 @@ namespace WrongWriteCodePartTwo
             }
          }
 
-         void Zadacha54()                                //метод упорядочения элементов строки массива от максимального к минимальному
+         // Метод упорядочения элементов строки массива от максимального к минимальному
+         void Zadacha54()
          {
             for (int m = 0; m < columns - 1; m++)
             {
@@ -85,7 +88,8 @@ namespace WrongWriteCodePartTwo
             }
          }
 
-         void Zadacha56()                              // метод нахождения строки в массиве с наименьшей суммой элементов
+         // Метод нахождения строки в массиве с наименьшей суммой элементов
+         void Zadacha56()                              
          {
             int rowMinSum = 1; int min_i = 1;
             for (int i = 0; i < rows; i++)
