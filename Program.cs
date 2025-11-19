@@ -379,13 +379,6 @@ namespace WrongWriteCodePartTwo
          int columns1 = Convert.ToInt32(Console.ReadLine()); ;
          int[,] array1 = new int[rows1, columns1];
 
-         FillArray1(array1);
-         Console.WriteLine("исходный массив");
-         PrintArray1(array1);
-         Console.WriteLine("упорядоченный массив c заменой строк ");
-         Zadacha1(array1);
-         PrintArray1(array1);
-
          void Zadacha1(int[,] array)                                    // метод замены строк в массиве
          {
             int temp = 0;
@@ -432,6 +425,15 @@ namespace WrongWriteCodePartTwo
                Console.WriteLine();
             }
          }
+
+         FillArray1(array1);
+         Console.WriteLine("исходный массив");
+         PrintArray1(array1);
+         Console.WriteLine("упорядоченный массив c заменой строк ");
+         Zadacha1(array1);
+         PrintArray1(array1);
+
+
       }
    }
 }
