@@ -228,11 +228,12 @@ namespace WrongWriteCodePartTwo
                   for (int j = 0; j < L3; j++)
                   {
                      int numm = rand.Next(10, 98);
-
                      for (k = 0; k < L4; k++)                    // проверка на уникальность значений, вводимых в  3-ех мерный массив
                      {
                         if (mass[k] != numm)
+                        {
                            q++;
+                        }
                      }
 
                      if (q == L4)
