@@ -1,1 +1,1 @@
-# WrongWriteCodePartTwo
+# Как не нужно писать код часть вторая
