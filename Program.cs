@@ -314,7 +314,6 @@ namespace WrongWriteCodePartTwo
          }
 
          Console.WriteLine();
-         Console.ReadLine();
 
          Console.WriteLine(" Задача 62----------------------------------------------------------------------------------------------------- ");
          Console.WriteLine("    Заполнение спирально двумерного массива 2 метод");
@@ -392,7 +391,6 @@ namespace WrongWriteCodePartTwo
             }
 
             array[l1 - 1, j - 1] = temp;
-
          }
 
          void FillArray1(int[,] array)                                   // метод заполнгения массива
@@ -406,7 +404,6 @@ namespace WrongWriteCodePartTwo
                {
                   array[i, j] = rand.Next(-10, 9);
                }
-
             }
          }
 
@@ -420,6 +417,7 @@ namespace WrongWriteCodePartTwo
                {
                   Console.Write(array[i, j] + "   ");
                }
+
                Console.WriteLine();
             }
          }
