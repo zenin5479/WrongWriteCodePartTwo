@@ -432,8 +432,6 @@ namespace WrongWriteCodePartTwo
          Console.WriteLine("упорядоченный массив c заменой строк ");
          Zadacha1(array1);
          PrintArray1(array1);
-
-
       }
    }
 }
