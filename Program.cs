@@ -311,7 +311,7 @@ namespace WrongWriteCodePartTwo
          }
 
          // Метод вывода 3-х мерного зубчатого массива
-         void PrintArrZ()                                
+         void PrintArrZ()
          {
             Console.WriteLine("Трехмерный зубчатый массив:");
             for (int i = 0; i < arrZ.Length; i++)
@@ -345,15 +345,17 @@ namespace WrongWriteCodePartTwo
          int indexX = 0;
          int indexY = 0;
 
-          // Для изменения индекса строки
-         int changeX = 0; 
+         // Для изменения индекса строки
+         int changeX = 0;
          // Для изменения индекса столбца
-         int changeY = 1;                 
+         int changeY = 1;
 
-         int steps = sizeY;               // считает шаги когда надо повернуть
-         int direction = 0;               // для измения кол шага
-
-         for (int i = 0; i < matrix.Length; i++)              // matrix.Length - общее кол элементов массива
+         // Считает шаги когда надо повернуть
+         int steps = sizeY;
+         // Для измения кол шага
+         int direction = 0;
+         // matrix.Length - общее кол элементов массива
+         for (int i = 0; i < matrix.Length; i++)
          {
             matrix[indexX, indexY] = i + 1;
             //'Console.Write( matrix[indexX,indexY] + "\t");
@@ -361,12 +363,12 @@ namespace WrongWriteCodePartTwo
             if (steps == 0)
             {
                steps = sizeY * ((direction) % 2) + sizeX * ((direction + 1) % 2) - 1 - direction / 2;
-               // изменение кол шага после каждого второго поворота (при повороте четное кол раз: sizeX - 1 dairection/2,  при повороте нечетное кол раз : sizeY - 1 dairection/2)
+               // Изменение кол шага после каждого второго поворота (при повороте четное кол раз: sizeX - 1 dairection/2,  при повороте нечетное кол раз : sizeY - 1 dairection/2)
                int temp = changeX;
                changeX = changeY;
                changeY = -temp;
-               direction++;                   // меняем направление 
-
+               // Меняем направление 
+               direction++;
             }
 
             indexX += changeX;
@@ -394,7 +396,8 @@ namespace WrongWriteCodePartTwo
          int columns1 = Convert.ToInt32(Console.ReadLine()); ;
          int[,] array1 = new int[rows1, columns1];
 
-         void Zadacha1(int[,] array)                                    // метод замены строк в массиве
+         // Метод замены строк в массиве
+         void Zadacha1(int[,] array)
          {
             int temp = 0;
             int j;
@@ -411,7 +414,8 @@ namespace WrongWriteCodePartTwo
             array[l1 - 1, j - 1] = temp;
          }
 
-         void FillArray1(int[,] array)                                   // метод заполнгения массива
+         // Метод заполения массива
+         void FillArray1(int[,] array)
          {
             Random rand = new Random();
             int rows = array.GetLength(0);
@@ -425,7 +429,8 @@ namespace WrongWriteCodePartTwo
             }
          }
 
-         void PrintArray1(int[,] array)                                // метод вывода массива
+         // Метод вывода массива
+         void PrintArray1(int[,] array)
          {
             int rows = array.GetLength(0);
             int columns = array.GetLength(1); ;
