@@ -263,7 +263,8 @@ namespace WrongWriteCodePartTwo
             }
          }
 
-         void PrintArr()                                // метод  вывода 3-ех мерного  прямоугольного  массива
+         // Метод вывода 3х мерного прямоугольного массива
+         void PrintArr()
          {
             int L1 = arr.GetLength(0);
             int L2 = arr.GetLength(1);
@@ -286,27 +287,33 @@ namespace WrongWriteCodePartTwo
             }
          }
 
-         void FillArrZ()                                   // метод заполнения зубчатого 3-ех мерного массива
+         // Метод заполнения зубчатого 3-х мерного массива
+         void FillArrZ()
          {
             Random rand = new Random();
             int L = arrZ.Length;
             for (int i = 0; i < L; i++)
             {
-               arrZ[i] = new int[rand.Next(2, 9)][];     // генерация случайного кол строк для каждой из стр 
-               for (int j = 0; j < arrZ[i].Length; j++)    // перебор строк       
+               // Генерация случайного кол строк для каждой из стр 
+               arrZ[i] = new int[rand.Next(2, 9)][];
+               // Перебор строк 
+               for (int j = 0; j < arrZ[i].Length; j++)
                {
-                  arrZ[i][j] = new int[rand.Next(2, 9)];     // для каждой строки генерация рондомно кол элементов        
-                  for (int k = 0; k < arrZ[i][j].Length; k++)    //        
+                  // Для каждой строки генерация рондомно кол элементов 
+                  arrZ[i][j] = new int[rand.Next(2, 9)];
+                  for (int k = 0; k < arrZ[i][j].Length; k++)
                   {
-                     arrZ[i][j][k] = rand.Next(100);     // для каждого элемента генерация рондомно значения        
+                     // Для каждого элемента генерация рондомно значения 
+                     arrZ[i][j][k] = rand.Next(100);
                   }
                }
             }
          }
 
-         void PrintArrZ()                                // метод  вывода 3-ех мерного зубчатого  массива
+         // Метод вывода 3-х мерного зубчатого массива
+         void PrintArrZ()                                
          {
-            Console.WriteLine("Трехмерный зубчатый массив: ");
+            Console.WriteLine("Трехмерный зубчатый массив:");
             for (int i = 0; i < arrZ.Length; i++)
             {
                Console.WriteLine("Page №: " + (i));
@@ -338,8 +345,10 @@ namespace WrongWriteCodePartTwo
          int indexX = 0;
          int indexY = 0;
 
-         int changeX = 0;                // для изменения индекса строки
-         int changeY = 1;                 // для изменения индекса столбца
+          // Для изменения индекса строки
+         int changeX = 0; 
+         // Для изменения индекса столбца
+         int changeY = 1;                 
 
          int steps = sizeY;               // считает шаги когда надо повернуть
          int direction = 0;               // для измения кол шага
