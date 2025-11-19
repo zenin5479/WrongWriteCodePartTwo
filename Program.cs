@@ -120,8 +120,6 @@ namespace WrongWriteCodePartTwo
          PrintArray();
          Zadacha56();
 
-         Console.ReadLine();
-
          Console.WriteLine("-------------------------------");
          Console.WriteLine("Умножение двух двумерных матриц");
          Console.WriteLine("-------------------------------");
@@ -174,6 +172,7 @@ namespace WrongWriteCodePartTwo
                {
                   Console.Write("{0} ", c[i, j]);
                }
+
                Console.WriteLine();
             }
          }
@@ -189,14 +188,12 @@ namespace WrongWriteCodePartTwo
                {
                   array[i, j] = rand.Next(-9, 8);
                }
-
             }
          }
 
-         Console.ReadLine();
-         Console.WriteLine(" Задача 60----------------------------------------------------------------------------------------------------- ");
-         Console.WriteLine("    Сформируйте трёхмерный прямоугольный массив из неповторяющихся двузначных чисел. Напишите программу, которая построчно выведет элементы и их индексы.");
-         Console.WriteLine(" ----------------------------------------------------------------------------------------------------------------------- ");
+         Console.WriteLine("----------------------------------------------------------------------------------------------------- ");
+         Console.WriteLine("Трёхмерный прямоугольный массив из неповторяющихся двузначных чисел. Напишите программу, которая построчно выведет элементы и их индексы.");
+         Console.WriteLine("----------------------------------------------------------------------------------------------------------------------- ");
 
          Random rnd = new Random();
          int r1 = rnd.Next(2, 5);
@@ -207,14 +204,13 @@ namespace WrongWriteCodePartTwo
 
          FillArr();
          PrintArr();
-         Console.ReadLine();
+
          FillArrZ();
          PrintArrZ();
 
          void FillArr()                                   // метод заполнения прямоугольного 3-ех мерного массива
          {
             Random rand = new Random();
-
             int L1 = arr.GetLength(0);
             int L2 = arr.GetLength(1);
             int L3 = arr.GetLength(2);
@@ -238,6 +234,7 @@ namespace WrongWriteCodePartTwo
                         if (mass[k] != numm)
                            q++;
                      }
+
                      if (q == L4)
                      {
                         arr[m, i, j] = numm;
@@ -251,14 +248,12 @@ namespace WrongWriteCodePartTwo
                         j--;
                      }
                   }
-
                }
             }
          }
 
          void PrintArr()                                // метод  вывода 3-ех мерного  прямоугольного  массива
          {
-
             int L1 = arr.GetLength(0);
             int L2 = arr.GetLength(1);
             int L3 = arr.GetLength(2);
@@ -266,15 +261,16 @@ namespace WrongWriteCodePartTwo
             for (int m = 0; m < L1; m++)
             {
                Console.WriteLine("Page №: " + (m));
-
                for (int i = 0; i < L2; i++)
                {
                   for (int j = 0; j < L3; j++)
                   {
                      Console.Write("arr [" + m + ", " + i + ", " + j + "] = " + arr[m, i, j] + "; ");
                   }
+
                   Console.WriteLine();
                }
+
                Console.WriteLine("===========================================================================================");
             }
          }
@@ -299,20 +295,20 @@ namespace WrongWriteCodePartTwo
 
          void PrintArrZ()                                // метод  вывода 3-ех мерного зубчатого  массива
          {
-
             Console.WriteLine("Трехмерный зубчатый массив: ");
             for (int i = 0; i < arrZ.Length; i++)
             {
                Console.WriteLine("Page №: " + (i));
-
                for (int j = 0; j < arrZ[i].Length; j++)
                {
                   for (int k = 0; k < arrZ[i][j].Length; k++)
                   {
                      Console.Write("arr [" + i + ", " + j + ", " + k + "] = " + arrZ[i][j][k] + "; ");
                   }
+
                   Console.WriteLine();
                }
+
                Console.WriteLine("==============================================================================================");
             }
          }
@@ -353,6 +349,7 @@ namespace WrongWriteCodePartTwo
                direction++;                   // меняем направление 
 
             }
+
             indexX += changeX;
             indexY += changeY;
          }
@@ -363,6 +360,7 @@ namespace WrongWriteCodePartTwo
             {
                Console.Write(matrix[i, j] + "\t");
             }
+
             Console.WriteLine();
          }
 
