@@ -33,29 +33,15 @@ namespace WrongWriteCodePartTwo
          Console.WriteLine("---------------------------------------------------------------------");
          Console.WriteLine("Упорядочивание по убыванию элементов каждой строки двумерного массива");
          Console.WriteLine("---------------------------------------------------------------------");
-         
+
          Console.WriteLine("--------------------------------------------------------------------------------");
          Console.WriteLine("Находение строки с наименьшей суммой элементов прямоугольного двумерного массива");
-        
+         Console.WriteLine("--------------------------------------------------------------------------------");
 
-         Console.WriteLine("введите размерность массива");
-
+         Console.WriteLine("Введите размерность массива");
          int rows = Convert.ToInt32(Console.ReadLine());
          int columns = Convert.ToInt32(Console.ReadLine()); ;
          int[,] array = new int[rows, columns];
-
-         FillArray();
-         Console.WriteLine("исходный массив");
-         PrintArray();
-         Zadacha54();
-         Console.WriteLine("упорядоченный массив по убыванию по строкам ");
-         PrintArray();
-         Console.WriteLine();
-         Console.WriteLine("задача 56 находит строку с наименьшей суммой элементов.");
-         Console.WriteLine("Прямоугольный массив");
-         PrintArray();
-         Zadacha56();
-
          void FillArray()                                   // метод заполнгения массива
          {
             Random rand = new Random();
@@ -121,6 +107,18 @@ namespace WrongWriteCodePartTwo
 
             Console.WriteLine("минимальная сумма строк = " + rowMinSum + ", в строке под номером: " + (min_i + 1));
          }
+
+         FillArray();
+         Console.WriteLine("Исходный массив");
+         PrintArray();
+         Zadacha54();
+         Console.WriteLine("Упорядоченный массив по убыванию по строкам");
+         PrintArray();
+         Console.WriteLine();
+         Console.WriteLine("Строка с наименьшей суммой элементов");
+         Console.WriteLine("Прямоугольный массив");
+         PrintArray();
+         Zadacha56();
 
          Console.ReadLine();
 
