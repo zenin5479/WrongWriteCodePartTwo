@@ -125,10 +125,10 @@ namespace WrongWriteCodePartTwo
          Console.WriteLine("-------------------------------");
          Console.WriteLine("Умножение двух двумерных матриц");
          Console.WriteLine("-------------------------------");
-         Console.WriteLine(" введите кол строк и столюцов матрицы А");
+         Console.WriteLine("Введите количество строк и столбцов матрицы А");
          int row1 = Convert.ToInt32(Console.ReadLine());
          int column1 = Convert.ToInt32(Console.ReadLine());
-         Console.WriteLine(" введите кол строк и столюцов матрицы B");
+         Console.WriteLine("Введите количество строк и столбцов матрицы B");
          int row2 = Convert.ToInt32(Console.ReadLine());
          int column2 = Convert.ToInt32(Console.ReadLine());
 
