@@ -76,7 +76,7 @@ namespace WrongWriteCodePartTwo
                Console.WriteLine();
             }
          }
-         
+
          void Zadacha54()                                //метод упорядочения элементов строки массива от максимального к минимальному
          {
 
@@ -97,7 +97,7 @@ namespace WrongWriteCodePartTwo
                }
             }
          }
-         
+
          void Zadacha56()                              // метод нахождения строки в массиве с наименьшей суммой элементов
          {
             int rowMinSum = 1; int min_i = 1;
@@ -195,7 +195,7 @@ namespace WrongWriteCodePartTwo
          Console.WriteLine(" Задача 60----------------------------------------------------------------------------------------------------- ");
          Console.WriteLine("    Сформируйте трёхмерный прямоугольный массив из неповторяющихся двузначных чисел. Напишите программу, которая построчно выведет элементы и их индексы.");
          Console.WriteLine(" ----------------------------------------------------------------------------------------------------------------------- ");
-         
+
          Random rnd = new Random();
          int r1 = rnd.Next(2, 5);
          int r2 = rnd.Next(2, 5);
@@ -203,14 +203,11 @@ namespace WrongWriteCodePartTwo
          int[,,] arr = new int[r1, r2, r3];   // инициализация прямоугольного массива (z,y,x) заполненный нулевыми значениями 
          int[][][] arrZ = new int[rnd.Next(3, 6)][][];         // инициализация зубчатого трехмерного массива на рондомное кол стр
 
-
-
          FillArr();
          PrintArr();
          Console.ReadLine();
          FillArrZ();
          PrintArrZ();
-
 
          void FillArr()                                   // метод заполнения прямоугольного 3-ех мерного массива
          {
@@ -319,10 +316,6 @@ namespace WrongWriteCodePartTwo
          }
 
          Console.WriteLine();
-
-
-
-
          Console.ReadLine();
 
          Console.WriteLine(" Задача 62----------------------------------------------------------------------------------------------------- ");
@@ -371,12 +364,6 @@ namespace WrongWriteCodePartTwo
             Console.WriteLine();
          }
 
-
-
-
-
-
-
          //ДОПНИКИ
 
          Console.WriteLine(" Задача 1----------------------------------------------------------------------------------------------------- ");
@@ -390,15 +377,12 @@ namespace WrongWriteCodePartTwo
          int columns1 = Convert.ToInt32(Console.ReadLine()); ;
          int[,] array1 = new int[rows1, columns1];
 
-
-
          FillArray1(array1);
          Console.WriteLine("исходный массив");
          PrintArray1(array1);
          Console.WriteLine("упорядоченный массив c заменой строк ");
          Zadacha1(array1);
          PrintArray1(array1);
-
 
          void Zadacha1(int[,] array)                                    // метод замены строк в массиве
          {
@@ -432,6 +416,7 @@ namespace WrongWriteCodePartTwo
 
             }
          }
+
          void PrintArray1(int[,] array)                                // метод вывода массива
          {
             int rows = array.GetLength(0);
@@ -445,7 +430,6 @@ namespace WrongWriteCodePartTwo
                Console.WriteLine();
             }
          }
-
       }
    }
 }
