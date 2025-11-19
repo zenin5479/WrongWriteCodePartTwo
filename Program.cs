@@ -89,7 +89,7 @@ namespace WrongWriteCodePartTwo
          }
 
          // Метод нахождения строки в массиве с наименьшей суммой элементов
-         void Zadacha56()                              
+         void Zadacha56()
          {
             int rowMinSum = 1; int min_i = 1;
             for (int i = 0; i < rows; i++)
@@ -146,7 +146,7 @@ namespace WrongWriteCodePartTwo
          PrintArr1(Multiplication(arr1, arr2));
 
          // Метод перемножения матриц
-         int[,] Multiplication(int[,] a, int[,] b)                            
+         int[,] Multiplication(int[,] a, int[,] b)
          {
             if (a.GetLength(1) != b.GetLength(0))
             {
@@ -169,7 +169,7 @@ namespace WrongWriteCodePartTwo
          }
 
          // Метод вывода массива
-         void PrintArr1(int[,] c)                                             
+         void PrintArr1(int[,] c)
          {
             for (int i = 0; i < c.GetLength(0); i++)
             {
@@ -183,7 +183,7 @@ namespace WrongWriteCodePartTwo
          }
 
          // Метод заполнения массива
-         void FillArr1(int[,] array)                                           
+         void FillArr1(int[,] array)
          {
             int row = array.GetLength(0);
             int column = array.GetLength(1);
@@ -205,8 +205,10 @@ namespace WrongWriteCodePartTwo
          int r1 = rnd.Next(2, 5);
          int r2 = rnd.Next(2, 5);
          int r3 = rnd.Next(2, 5);
-         int[,,] arr = new int[r1, r2, r3];   // инициализация прямоугольного массива (z,y,x) заполненный нулевыми значениями 
-         int[][][] arrZ = new int[rnd.Next(3, 6)][][];         // инициализация зубчатого трехмерного массива на рондомное кол стр
+         // Инициализация прямоугольного массива (z,y,x) заполненный нулевыми значениями 
+         int[,,] arr = new int[r1, r2, r3];
+         // Инициализация зубчатого трехмерного массива на рондомное кол стр
+         int[][][] arrZ = new int[rnd.Next(3, 6)][][];
 
          FillArr();
          PrintArr();
@@ -214,19 +216,20 @@ namespace WrongWriteCodePartTwo
          FillArrZ();
          PrintArrZ();
 
-         void FillArr()                                   // метод заполнения прямоугольного 3-ех мерного массива
+         // Метод заполнения прямоугольного 3-х мерного массива
+         void FillArr()
          {
             Random rand = new Random();
             int L1 = arr.GetLength(0);
             int L2 = arr.GetLength(1);
             int L3 = arr.GetLength(2);
             int L4 = L1 * L2 * L3;
-            int[] mass = new int[L4];                  // массив для проверки чисел на неповторяемость 
+            // Массив для проверки чисел на неповторяемость 
+            int[] mass = new int[L4];
             mass[0] = 0;
             int k = 0;
             int q = 0;
             int g = 0;
-
             for (int m = 0; m < L1; m++)
             {
                for (int i = 0; i < L2; i++)
@@ -234,7 +237,8 @@ namespace WrongWriteCodePartTwo
                   for (int j = 0; j < L3; j++)
                   {
                      int numm = rand.Next(10, 98);
-                     for (k = 0; k < L4; k++)                    // проверка на уникальность значений, вводимых в  3-ех мерный массив
+                     // Проверка на уникальность значений, вводимых в 3х мерный массив
+                     for (k = 0; k < L4; k++)
                      {
                         if (mass[k] != numm)
                         {
