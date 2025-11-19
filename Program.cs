@@ -64,6 +64,7 @@ namespace WrongWriteCodePartTwo
 
             }
          }
+
          void PrintArray()                                // метод вывода массива
          {
             for (int i = 0; i < rows; i++)
@@ -75,8 +76,7 @@ namespace WrongWriteCodePartTwo
                Console.WriteLine();
             }
          }
-
-
+         
          void Zadacha54()                                //метод упорядочения элементов строки массива от максимального к минимальному
          {
 
@@ -97,8 +97,7 @@ namespace WrongWriteCodePartTwo
                }
             }
          }
-
-
+         
          void Zadacha56()                              // метод нахождения строки в массиве с наименьшей суммой элементов
          {
             int rowMinSum = 1; int min_i = 1;
@@ -115,6 +114,7 @@ namespace WrongWriteCodePartTwo
                   rowMinSum = temp1;
                }
             }
+
             Console.WriteLine("минимальная сумма строк = " + rowMinSum + ", в строке под номером: " + (min_i + 1));
          }
 
@@ -143,7 +143,6 @@ namespace WrongWriteCodePartTwo
          Multiplication(arr1, arr2);
          PrintArr1(Multiplication(arr1, arr2));
 
-
          int[,] Multiplication(int[,] a, int[,] b)                            // метод перемножения матриц
          {
 
@@ -164,6 +163,7 @@ namespace WrongWriteCodePartTwo
             }
             return r;
          }
+
          void PrintArr1(int[,] c)                                             // метод вывода массива
          {
             for (int i = 0; i < c.GetLength(0); i++)
@@ -175,8 +175,6 @@ namespace WrongWriteCodePartTwo
                Console.WriteLine();
             }
          }
-
-
 
          void FillArr1(int[,] array)                                           // метод запорлнения массива
          {
@@ -193,17 +191,12 @@ namespace WrongWriteCodePartTwo
             }
          }
 
-
          Console.ReadLine();
-
          Console.WriteLine(" Задача 60----------------------------------------------------------------------------------------------------- ");
          Console.WriteLine("    Сформируйте трёхмерный прямоугольный массив из неповторяющихся двузначных чисел. Напишите программу, которая построчно выведет элементы и их индексы.");
          Console.WriteLine(" ----------------------------------------------------------------------------------------------------------------------- ");
-
-
+         
          Random rnd = new Random();
-
-
          int r1 = rnd.Next(2, 5);
          int r2 = rnd.Next(2, 5);
          int r3 = rnd.Next(2, 5);
