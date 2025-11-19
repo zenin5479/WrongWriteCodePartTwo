@@ -122,9 +122,9 @@ namespace WrongWriteCodePartTwo
 
          Console.ReadLine();
 
-         Console.WriteLine("-----------------------------------------------------------------------------------------------------");
+         Console.WriteLine("-------------------------------");
          Console.WriteLine("Умножение двух двумерных матриц");
-         Console.WriteLine("----------------------------------------------------------------------------------------------------- ");
+         Console.WriteLine("-------------------------------");
          Console.WriteLine(" введите кол строк и столюцов матрицы А");
          int row1 = Convert.ToInt32(Console.ReadLine());
          int column1 = Convert.ToInt32(Console.ReadLine());
