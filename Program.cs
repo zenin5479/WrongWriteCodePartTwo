@@ -51,7 +51,6 @@ namespace WrongWriteCodePartTwo
                {
                   array[i, j] = rand.Next(-10, 9);
                }
-
             }
          }
 
@@ -63,16 +62,15 @@ namespace WrongWriteCodePartTwo
                {
                   Console.Write(" {0}  ", array[i, j]);
                }
+
                Console.WriteLine();
             }
          }
 
          void Zadacha54()                                //метод упорядочения элементов строки массива от максимального к минимальному
          {
-
             for (int m = 0; m < columns - 1; m++)
             {
-
                for (int i = 0; i < rows; i++)
                {
                   for (int j = 0; j < columns - 1; j++)
@@ -98,6 +96,7 @@ namespace WrongWriteCodePartTwo
                {
                   temp1 = array[i, j] + temp1;
                }
+
                if (temp1 < rowMinSum)
                {
                   min_i = i;
@@ -145,11 +144,11 @@ namespace WrongWriteCodePartTwo
 
          int[,] Multiplication(int[,] a, int[,] b)                            // метод перемножения матриц
          {
-
             if (a.GetLength(1) != b.GetLength(0))
             {
                if (a.GetLength(1) != b.GetLength(0)) throw new Exception("Матрицы нельзя перемножить. Введите другие размерности матриц");  // принудительная генерация исключения 
             }
+
             int[,] r = new int[a.GetLength(0), b.GetLength(1)];
             for (int i = 0; i < a.GetLength(0); i++)
             {
@@ -161,6 +160,7 @@ namespace WrongWriteCodePartTwo
                   }
                }
             }
+
             return r;
          }
 
