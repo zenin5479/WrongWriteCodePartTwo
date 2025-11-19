@@ -422,9 +422,9 @@ namespace WrongWriteCodePartTwo
          }
 
          FillArray1(array1);
-         Console.WriteLine("исходный массив");
+         Console.WriteLine("Исходный массив");
          PrintArray1(array1);
-         Console.WriteLine("упорядоченный массив c заменой строк ");
+         Console.WriteLine("Упорядоченный массив c заменой строк");
          Zadacha1(array1);
          PrintArray1(array1);
       }
