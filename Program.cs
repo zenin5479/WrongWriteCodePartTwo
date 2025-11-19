@@ -145,7 +145,8 @@ namespace WrongWriteCodePartTwo
          Multiplication(arr1, arr2);
          PrintArr1(Multiplication(arr1, arr2));
 
-         int[,] Multiplication(int[,] a, int[,] b)                            // метод перемножения матриц
+         // Метод перемножения матриц
+         int[,] Multiplication(int[,] a, int[,] b)                            
          {
             if (a.GetLength(1) != b.GetLength(0))
             {
@@ -167,7 +168,8 @@ namespace WrongWriteCodePartTwo
             return r;
          }
 
-         void PrintArr1(int[,] c)                                             // метод вывода массива
+         // Метод вывода массива
+         void PrintArr1(int[,] c)                                             
          {
             for (int i = 0; i < c.GetLength(0); i++)
             {
@@ -180,7 +182,8 @@ namespace WrongWriteCodePartTwo
             }
          }
 
-         void FillArr1(int[,] array)                                           // метод запорлнения массива
+         // Метод заполнения массива
+         void FillArr1(int[,] array)                                           
          {
             int row = array.GetLength(0);
             int column = array.GetLength(1);
