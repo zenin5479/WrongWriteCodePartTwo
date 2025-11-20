@@ -56,10 +56,6 @@ namespace WrongWriteCodePartTwo
                   j++;
                }
 
-               for ()
-               {
-
-               }
 
                i++;
             }
