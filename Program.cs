@@ -75,7 +75,10 @@ namespace WrongWriteCodePartTwo
          }
 
          // Метод упорядочения элементов строки массива от максимального к минимальному
-         void Task54()
+         // OrdersMaximumToMinimum
+
+
+         void OrdersMaximumToMinimum()
          {
             for (int m = 0; m < columns - 1; m++)
             {
@@ -119,7 +122,7 @@ namespace WrongWriteCodePartTwo
          FillingsMassif();
          Console.WriteLine("Исходный массив");
          PrintArray();
-         Task54();
+         OrdersMaximumToMinimum();
          Console.WriteLine("Упорядоченный массив по убыванию по строкам");
          PrintArray();
          Console.WriteLine();
