@@ -89,7 +89,7 @@ namespace WrongWriteCodePartTwo
          }
 
          // Метод нахождения строки в массиве с наименьшей суммой элементов
-         void Zadacha56()
+         void Task56()
          {
             int rowMinSum = 1; int minI = 1;
             for (int i = 0; i < rows; i++)
@@ -120,7 +120,7 @@ namespace WrongWriteCodePartTwo
          Console.WriteLine("Строка с наименьшей суммой элементов");
          Console.WriteLine("Прямоугольный массив");
          PrintArray();
-         Zadacha56();
+         Task56();
 
          Console.WriteLine("-------------------------------");
          Console.WriteLine("Умножение двух двумерных матриц");
