@@ -37,7 +37,6 @@ namespace WrongWriteCodePartTwo
          Console.WriteLine("Находение строки с наименьшей суммой элементов прямоугольного двумерного массива");
          Console.WriteLine("--------------------------------------------------------------------------------");
 
-         Console.WriteLine("Введите размерность массива:");
          Console.WriteLine("Введите количество строк массива");
          int rows = Convert.ToInt32(Console.ReadLine());
          Console.WriteLine("Введите количество столбцов массива");
