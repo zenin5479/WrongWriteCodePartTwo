@@ -150,7 +150,10 @@ namespace WrongWriteCodePartTwo
          {
             if (a.GetLength(1) != b.GetLength(0))
             {
-               if (a.GetLength(1) != b.GetLength(0)) throw new Exception("Матрицы нельзя перемножить. Введите другие размерности матриц");  // принудительная генерация исключения 
+               if (a.GetLength(1) != b.GetLength(0))
+               {
+                  Console.WriteLine("Матрицы нельзя перемножить. Введите другие размерности матриц");
+               }
             }
 
             int[,] r = new int[a.GetLength(0), b.GetLength(1)];
