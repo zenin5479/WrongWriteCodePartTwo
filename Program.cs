@@ -94,8 +94,6 @@ namespace WrongWriteCodePartTwo
             }
          }
 
-
-         // FindRowLowAmount
          // Метод нахождения строки в массиве с наименьшей суммой элементов
          void FindRowLowAmount()
          {
