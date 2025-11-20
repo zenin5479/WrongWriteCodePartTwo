@@ -62,7 +62,7 @@ namespace WrongWriteCodePartTwo
             {
                for (int j = 0; j < columns; j++)
                {
-                  Console.Write("{0}  ", massif[i, j]);
+                  Console.Write("{0}\t", massif[i, j]);
                }
 
                Console.WriteLine();
