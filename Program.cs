@@ -46,12 +46,21 @@ namespace WrongWriteCodePartTwo
          void FillingsMassif()
          {
             Random chance = new Random();
-            for (int i = 0; i < rows; i++)
+            int i = 0;
+            while (i < rows)
             {
                for (int j = 0; j < columns; j++)
                {
                   massif[i, j] = chance.Next(-10, 9);
                }
+               
+               
+               i++;
+
+            }
+            for ( )
+            {
+               
             }
          }
 
