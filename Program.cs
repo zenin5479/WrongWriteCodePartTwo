@@ -69,7 +69,7 @@ namespace WrongWriteCodePartTwo
          }
 
          // Метод упорядочения элементов строки массива от максимального к минимальному
-         void Zadacha54()
+         void Task54()
          {
             for (int m = 0; m < columns - 1; m++)
             {
@@ -113,7 +113,7 @@ namespace WrongWriteCodePartTwo
          FillArray();
          Console.WriteLine("Исходный массив");
          PrintArray();
-         Zadacha54();
+         Task54();
          Console.WriteLine("Упорядоченный массив по убыванию по строкам");
          PrintArray();
          Console.WriteLine();
