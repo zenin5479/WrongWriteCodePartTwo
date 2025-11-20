@@ -91,7 +91,7 @@ namespace WrongWriteCodePartTwo
          // Метод нахождения строки в массиве с наименьшей суммой элементов
          void Zadacha56()
          {
-            int rowMinSum = 1; int min_i = 1;
+            int rowMinSum = 1; int minI = 1;
             for (int i = 0; i < rows; i++)
             {
                int temp1 = 0;
@@ -102,12 +102,12 @@ namespace WrongWriteCodePartTwo
 
                if (temp1 < rowMinSum)
                {
-                  min_i = i;
+                  minI = i;
                   rowMinSum = temp1;
                }
             }
 
-            Console.WriteLine("минимальная сумма строк = " + rowMinSum + ", в строке под номером: " + (min_i + 1));
+            Console.WriteLine("минимальная сумма строк = " + rowMinSum + ", в строке под номером: " + (minI + 1));
          }
 
          FillArray();
