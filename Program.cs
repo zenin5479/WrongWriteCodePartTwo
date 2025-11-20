@@ -41,7 +41,7 @@ namespace WrongWriteCodePartTwo
          int rows = Convert.ToInt32(Console.ReadLine());
          Console.WriteLine("Введите количество столбцов массива:");
          int columns = Convert.ToInt32(Console.ReadLine());
-         int[,] array = new int[rows, columns];
+         int[,] massif = new int[rows, columns];
          // Метод заполнения массива
          void FillArray()
          {
@@ -50,7 +50,7 @@ namespace WrongWriteCodePartTwo
             {
                for (int j = 0; j < columns; j++)
                {
-                  array[i, j] = rand.Next(-10, 9);
+                  massif[i, j] = rand.Next(-10, 9);
                }
             }
          }
@@ -62,7 +62,7 @@ namespace WrongWriteCodePartTwo
             {
                for (int j = 0; j < columns; j++)
                {
-                  Console.Write(" {0}  ", array[i, j]);
+                  Console.Write(" {0}  ", massif[i, j]);
                }
 
                Console.WriteLine();
@@ -78,11 +78,11 @@ namespace WrongWriteCodePartTwo
                {
                   for (int j = 0; j < columns - 1; j++)
                   {
-                     if (array[i, j] < array[i, j + 1])
+                     if (massif[i, j] < massif[i, j + 1])
                      {
-                        int temp = array[i, j];
-                        array[i, j] = array[i, j + 1];
-                        array[i, j + 1] = temp;
+                        int temp = massif[i, j];
+                        massif[i, j] = massif[i, j + 1];
+                        massif[i, j + 1] = temp;
                      }
                   }
                }
@@ -98,7 +98,7 @@ namespace WrongWriteCodePartTwo
                int temp1 = 0;
                for (int j = 0; j < columns; j++)
                {
-                  temp1 = array[i, j] + temp1;
+                  temp1 = massif[i, j] + temp1;
                }
 
                if (temp1 < rowMinSum)
