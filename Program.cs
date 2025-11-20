@@ -32,9 +32,6 @@ namespace WrongWriteCodePartTwo
          Console.WriteLine("---------------------------------------------------------------------");
          Console.WriteLine("Упорядочивание по убыванию элементов каждой строки двумерного массива");
          Console.WriteLine("---------------------------------------------------------------------");
-
-
-
          Console.Write("Введите количество строк массива:");
          int rows = Convert.ToInt32(Console.ReadLine());
          Console.WriteLine("Введите количество столбцов массива:");
@@ -65,7 +62,7 @@ namespace WrongWriteCodePartTwo
             {
                for (int j = 0; j < columns; j++)
                {
-                  Console.Write(" {0}  ", massif[i, j]);
+                  Console.Write("{0}  ", massif[i, j]);
                }
 
                Console.WriteLine();
