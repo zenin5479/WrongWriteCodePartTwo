@@ -137,11 +137,11 @@ namespace WrongWriteCodePartTwo
 
          FillArr1(arr1);
          FillArr1(arr2);
-         Console.WriteLine("Матрица А");
+         Console.WriteLine("Матрица А:");
          PrintArr1(arr1);
-         Console.WriteLine("Матрица B");
+         Console.WriteLine("Матрица B:");
          PrintArr1(arr2);
-         Console.WriteLine("Матрица С = А * В :");
+         Console.WriteLine("Матрица С = А * В:");
          Multiplication(arr1, arr2);
          PrintArr1(Multiplication(arr1, arr2));
 
@@ -198,7 +198,7 @@ namespace WrongWriteCodePartTwo
          }
 
          Console.WriteLine("----------------------------------------------------------------------------------------------------- ");
-         Console.WriteLine("Трёхмерный прямоугольный массив из неповторяющихся двузначных чисел. Напишите программу, которая построчно выведет элементы и их индексы.");
+         Console.WriteLine("Трёхмерный прямоугольный массив из неповторяющихся двузначных чисел");
          Console.WriteLine("----------------------------------------------------------------------------------------------------------------------- ");
 
          Random rnd = new Random();
