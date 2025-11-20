@@ -49,18 +49,19 @@ namespace WrongWriteCodePartTwo
             int i = 0;
             while (i < rows)
             {
-               for (int j = 0; j < columns; j++)
+               int j = 0;
+               while (j < columns)
                {
                   massif[i, j] = chance.Next(-10, 9);
+                  j++;
                }
-               
-               
-               i++;
 
-            }
-            for ( )
-            {
-               
+               for ()
+               {
+
+               }
+
+               i++;
             }
          }
 
