@@ -43,7 +43,7 @@ namespace WrongWriteCodePartTwo
          int columns = Convert.ToInt32(Console.ReadLine());
          int[,] massif = new int[rows, columns];
          // Метод заполнения массива
-         void FillMassif()
+         void FillingsMassif()
          {
             Random chance = new Random();
             for (int i = 0; i < rows; i++)
@@ -111,7 +111,7 @@ namespace WrongWriteCodePartTwo
             Console.WriteLine("минимальная сумма строк = " + rowMinSum + ", в строке под номером: " + (minI + 1));
          }
 
-         FillMassif();
+         FillingsMassif();
          Console.WriteLine("Исходный массив");
          PrintArray();
          Task54();
