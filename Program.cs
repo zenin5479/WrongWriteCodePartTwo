@@ -75,7 +75,7 @@ namespace WrongWriteCodePartTwo
          }
 
          // Метод упорядочения элементов строки массива от максимального к минимальному
-         // OrdersMaximumToMinimum
+         
 
 
          void OrdersMaximumToMinimum()
