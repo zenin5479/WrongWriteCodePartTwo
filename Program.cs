@@ -38,7 +38,9 @@ namespace WrongWriteCodePartTwo
          Console.WriteLine("--------------------------------------------------------------------------------");
 
          Console.WriteLine("Введите размерность массива:");
+         Console.WriteLine("Введите количество строк массива");
          int rows = Convert.ToInt32(Console.ReadLine());
+         Console.WriteLine("Введите количество столбцов массива");
          int columns = Convert.ToInt32(Console.ReadLine());
          int[,] array = new int[rows, columns];
          // Метод заполнения массива
