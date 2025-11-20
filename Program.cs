@@ -45,12 +45,12 @@ namespace WrongWriteCodePartTwo
          // Метод заполнения массива
          void FillMassif()
          {
-            Random Chance = new Random();
+            Random chance = new Random();
             for (int i = 0; i < rows; i++)
             {
                for (int j = 0; j < columns; j++)
                {
-                  massif[i, j] = Chance.Next(-10, 9);
+                  massif[i, j] = chance.Next(-10, 9);
                }
             }
          }
