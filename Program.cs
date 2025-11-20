@@ -47,7 +47,7 @@ namespace WrongWriteCodePartTwo
                int j = 0;
                while (j < columns)
                {
-                  massif[i, j] = chance.Next(10, 9);
+                  massif[i, j] = chance.Next(10, 100);
                   j++;
                }
 
