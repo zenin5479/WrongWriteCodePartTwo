@@ -105,7 +105,9 @@ namespace WrongWriteCodePartTwo
          // Метод нахождения строки в массиве с наименьшей суммой элементов
          void FindRowLowAmount()
          {
-            int rowMinSum = 1; int minI = 1;
+            int rowMinSum = 1; 
+            int minI = 1;
+            
             for (int i = 0; i < rows; i++)
             {
                int temp1 = 0;
