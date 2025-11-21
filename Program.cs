@@ -105,15 +105,17 @@ namespace WrongWriteCodePartTwo
          // Метод нахождения строки в массиве с наименьшей суммой элементов
          void FindRowLowAmount()
          {
-            int rowMinSum = 1; 
+            int rowMinSum = 1;
             int minI = 1;
-            
-            for (int i = 0; i < rows; i++)
+            int i = 0;
+            while (i < rows)
             {
                int temp1 = 0;
-               for (int j = 0; j < columns; j++)
+               int j = 0;
+               while (j < columns)
                {
                   temp1 = massif[i, j] + temp1;
+                  j++;
                }
 
                if (temp1 < rowMinSum)
@@ -121,6 +123,8 @@ namespace WrongWriteCodePartTwo
                   minI = i;
                   rowMinSum = temp1;
                }
+
+               i++;
             }
 
             Console.WriteLine("минимальная сумма строк = " + rowMinSum + ", в строке под номером: " + (minI + 1));
