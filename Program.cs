@@ -58,7 +58,8 @@ namespace WrongWriteCodePartTwo
          // Метод вывода массива
          void PrintMassif()
          {
-            for (int i = 0; i < rows; i++)
+            int i = 0;
+            while (i < rows)
             {
                for (int j = 0; j < columns; j++)
                {
@@ -66,6 +67,14 @@ namespace WrongWriteCodePartTwo
                }
 
                Console.WriteLine();
+
+               i++;
+            }
+            for (  )
+            {
+
+
+
             }
          }
 
