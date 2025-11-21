@@ -65,8 +65,6 @@ namespace WrongWriteCodePartTwo
                while (j < columns)
                {
                   Console.Write("{0}\t", massif[i, j]);
-
-
                   j++;
                }
 
