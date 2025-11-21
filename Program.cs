@@ -76,7 +76,8 @@ namespace WrongWriteCodePartTwo
          // Метод упорядочения элементов строки массива от максимального к минимальному
          void MaximumToMinimum()
          {
-            for (int m = 0; m < columns - 1; m++)
+            int m = 0;
+            while (m < columns - 1)
             {
                for (int i = 0; i < rows; i++)
                {
@@ -90,6 +91,11 @@ namespace WrongWriteCodePartTwo
                      }
                   }
                }
+               m++;
+            }
+            for ( )
+            {
+
             }
          }
 
