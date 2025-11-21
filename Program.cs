@@ -91,23 +91,13 @@ namespace WrongWriteCodePartTwo
                         massif[i, j] = massif[i, j + 1];
                         massif[i, j + 1] = temp;
                      }
-                     
-                     
+
                      j++;
-                  }
-
-
-                  for ()
-                  {
-                     
                   }
 
                   i++;
                }
-               for ( )
-               {
 
-               }
                m++;
             }
          }
