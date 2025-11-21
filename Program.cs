@@ -61,9 +61,18 @@ namespace WrongWriteCodePartTwo
             int i = 0;
             while (i < rows)
             {
-               for (int j = 0; j < columns; j++)
+               int j = 0;
+               while (j < columns)
                {
-                  Console.Write("{0}\t", massif[i, j]);
+                   Console.Write("{0}\t", massif[i, j]);
+                  
+                  
+                  j++;
+               }
+
+               for ( )
+               {
+                 
                }
 
                Console.WriteLine();
