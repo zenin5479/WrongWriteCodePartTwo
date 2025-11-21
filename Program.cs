@@ -82,7 +82,8 @@ namespace WrongWriteCodePartTwo
                int i = 0;
                while (i < rows)
                {
-                  for (int j = 0; j < columns - 1; j++)
+                  int j = 0;
+                  while (j < columns - 1)
                   {
                      if (massif[i, j] < massif[i, j + 1])
                      {
@@ -90,6 +91,15 @@ namespace WrongWriteCodePartTwo
                         massif[i, j] = massif[i, j + 1];
                         massif[i, j + 1] = temp;
                      }
+                     
+                     
+                     j++;
+                  }
+
+
+                  for ()
+                  {
+                     
                   }
 
                   i++;
