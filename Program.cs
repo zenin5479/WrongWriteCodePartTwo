@@ -79,7 +79,8 @@ namespace WrongWriteCodePartTwo
             int m = 0;
             while (m < columns - 1)
             {
-               for (int i = 0; i < rows; i++)
+               int i = 0;
+               while (i < rows)
                {
                   for (int j = 0; j < columns - 1; j++)
                   {
@@ -90,12 +91,14 @@ namespace WrongWriteCodePartTwo
                         massif[i, j + 1] = temp;
                      }
                   }
+
+                  i++;
+               }
+               for ( )
+               {
+
                }
                m++;
-            }
-            for ( )
-            {
-
             }
          }
 
