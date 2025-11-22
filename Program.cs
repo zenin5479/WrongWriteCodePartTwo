@@ -154,6 +154,10 @@ namespace WrongWriteCodePartTwo
                Console.WriteLine();
             }
          }
+
+
+        Console.WriteLine("Прямоугольный массив");
+         OutputMassif();
          //
          // Метод нахождения строки в массиве с наименьшей суммой элементов
          void FindRowLowAmount()
@@ -183,8 +187,8 @@ namespace WrongWriteCodePartTwo
             Console.WriteLine("минимальная сумма строк = " + rowMinSum + ", в строке под номером: " + (minI + 1));
          }
          Console.WriteLine("Строка с наименьшей суммой элементов");
-         Console.WriteLine("Прямоугольный массив");
-         OutputMassif();
+         
+         
          FindRowLowAmount();
 
          Console.WriteLine("-------------------------------");
