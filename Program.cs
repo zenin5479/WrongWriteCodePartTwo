@@ -138,7 +138,7 @@ namespace WrongWriteCodePartTwo
          }
 
          // Метод вывода массива
-         void PrintMassif()
+         void outputMassif()
          {
             int i = 0;
             while (i < rows)
@@ -184,7 +184,7 @@ namespace WrongWriteCodePartTwo
          }
          Console.WriteLine("Строка с наименьшей суммой элементов");
          Console.WriteLine("Прямоугольный массив");
-         PrintMassif();
+         outputMassif();
          FindRowLowAmount();
 
          Console.WriteLine("-------------------------------");
