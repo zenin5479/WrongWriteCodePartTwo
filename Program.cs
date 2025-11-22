@@ -102,7 +102,7 @@ namespace WrongWriteCodePartTwo
             }
          }
 
-        
+
 
          FillingsMassif();
          Console.WriteLine("Исходный массив");
@@ -116,8 +116,8 @@ namespace WrongWriteCodePartTwo
          Console.WriteLine("Находение строки с наименьшей суммой элементов прямоугольного двумерного массива");
          Console.WriteLine("--------------------------------------------------------------------------------");
 
-         //
-         // // Метод нахождения строки в массиве с наименьшей суммой элементов
+         
+         // Метод нахождения строки в массиве с наименьшей суммой элементов
          void FindRowLowAmount()
          {
             int rowMinSum = 1;
