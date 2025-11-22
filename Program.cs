@@ -113,19 +113,19 @@ namespace WrongWriteCodePartTwo
          Console.WriteLine("Находение строки с наименьшей суммой элементов прямоугольного двумерного массива");
          Console.WriteLine("--------------------------------------------------------------------------------");
          Console.Write("Введите количество строк массива: ");
-         int rows = Convert.ToInt32(Console.ReadLine());
+         int strip = Convert.ToInt32(Console.ReadLine());
          Console.Write("Введите количество столбцов массива: ");
-         int columns = Convert.ToInt32(Console.ReadLine());
-         int[,] massif = new int[rows, columns];
+         int verticals = Convert.ToInt32(Console.ReadLine());
+         int[,] massif = new int[strip, verticals];
          // Метод заполнения массива
          void CompletionMassif()
          {
             Random chance = new Random();
             int i = 0;
-            while (i < rows)
+            while (i < strip)
             {
                int j = 0;
-               while (j < columns)
+               while (j < verticals)
                {
                   massif[i, j] = chance.Next(10, 100);
                   j++;
@@ -139,10 +139,10 @@ namespace WrongWriteCodePartTwo
          void OutputMassif()
          {
             int i = 0;
-            while (i < rows)
+            while (i < strip)
             {
                int j = 0;
-               while (j < columns)
+               while (j < verticals)
                {
                   Console.Write("{0}\t", massif[i, j]);
                   j++;
@@ -159,11 +159,11 @@ namespace WrongWriteCodePartTwo
             int rowMinSum = 1;
             int minI = 1;
             int i = 0;
-            while (i < rows)
+            while (i < strip)
             {
                int temp1 = 0;
                int j = 0;
-               while (j < columns)
+               while (j < verticals)
                {
                   temp1 = massif[i, j] + temp1;
                   j++;
