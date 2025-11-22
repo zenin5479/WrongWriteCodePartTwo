@@ -29,9 +29,91 @@ namespace WrongWriteCodePartTwo
    {
       static void Main(string[] args)
       {
-         Console.WriteLine("---------------------------------------------------------------------");
-         Console.WriteLine("Упорядочивание по убыванию элементов каждой строки двумерного массива");
-         Console.WriteLine("---------------------------------------------------------------------");
+         //Console.WriteLine("---------------------------------------------------------------------");
+         //Console.WriteLine("Упорядочивание по убыванию элементов каждой строки двумерного массива");
+         //Console.WriteLine("---------------------------------------------------------------------");
+         //Console.Write("Введите количество строк массива: ");
+         //int rows = Convert.ToInt32(Console.ReadLine());
+         //Console.Write("Введите количество столбцов массива: ");
+         //int columns = Convert.ToInt32(Console.ReadLine());
+         //int[,] massif = new int[rows, columns];
+         //// Метод заполнения массива
+         //void FillingsMassif()
+         //{
+         //   Random chance = new Random();
+         //   int i = 0;
+         //   while (i < rows)
+         //   {
+         //      int j = 0;
+         //      while (j < columns)
+         //      {
+         //         massif[i, j] = chance.Next(10, 100);
+         //         j++;
+         //      }
+
+         //      i++;
+         //   }
+         //}
+
+         //// Метод вывода массива
+         //void PrintMassif()
+         //{
+         //   int i = 0;
+         //   while (i < rows)
+         //   {
+         //      int j = 0;
+         //      while (j < columns)
+         //      {
+         //         Console.Write("{0}\t", massif[i, j]);
+         //         j++;
+         //      }
+
+         //      i++;
+         //      Console.WriteLine();
+         //   }
+         //}
+
+         //// Метод упорядочения элементов строки массива от максимального к минимальному
+         //void MaximumToMinimum()
+         //{
+         //   int m = 0;
+         //   while (m < columns - 1)
+         //   {
+         //      int i = 0;
+         //      while (i < rows)
+         //      {
+         //         int j = 0;
+         //         while (j < columns - 1)
+         //         {
+         //            if (massif[i, j] < massif[i, j + 1])
+         //            {
+         //               int temp = massif[i, j];
+         //               massif[i, j] = massif[i, j + 1];
+         //               massif[i, j + 1] = temp;
+         //            }
+
+         //            j++;
+         //         }
+
+         //         i++;
+         //      }
+
+         //      m++;
+         //   }
+         //}
+         //FillingsMassif();
+         //Console.WriteLine("Исходный массив:");
+         //PrintMassif();
+         //MaximumToMinimum();
+         //Console.WriteLine("Упорядоченный массив по убыванию в строке:");
+         //PrintMassif();
+         //Console.WriteLine();
+
+         Console.WriteLine("--------------------------------------------------------------------------------");
+         Console.WriteLine("Находение строки с наименьшей суммой элементов прямоугольного двумерного массива");
+         Console.WriteLine("--------------------------------------------------------------------------------");
+         
+         
          Console.Write("Введите количество строк массива: ");
          int rows = Convert.ToInt32(Console.ReadLine());
          Console.Write("Введите количество столбцов массива: ");
@@ -72,47 +154,6 @@ namespace WrongWriteCodePartTwo
                Console.WriteLine();
             }
          }
-
-         // Метод упорядочения элементов строки массива от максимального к минимальному
-         void MaximumToMinimum()
-         {
-            int m = 0;
-            while (m < columns - 1)
-            {
-               int i = 0;
-               while (i < rows)
-               {
-                  int j = 0;
-                  while (j < columns - 1)
-                  {
-                     if (massif[i, j] < massif[i, j + 1])
-                     {
-                        int temp = massif[i, j];
-                        massif[i, j] = massif[i, j + 1];
-                        massif[i, j + 1] = temp;
-                     }
-
-                     j++;
-                  }
-
-                  i++;
-               }
-
-               m++;
-            }
-         }
-         FillingsMassif();
-         Console.WriteLine("Исходный массив:");
-         PrintMassif();
-         MaximumToMinimum();
-         Console.WriteLine("Упорядоченный массив по убыванию в строке:");
-         PrintMassif();
-         Console.WriteLine();
-
-         Console.WriteLine("--------------------------------------------------------------------------------");
-         Console.WriteLine("Находение строки с наименьшей суммой элементов прямоугольного двумерного массива");
-         Console.WriteLine("--------------------------------------------------------------------------------");
-         
          //
          // Метод нахождения строки в массиве с наименьшей суммой элементов
          void FindRowLowAmount()
