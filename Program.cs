@@ -105,7 +105,7 @@ namespace WrongWriteCodePartTwo
          Console.WriteLine("Исходный массив:");
          PrintMassif();
          MaximumToMinimum();
-         Console.WriteLine("Упорядоченный массив по убыванию по строкам:");
+         Console.WriteLine("Упорядоченный массив по убыванию в строке:");
          PrintMassif();
          Console.WriteLine();
 
