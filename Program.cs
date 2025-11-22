@@ -112,8 +112,8 @@ namespace WrongWriteCodePartTwo
          Console.WriteLine("--------------------------------------------------------------------------------");
          Console.WriteLine("Находение строки с наименьшей суммой элементов прямоугольного двумерного массива");
          Console.WriteLine("--------------------------------------------------------------------------------");
-         
-         
+
+
          Console.Write("Введите количество строк массива: ");
          int rows = Convert.ToInt32(Console.ReadLine());
          Console.Write("Введите количество столбцов массива: ");
@@ -155,11 +155,7 @@ namespace WrongWriteCodePartTwo
             }
          }
 
-
-        Console.WriteLine("Прямоугольный массив");
-         OutputMassif();
-         //
-         // Метод нахождения строки в массиве с наименьшей суммой элементов
+  // Метод нахождения строки в массиве с наименьшей суммой элементов
          void FindRowLowAmount()
          {
             int rowMinSum = 1;
@@ -186,9 +182,13 @@ namespace WrongWriteCodePartTwo
 
             Console.WriteLine("минимальная сумма строк = " + rowMinSum + ", в строке под номером: " + (minI + 1));
          }
+         CompletionMassif();
+         Console.WriteLine("Прямоугольный массив");
+         OutputMassif();
+       
          Console.WriteLine("Строка с наименьшей суммой элементов");
-         
-         
+
+
          FindRowLowAmount();
 
          Console.WriteLine("-------------------------------");
