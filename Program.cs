@@ -120,7 +120,7 @@ namespace WrongWriteCodePartTwo
          int columns = Convert.ToInt32(Console.ReadLine());
          int[,] massif = new int[rows, columns];
          // Метод заполнения массива
-         void FillingsMassif()
+         void CompletionMassif()
          {
             Random chance = new Random();
             int i = 0;
