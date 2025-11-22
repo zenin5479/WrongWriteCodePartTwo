@@ -32,9 +32,9 @@ namespace WrongWriteCodePartTwo
          Console.WriteLine("---------------------------------------------------------------------");
          Console.WriteLine("Упорядочивание по убыванию элементов каждой строки двумерного массива");
          Console.WriteLine("---------------------------------------------------------------------");
-         Console.Write("Введите количество строк массива:");
+         Console.Write("Введите количество строк массива: ");
          int rows = Convert.ToInt32(Console.ReadLine());
-         Console.WriteLine("Введите количество столбцов массива:");
+         Console.Write("Введите количество столбцов массива:");
          int columns = Convert.ToInt32(Console.ReadLine());
          int[,] massif = new int[rows, columns];
          // Метод заполнения массива
