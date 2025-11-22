@@ -116,18 +116,18 @@ namespace WrongWriteCodePartTwo
          int strip = Convert.ToInt32(Console.ReadLine());
          Console.Write("Введите количество столбцов массива: ");
          int verticals = Convert.ToInt32(Console.ReadLine());
-         int[,] massif = new int[strip, verticals];
+         int[,] cluster = new int[strip, verticals];
          // Метод заполнения массива
          void CompletionMassif()
          {
-            Random Stochastic = new Random();
+            Random stochastic = new Random();
             int i = 0;
             while (i < strip)
             {
                int j = 0;
                while (j < verticals)
                {
-                  massif[i, j] = Stochastic.Next(10, 100);
+                  cluster[i, j] = stochastic.Next(10, 100);
                   j++;
                }
 
@@ -144,7 +144,7 @@ namespace WrongWriteCodePartTwo
                int j = 0;
                while (j < verticals)
                {
-                  Console.Write("{0}\t", massif[i, j]);
+                  Console.Write("{0}\t", cluster[i, j]);
                   j++;
                }
 
@@ -156,29 +156,29 @@ namespace WrongWriteCodePartTwo
          // Метод нахождения строки в массиве с наименьшей суммой элементов
          void FindRowLowAmount()
          {
-            int rowMinSum = 1;
+            int stripMinSum = 1;
             int minI = 1;
             int i = 0;
             while (i < strip)
             {
-               int temp1 = 0;
+               int temp = 0;
                int j = 0;
                while (j < verticals)
                {
-                  temp1 = massif[i, j] + temp1;
+                  temp = cluster[i, j] + temp;
                   j++;
                }
 
-               if (temp1 < rowMinSum)
+               if (temp < stripMinSum)
                {
                   minI = i;
-                  rowMinSum = temp1;
+                  stripMinSum = temp;
                }
 
                i++;
             }
 
-            Console.WriteLine("минимальная сумма строк = " + rowMinSum + ", в строке под номером: " + (minI + 1));
+            Console.WriteLine("минимальная сумма строк = " + stripMinSum + ", в строке под номером: " + (minI + 1));
          }
 
          CompletionMassif();
