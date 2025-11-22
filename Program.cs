@@ -102,10 +102,10 @@ namespace WrongWriteCodePartTwo
             }
          }
          FillingsMassif();
-         Console.WriteLine("Исходный массив");
+         Console.WriteLine("Исходный массив:");
          PrintMassif();
          MaximumToMinimum();
-         Console.WriteLine("Упорядоченный массив по убыванию по строкам");
+         Console.WriteLine("Упорядоченный массив по убыванию по строкам:");
          PrintMassif();
          Console.WriteLine();
 
