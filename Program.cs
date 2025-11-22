@@ -120,14 +120,14 @@ namespace WrongWriteCodePartTwo
          // Метод заполнения массива
          void CompletionMassif()
          {
-            Random chance = new Random();
+            Random Stochastic = new Random();
             int i = 0;
             while (i < strip)
             {
                int j = 0;
                while (j < verticals)
                {
-                  massif[i, j] = chance.Next(10, 100);
+                  massif[i, j] = Stochastic.Next(10, 100);
                   j++;
                }
 
