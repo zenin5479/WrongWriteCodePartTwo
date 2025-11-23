@@ -136,7 +136,11 @@ namespace WrongWriteCodePartTwo
             {
                Console.WriteLine("Введите количество столбцов массива:");
                int.TryParse(Console.ReadLine(), out m);
-               if (m <= 0 || m > 20 || rank == m)
+               if ( rank == m)
+               {
+                  Console.WriteLine("Введено неверное значение");
+               }
+               else if (m <= 0 || m > 20)
                {
                   Console.WriteLine("Введено неверное значение");
                }
