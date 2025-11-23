@@ -117,7 +117,39 @@ namespace WrongWriteCodePartTwo
          Console.Write("Введите количество столбцов массива: ");
          int verticals = Convert.ToInt32(Console.ReadLine());
          // Проверка на прямоугольность массива
+         public static int SizeRow()
+         {
+            int n;
+            do
+            {
+               Console.WriteLine("Введите количество строк массива:");
+               int.TryParse(Console.ReadLine(), out n);
+               //n = Convert.ToInt32(Console.ReadLine());
+               if (n <= 0 || n > 20)
+               {
+                  Console.WriteLine("Введено неверное значение");
+               }
+            } while (n <= 0 || n > 20);
 
+            return n;
+         }
+
+         public static int SizeColumn()
+         {
+            int m;
+            do
+            {
+               Console.WriteLine("Введите количество столбцов массива:");
+               int.TryParse(Console.ReadLine(), out m);
+               //m = Convert.ToInt32(Console.ReadLine());
+               if (m <= 0 || m > 20)
+               {
+                  Console.WriteLine("Введено неверное значение");
+               }
+            } while (m <= 0 || m > 20);
+
+            return m;
+         }
 
          int[,] cluster = new int[strip, verticals];
          // Метод заполнения массива
