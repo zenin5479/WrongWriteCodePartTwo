@@ -115,9 +115,10 @@ namespace WrongWriteCodePartTwo
          Console.Write("Введите количество строк массива: ");
          int strip = Convert.ToInt32(Console.ReadLine());
          Console.Write("Введите количество столбцов массива: ");
-         // Проверка на прямоугольность мссива
-
          int verticals = Convert.ToInt32(Console.ReadLine());
+         // Проверка на прямоугольность массива
+
+
          int[,] cluster = new int[strip, verticals];
          // Метод заполнения массива
          void CompletionMassif()
