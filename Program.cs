@@ -118,7 +118,7 @@ namespace WrongWriteCodePartTwo
             int n;
             do
             {
-               Console.WriteLine("Введите количество строк массива:");
+               Console.Write("Введите количество строк массива: ");
                int.TryParse(Console.ReadLine(), out n);
                if (n <= 0 || n > 20)
                {
