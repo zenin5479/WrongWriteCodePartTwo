@@ -136,9 +136,9 @@ namespace WrongWriteCodePartTwo
             {
                Console.WriteLine("Введите количество столбцов массива:");
                int.TryParse(Console.ReadLine(), out m);
-               if ( rank == m)
+               if (rank == m)
                {
-                  Console.WriteLine("Введено неверное значение");
+                  Console.WriteLine("Количество строк массива равно количеству столбцов: матрица");
                }
                else if (m <= 0 || m > 20)
                {
