@@ -117,7 +117,7 @@ namespace WrongWriteCodePartTwo
          Console.Write("Введите количество столбцов массива: ");
          int verticals = Convert.ToInt32(Console.ReadLine());
          // Проверка на прямоугольность массива
-         public static int SizeRow()
+         int SizeRow()
          {
             int n;
             do
@@ -134,7 +134,7 @@ namespace WrongWriteCodePartTwo
             return n;
          }
 
-         public static int SizeColumn()
+         int SizeColumn()
          {
             int m;
             do
