@@ -130,7 +130,7 @@ namespace WrongWriteCodePartTwo
             return n;
          }
          // Метод ввода количества столбцов
-         int SizeColumn()
+         int SizeColumn(int row)
          {
             int m;
             do
@@ -151,7 +151,7 @@ namespace WrongWriteCodePartTwo
          Console.Write("Введите количество столбцов массива: ");
          
          // Проверка на прямоугольность массива
-         int verticals = SizeColumn();
+         int verticals = SizeColumn(strip);
          int[,] cluster = new int[strip, verticals];
          // Метод заполнения массива
          void CompletionMassif()
