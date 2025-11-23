@@ -129,15 +129,14 @@ namespace WrongWriteCodePartTwo
             return n;
          }
          // Метод ввода количества столбцов
-         int SizeColumn(int row)
+         int SizeColumn(int rank)
          {
             int m;
             do
             {
                Console.WriteLine("Введите количество столбцов массива:");
                int.TryParse(Console.ReadLine(), out m);
-              
-               if (m <= 0 || m > 20)
+               if (m <= 0 || m > 20 || rank == m)
                {
                   Console.WriteLine("Введено неверное значение");
                }
@@ -148,7 +147,7 @@ namespace WrongWriteCodePartTwo
          Console.Write("Введите количество строк массива: ");
          int strip = SizeRow();
          Console.Write("Введите количество столбцов массива: ");
-         
+
          // Проверка на прямоугольность массива
          int verticals = SizeColumn(strip);
          int[,] cluster = new int[strip, verticals];
