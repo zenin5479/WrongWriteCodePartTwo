@@ -129,8 +129,7 @@ namespace WrongWriteCodePartTwo
             return n;
          }
 
-         // Метод ввода количества столбцов
-
+         // Метод ввода количества столбцов и проверка на прямоугольность массива
          int SizeColumn(int rank)
          {
             int m;
