@@ -138,6 +138,7 @@ namespace WrongWriteCodePartTwo
             {
                Console.Write("Введите количество столбцов массива: ");
                int.TryParse(Console.ReadLine(), out m);
+               // Проверка на прямоугольность массива
                if (rank == m)
                {
                   Console.WriteLine("Количество строк массива равно количеству столбцов: матрица");
@@ -150,9 +151,8 @@ namespace WrongWriteCodePartTwo
 
             return m;
          }
+
          int strip = SizeRow();
-        
-         // Проверка на прямоугольность массива
          int verticals = SizeColumn(strip);
          int[,] cluster = new int[strip, verticals];
          // Метод заполнения массива
