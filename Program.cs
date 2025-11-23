@@ -130,6 +130,7 @@ namespace WrongWriteCodePartTwo
          }
 
          // Метод ввода количества столбцов
+
          int SizeColumn(int rank)
          {
             int m;
@@ -149,10 +150,8 @@ namespace WrongWriteCodePartTwo
 
             return m;
          }
-
          int strip = SizeRow();
-         Console.Write("Введите количество столбцов массива: ");
-
+        
          // Проверка на прямоугольность массива
          int verticals = SizeColumn(strip);
          int[,] cluster = new int[strip, verticals];
