@@ -129,7 +129,7 @@ namespace WrongWriteCodePartTwo
 
             return n;
          }
-         // Метод ввода количества строк
+         // Метод ввода количества столбцов
          int SizeColumn()
          {
             int m;
