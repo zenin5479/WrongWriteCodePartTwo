@@ -150,8 +150,6 @@ namespace WrongWriteCodePartTwo
          int strip = SizeRow();
          Console.Write("Введите количество столбцов массива: ");
          int verticals = SizeColumn();
-
-         //int verticals = Convert.ToInt32(Console.ReadLine());
          // Проверка на прямоугольность массива
 
          int[,] cluster = new int[strip, verticals];
