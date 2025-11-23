@@ -148,7 +148,7 @@ namespace WrongWriteCodePartTwo
 
             return m;
          }
-         Console.Write("Введите количество строк массива: ");
+
          int strip = SizeRow();
          Console.Write("Введите количество столбцов массива: ");
 
