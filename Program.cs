@@ -128,13 +128,14 @@ namespace WrongWriteCodePartTwo
 
             return n;
          }
+
          // Метод ввода количества столбцов
          int SizeColumn(int rank)
          {
             int m;
             do
             {
-               Console.WriteLine("Введите количество столбцов массива:");
+               Console.Write("Введите количество столбцов массива: ");
                int.TryParse(Console.ReadLine(), out m);
                if (rank == m)
                {
