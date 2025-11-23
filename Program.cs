@@ -120,7 +120,7 @@ namespace WrongWriteCodePartTwo
             {
                Console.WriteLine("Введите количество строк массива:");
                int.TryParse(Console.ReadLine(), out n);
-               //n = Convert.ToInt32(Console.ReadLine());
+              
                if (n <= 0 || n > 20)
                {
                   Console.WriteLine("Введено неверное значение");
