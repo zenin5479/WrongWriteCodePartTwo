@@ -148,11 +148,10 @@ namespace WrongWriteCodePartTwo
          }
          Console.Write("Введите количество строк массива: ");
          int strip = SizeRow();
-// Проверка на прямоугольность массива
          Console.Write("Введите количество столбцов массива: ");
-         int verticals = SizeColumn();
          
-
+         // Проверка на прямоугольность массива
+         int verticals = SizeColumn();
          int[,] cluster = new int[strip, verticals];
          // Метод заполнения массива
          void CompletionMassif()
