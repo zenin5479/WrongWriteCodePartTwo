@@ -147,7 +147,9 @@ namespace WrongWriteCodePartTwo
             return m;
          }
          Console.Write("Введите количество строк массива: ");
-         int strip = Convert.ToInt32(Console.ReadLine());
+         int strip = SizeRow();
+
+         //int strip = Convert.ToInt32(Console.ReadLine());
 
          Console.Write("Введите количество столбцов массива: ");
          int verticals = Convert.ToInt32(Console.ReadLine());
