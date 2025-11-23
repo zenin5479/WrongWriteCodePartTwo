@@ -148,6 +148,7 @@ namespace WrongWriteCodePartTwo
          }
          Console.Write("Введите количество строк массива: ");
          int strip = SizeRow();
+
          Console.Write("Введите количество столбцов массива: ");
          int verticals = SizeColumn();
          // Проверка на прямоугольность массива
