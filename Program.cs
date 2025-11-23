@@ -144,7 +144,7 @@ namespace WrongWriteCodePartTwo
                {
                   Console.WriteLine("Введено неверное значение");
                }
-            } while (m <= 0 || m > 20|| rank == m);
+            } while (m <= 0 || m > 20 || rank == m);
 
             return m;
          }
