@@ -584,7 +584,7 @@ namespace WrongWriteCodePartTwo
             if (k == sumArray.Length - 1)
             {
                //Console.Write(sumArray[k]);
-               Console.Write("{0:f}", sumArray[k]);
+              
                //Console.Write("{0:f2}", sumArray[k]);
             }
             else
