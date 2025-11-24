@@ -561,7 +561,7 @@ namespace WrongWriteCodePartTwo
       public static int[] SumRowElements(int[,] inputArray)
       {
          Console.WriteLine("Одномерный массив сумм элементов строк двумерного массива");
-         double[] sumArray = new double[inputArray.GetLength(0)];
+         int[] sumArray = new double[inputArray.GetLength(0)];
          int i = 0;
          while (i < inputArray.GetLength(0))
          {
