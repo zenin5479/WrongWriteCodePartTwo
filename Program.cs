@@ -582,11 +582,7 @@ namespace WrongWriteCodePartTwo
          int k = 0;
          while (k < sumArray.Length)
          {
-
-            Console.Write(sumArray[k]);
-
-
-
+            Console.WriteLine(sumArray[k]);
             k++;
          }
 
