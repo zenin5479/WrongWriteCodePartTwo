@@ -590,6 +590,8 @@ namespace WrongWriteCodePartTwo
                Console.Write(sumArray[k] + " ");
             }
 
+
+
             k++;
          }
 
