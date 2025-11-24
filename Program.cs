@@ -588,7 +588,7 @@ namespace WrongWriteCodePartTwo
             }
             else
             {
-               Console.Write(sumArray[k] + " ");
+               Console.Write(sumArray[k] + "\t");
             }
 
             k++;
