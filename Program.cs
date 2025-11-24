@@ -565,7 +565,7 @@ namespace WrongWriteCodePartTwo
          int i = 0;
          while (i < inputArray.GetLength(0))
          {
-            double sum = 0;
+            int sum = 0;
             int j = 0;
             while (j < inputArray.GetLength(1))
             {
