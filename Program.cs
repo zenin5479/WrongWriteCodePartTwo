@@ -223,7 +223,8 @@ namespace WrongWriteCodePartTwo
          OutputMassif();
          Console.WriteLine("Строка с наименьшей суммой элементов");
          FindRowLowAmount();
-         SumRowElements(cluster);
+
+         int []  gjgj =SumRowElements(cluster);
 
          Console.WriteLine("-------------------------------");
          Console.WriteLine("Умножение двух двумерных матриц");
