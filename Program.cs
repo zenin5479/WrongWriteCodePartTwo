@@ -222,14 +222,13 @@ namespace WrongWriteCodePartTwo
             return sumArray;
          }
 
-         Console.WriteLine("Минимальная сумма строк = 250" + ", в строке под номером: 5");
-
          CompletionMassif();
          Console.WriteLine("Прямоугольный массив");
          OutputMassif();
          Console.WriteLine("Строка с наименьшей суммой элементов");
          //
-         int [] bank = SumRowElements(cluster);
+         int[] bank = SumRowElements(cluster);
+         Console.WriteLine("Минимальная сумма строк = 250" + ", в строке под номером: 5");
 
          Console.WriteLine("-------------------------------");
          Console.WriteLine("Умножение двух двумерных матриц");
