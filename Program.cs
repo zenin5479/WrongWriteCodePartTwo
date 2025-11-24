@@ -215,7 +215,7 @@ namespace WrongWriteCodePartTwo
                i++;
             }
 
-            Console.WriteLine("минимальная сумма строк = " + stripMinSum + ", в строке под номером: " + (minI + 1));
+            Console.WriteLine("Минимальная сумма строк = " + stripMinSum + ", в строке под номером: " + (minI + 1));
          }
 
          CompletionMassif();
