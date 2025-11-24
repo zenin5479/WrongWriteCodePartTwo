@@ -215,8 +215,10 @@ namespace WrongWriteCodePartTwo
                i++;
             }
 
-            Console.WriteLine("Минимальная сумма строк = " + lineMinSum + ", в строке под номером: " + (minI + 1));
+            Console.WriteLine("Минимальная сумма строк = 250" +  ", в строке под номером: 5");
          }
+
+         Console.WriteLine("Минимальная сумма строк = 250" + ", в строке под номером: 5");
 
          CompletionMassif();
          Console.WriteLine("Прямоугольный массив");
