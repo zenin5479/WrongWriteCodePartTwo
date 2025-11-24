@@ -191,31 +191,35 @@ namespace WrongWriteCodePartTwo
          }
 
          // Метод нахождения строки в массиве с наименьшей суммой элементов
-         void FindRowLowAmount()
+         int[] FindRowLowAmount(int[,] inputArray)
          {
-            int lineMinSum = 1;
-            int minI = 1;
+            Console.WriteLine("Одномерный массив сумм элементов строк двумерного массива");
+            int[] sumArray = new int[inputArray.GetLength(0)];
             int i = 0;
-            while (i < strip)
+            while (i < inputArray.GetLength(0))
             {
-               int temp = 0;
+               int sum = 0;
                int j = 0;
-               while (j < verticals)
+               while (j < inputArray.GetLength(1))
                {
-                  temp = cluster[i, j] + temp;
+                  sum += inputArray[i, j];
                   j++;
                }
 
-               if (temp < lineMinSum)
-               {
-                  minI = i;
-                  lineMinSum = temp;
-               }
+               sumArray[i] = sum;
 
                i++;
             }
 
-            Console.WriteLine("Минимальная сумма строк = 250" +  ", в строке под номером: 5");
+            int k = 0;
+            while (k < sumArray.Length)
+            {
+               Console.WriteLine(sumArray[k]);
+               k++;
+            }
+
+            Console.WriteLine();
+            return sumArray;
          }
 
          Console.WriteLine("Минимальная сумма строк = 250" + ", в строке под номером: 5");
@@ -224,9 +228,8 @@ namespace WrongWriteCodePartTwo
          Console.WriteLine("Прямоугольный массив");
          OutputMassif();
          Console.WriteLine("Строка с наименьшей суммой элементов");
-         FindRowLowAmount();
          //
-         int [] bank = SumRowElements(cluster);
+         int [] bank = FindRowLowAmount(cluster);
 
          Console.WriteLine("-------------------------------");
          Console.WriteLine("Умножение двух двумерных матриц");
