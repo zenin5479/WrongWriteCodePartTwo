@@ -191,7 +191,7 @@ namespace WrongWriteCodePartTwo
          }
 
          // Метод нахождения строки в массиве с наименьшей суммой элементов
-         int[] FindRowLowAmount(int[,] inputArray)
+         int[] SumRowElements(int[,] inputArray)
          {
             Console.WriteLine("Одномерный массив сумм элементов строк двумерного массива");
             int[] sumArray = new int[inputArray.GetLength(0)];
@@ -229,7 +229,7 @@ namespace WrongWriteCodePartTwo
          OutputMassif();
          Console.WriteLine("Строка с наименьшей суммой элементов");
          //
-         int [] bank = FindRowLowAmount(cluster);
+         int [] bank = SumRowElements(cluster);
 
          Console.WriteLine("-------------------------------");
          Console.WriteLine("Умножение двух двумерных матриц");
@@ -563,37 +563,6 @@ namespace WrongWriteCodePartTwo
          Console.WriteLine("Упорядоченный массив c заменой строк");
          Zadacha1(array1);
          PrintArray1(array1);
-      }
-
-      public static int[] SumRowElements(int[,] inputArray)
-      {
-         Console.WriteLine("Одномерный массив сумм элементов строк двумерного массива");
-         int[] sumArray = new int[inputArray.GetLength(0)];
-         int i = 0;
-         while (i < inputArray.GetLength(0))
-         {
-            int sum = 0;
-            int j = 0;
-            while (j < inputArray.GetLength(1))
-            {
-               sum += inputArray[i, j];
-               j++;
-            }
-
-            sumArray[i] = sum;
-
-            i++;
-         }
-
-         int k = 0;
-         while (k < sumArray.Length)
-         {
-            Console.WriteLine(sumArray[k]);
-            k++;
-         }
-
-         Console.WriteLine();
-         return sumArray;
       }
    }
 }
