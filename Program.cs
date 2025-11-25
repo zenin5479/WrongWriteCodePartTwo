@@ -224,7 +224,6 @@ namespace WrongWriteCodePartTwo
 
 
 
-
          CompletionMassif();
          Console.WriteLine("Прямоугольный массив");
          OutputMassif();
