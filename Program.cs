@@ -219,23 +219,22 @@ namespace WrongWriteCodePartTwo
             }
 
             // Поиск максимального элемента строки
-            int row = 0;
-
-            int minSum = sumArray[0];
+            int rank = 0;
             int indexMinSum = 0;
-            while (row < sumArray.Length)
+            int minSum = sumArray[0];
+            while (rank < sumArray.Length)
             {
-               // Cчитаем, что минимум - это первый элемент строки
-               if (minSum > sumArray[row])
+               // Cчитаем, что минимум - это нулевой элемент массива
+               if (minSum > sumArray[rank])
                {
-                  minSum = sumArray[row];
-                  indexMinSum = row;
+                  minSum = sumArray[rank];
+                  indexMinSum = rank;
                }
 
-               row++;
+               rank++;
             }
 
-            Console.WriteLine("Минимальная сумма элементов = {0}" + ", в строке с индексом: {1}", minSum, indexMinSum);
+            Console.WriteLine("Минимальная сумма элементов: {0}," + " в строке с индексом: {1}", minSum, indexMinSum);
          }
 
          CompletionMassif();
