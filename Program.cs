@@ -222,7 +222,7 @@ namespace WrongWriteCodePartTwo
                   maxOut = sumArray[row];
                }
                sumArray[row] = maxOut;
-               Console.WriteLine("Максимум в строке {0} равен: {1}", rowOut, maxOut);
+               Console.WriteLine("Максимум равен: {0}", maxOut);
                row++;
             }
 
