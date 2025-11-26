@@ -191,7 +191,7 @@ namespace WrongWriteCodePartTwo
          }
 
          // Метод нахождения строки в массиве с наименьшей суммой элементов
-         int[] SumRowElements(int[,] inputArray)
+         void SumRowElements(int[,] inputArray)
          {
             Console.WriteLine("Одномерный массив сумм элементов строк двумерного массива");
             int[] sumArray = new int[inputArray.GetLength(0)];
@@ -226,16 +226,7 @@ namespace WrongWriteCodePartTwo
                row++;
             }
 
-            Console.WriteLine("Массив максимальных значений строк");
-            int indexMax = 0;
-            while (indexMax < arrayMax.Length)
-            {
-               Console.Write("{0} ", arrayMax[indexMax]);
-               indexMax++;
-            }
-
-            Console.WriteLine();
-            return arrayMax;
+            
 
 
 
