@@ -220,19 +220,20 @@ namespace WrongWriteCodePartTwo
 
             // Поиск максимального элемента строки
             int row = 0;
-            int maxOut = sumArray[0];
+            int minSum = sumArray[0];
             while (row < sumArray.GetLength(0))
             {
                // Cчитаем, что максимум - это первый элемент строки
-               if (maxOut < sumArray[row])
+               if (minSum > sumArray[row])
                {
-                  maxOut = sumArray[row];
+                  minSum = sumArray[row];
                }
-               sumArray[row] = maxOut;
-               Console.WriteLine("Максимум равен: {0}", maxOut);
+               sumArray[row] = minSum;
+
                row++;
             }
 
+            Console.WriteLine("Максимум равен: {0}", minSum);
             Console.WriteLine();
          }
 
