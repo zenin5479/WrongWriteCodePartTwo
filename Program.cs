@@ -220,11 +220,12 @@ namespace WrongWriteCodePartTwo
 
             // Поиск максимального элемента строки
             int row = 0;
+
             int minSum = sumArray[0];
             int indexMinSum = 0;
             while (row < sumArray.Length)
             {
-               // Cчитаем, что максимум - это первый элемент строки
+               // Cчитаем, что минимум - это первый элемент строки
                if (minSum > sumArray[row])
                {
                   minSum = sumArray[row];
