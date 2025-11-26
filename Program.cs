@@ -213,25 +213,16 @@ namespace WrongWriteCodePartTwo
 
             // Поиск максимального элемента строки
             int row = 0;
-            int column = 0;
-            int maxOut = inputArray[0];
-            while (row < inputArray.GetLength(0))
+            int maxOut = sumArray[0];
+            while (row < sumArray.GetLength(0))
             {
                // Cчитаем, что максимум - это первый элемент строки
-
-               while (column < inputArray.GetLength(1))
+               if (maxOut < sumArray[row])
                {
-                  if (maxOut < inputArray[row, column])
-                  {
-                     maxOut = inputArray[row, column];
-                  }
-
-                  column++;
+                  maxOut = sumArray[row];
                }
-
-               arrayMax[row] = maxOut;
-               //Console.WriteLine("Максимум в строке {0} равен: {1}", rowOut, maxOut);
-               column = 0;
+               sumArray[row] = maxOut;
+               Console.WriteLine("Максимум в строке {0} равен: {1}", rowOut, maxOut);
                row++;
             }
 
