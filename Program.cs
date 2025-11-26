@@ -211,6 +211,13 @@ namespace WrongWriteCodePartTwo
                i++;
             }
 
+            int k = 0;
+            while (k < sumArray.Length)
+            {
+               Console.WriteLine(sumArray[k]);
+               k++;
+            }
+
             // Поиск максимального элемента строки
             int row = 0;
             int maxOut = sumArray[0];
@@ -227,7 +234,6 @@ namespace WrongWriteCodePartTwo
             }
 
             Console.WriteLine();
-            return sumArray;
          }
 
          CompletionMassif();
