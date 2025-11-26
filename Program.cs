@@ -226,12 +226,6 @@ namespace WrongWriteCodePartTwo
                row++;
             }
 
-            
-
-
-
-
-
             Console.WriteLine();
             return sumArray;
          }
@@ -241,7 +235,7 @@ namespace WrongWriteCodePartTwo
          OutputMassif();
          Console.WriteLine("Строка с наименьшей суммой элементов");
          //
-         int[] bank = SumRowElements(cluster);
+         SumRowElements(cluster);
 
          Console.WriteLine("Минимальная сумма строк = 250" + ", в строке под номером: 5");
 
