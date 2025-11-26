@@ -220,22 +220,21 @@ namespace WrongWriteCodePartTwo
 
             // Поиск максимального элемента строки
             int row = 0;
-            int index = 0;
             int minSum = sumArray[0];
-
+            int indexMinSum = 0;
             while (row < sumArray.Length)
             {
                // Cчитаем, что максимум - это первый элемент строки
                if (minSum > sumArray[row])
                {
                   minSum = sumArray[row];
+                  indexMinSum = row;
                }
 
-               sumArray[row] = minSum;
                row++;
             }
 
-            Console.WriteLine("Минимальная сумма строк = {0}" + ", с индексом: {1}", minSum, columns);
+            Console.WriteLine("Минимальная сумма элементов = {0}" + ", в строке с индексом: {1}", minSum, indexMinSum);
             Console.WriteLine();
          }
 
