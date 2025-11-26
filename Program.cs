@@ -233,18 +233,16 @@ namespace WrongWriteCodePartTwo
                row++;
             }
 
-            Console.WriteLine("Максимум равен: {0}", minSum);
+            Console.WriteLine("Минимальная сумма строк = {0}" + ", с индексом: {1}", minSum, columns);
             Console.WriteLine();
          }
 
          CompletionMassif();
          Console.WriteLine("Прямоугольный массив");
          OutputMassif();
-         Console.WriteLine("Строка с наименьшей суммой элементов");
-         //
          SumRowElements(cluster);
 
-         Console.WriteLine("Минимальная сумма строк = 250" + ", в строке под номером: 5");
+
 
          Console.WriteLine("-------------------------------");
          Console.WriteLine("Умножение двух двумерных матриц");
