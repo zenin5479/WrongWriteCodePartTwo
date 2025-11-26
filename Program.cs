@@ -235,7 +235,6 @@ namespace WrongWriteCodePartTwo
             }
 
             Console.WriteLine("Минимальная сумма элементов = {0}" + ", в строке с индексом: {1}", minSum, indexMinSum);
-            Console.WriteLine();
          }
 
          CompletionMassif();
