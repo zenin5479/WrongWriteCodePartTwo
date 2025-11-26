@@ -242,8 +242,6 @@ namespace WrongWriteCodePartTwo
          OutputMassif();
          SumRowElements(cluster);
 
-
-
          Console.WriteLine("-------------------------------");
          Console.WriteLine("Умножение двух двумерных матриц");
          Console.WriteLine("-------------------------------");
