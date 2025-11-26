@@ -228,8 +228,8 @@ namespace WrongWriteCodePartTwo
                {
                   minSum = sumArray[row];
                }
-               sumArray[row] = minSum;
 
+               sumArray[row] = minSum;
                row++;
             }
 
