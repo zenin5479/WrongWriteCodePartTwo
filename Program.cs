@@ -218,7 +218,7 @@ namespace WrongWriteCodePartTwo
                k++;
             }
 
-            // Поиск максимального элемента строки
+            // Поиск максимального элемента масива
             int rank = 0;
             int indexMinSum = 0;
             int minSum = sumArray[0];
