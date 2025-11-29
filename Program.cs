@@ -191,7 +191,7 @@ namespace WrongWriteCodePartTwo
          }
 
          // Метод нахождения строки в массиве с наименьшей суммой элементов
-         void SumRowElements(int[,] inputArray)
+         void MinSumRowElements(int[,] inputArray)
          {
             Console.WriteLine("Одномерный массив сумм элементов строк двумерного массива");
             int[] sumArray = new int[inputArray.GetLength(0)];
@@ -240,7 +240,7 @@ namespace WrongWriteCodePartTwo
          CompletionMassif();
          Console.WriteLine("Прямоугольный массив");
          OutputMassif();
-         SumRowElements(cluster);
+         MinSumRowElements(cluster);
 
          Console.WriteLine("-------------------------------");
          Console.WriteLine("Умножение двух двумерных матриц");
