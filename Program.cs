@@ -405,7 +405,7 @@ namespace WrongWriteCodePartTwo
             }
          }
 
-         // Метод заполнения зубчатого 3-х мерного массива
+         // Метод заполнения 3-х мерного зубчатого  массива
          void FillArrZ()
          {
             Random rand = new Random();
