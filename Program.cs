@@ -309,8 +309,6 @@ namespace WrongWriteCodePartTwo
             }
          }
 
-
-
          FillArr1(arr1);
          FillArr1(arr2);
          Console.WriteLine("Матрица А:");
