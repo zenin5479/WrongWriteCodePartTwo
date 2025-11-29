@@ -381,7 +381,7 @@ namespace WrongWriteCodePartTwo
             }
          }
 
-         // Метод вывода 3х мерного прямоугольного массива
+         // Метод вывода 3-х мерного прямоугольного массива
          void PrintArr()
          {
             int L1 = arr.GetLength(0);
