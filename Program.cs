@@ -319,8 +319,6 @@ namespace WrongWriteCodePartTwo
          Multiplication(arr1, arr2);
          PrintArr1(Multiplication(arr1, arr2));
 
-
-
          Console.WriteLine("-------------------------------------------------------------------");
          Console.WriteLine("Трёхмерный прямоугольный массив из неповторяющихся двузначных чисел");
          Console.WriteLine("-------------------------------------------------------------------");
