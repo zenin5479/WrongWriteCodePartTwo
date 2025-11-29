@@ -101,7 +101,7 @@ namespace WrongWriteCodePartTwo
                m++;
             }
          }
-         
+
          FillingsMassif();
          Console.WriteLine("Исходный массив:");
          PrintMassif();
@@ -155,7 +155,7 @@ namespace WrongWriteCodePartTwo
          int strip = SizeRow();
          int verticals = SizeColumn(strip);
          int[,] cluster = new int[strip, verticals];
-         
+
          // Метод заполнения массива
          void CompletionMassif()
          {
@@ -334,7 +334,7 @@ namespace WrongWriteCodePartTwo
          // Инициализация зубчатого трехмерного массива на случайное количество строк
          int[][][] arrZ = new int[rnd.Next(3, 6)][][];
 
-          // Метод заполнения прямоугольного 3-х мерного массива
+         // Метод заполнения прямоугольного 3-х мерного массива
          void FillArr()
          {
             Random rand = new Random();
@@ -448,7 +448,7 @@ namespace WrongWriteCodePartTwo
                Console.WriteLine("==============================================================================================");
             }
          }
-         
+
          FillArr();
          PrintArr();
          FillArrZ();
