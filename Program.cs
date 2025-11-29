@@ -255,16 +255,6 @@ namespace WrongWriteCodePartTwo
          int[,] arr1 = new int[row1, column1];
          int[,] arr2 = new int[row2, column2];
 
-         FillArr1(arr1);
-         FillArr1(arr2);
-         Console.WriteLine("Матрица А:");
-         PrintArr1(arr1);
-         Console.WriteLine("Матрица B:");
-         PrintArr1(arr2);
-         Console.WriteLine("Матрица С = А * В:");
-         Multiplication(arr1, arr2);
-         PrintArr1(Multiplication(arr1, arr2));
-
          // Метод перемножения матриц
          int[,] Multiplication(int[,] a, int[,] b)
          {
@@ -319,6 +309,18 @@ namespace WrongWriteCodePartTwo
                }
             }
          }
+
+         FillArr1(arr1);
+         FillArr1(arr2);
+         Console.WriteLine("Матрица А:");
+         PrintArr1(arr1);
+         Console.WriteLine("Матрица B:");
+         PrintArr1(arr2);
+         Console.WriteLine("Матрица С = А * В:");
+         Multiplication(arr1, arr2);
+         PrintArr1(Multiplication(arr1, arr2));
+
+
 
          Console.WriteLine("-------------------------------------------------------------------");
          Console.WriteLine("Трёхмерный прямоугольный массив из неповторяющихся двузначных чисел");
