@@ -242,10 +242,6 @@ namespace WrongWriteCodePartTwo
          OutputMassif();
          MinSumRowElements(cluster);
 
-         
-
-        
-
          Console.WriteLine("-------------------------------------------------------------------");
          Console.WriteLine("Трёхмерный прямоугольный массив из неповторяющихся двузначных чисел");
          Console.WriteLine("-------------------------------------------------------------------");
