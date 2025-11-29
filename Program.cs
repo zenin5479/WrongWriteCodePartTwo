@@ -323,9 +323,7 @@ namespace WrongWriteCodePartTwo
                Console.WriteLine("===========================================================================================");
             }
          }
-
-        
-
+         
          FillArr();
          PrintArr();
          Console.WriteLine();
