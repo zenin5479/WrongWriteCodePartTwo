@@ -332,13 +332,7 @@ namespace WrongWriteCodePartTwo
          // Инициализация зубчатого трехмерного массива на рондомное кол стр
          int[][][] arrZ = new int[rnd.Next(3, 6)][][];
 
-         FillArr();
-         PrintArr();
-
-         FillArrZ();
-         PrintArrZ();
-
-         // Метод заполнения прямоугольного 3-х мерного массива
+          // Метод заполнения прямоугольного 3-х мерного массива
          void FillArr()
          {
             Random rand = new Random();
@@ -452,6 +446,14 @@ namespace WrongWriteCodePartTwo
                Console.WriteLine("==============================================================================================");
             }
          }
+         
+         FillArr();
+         PrintArr();
+
+         FillArrZ();
+         PrintArrZ();
+
+        
 
          Console.WriteLine();
 
