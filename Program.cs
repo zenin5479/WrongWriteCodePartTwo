@@ -252,8 +252,7 @@ namespace WrongWriteCodePartTwo
          int r3 = rnd.Next(2, 5);
          // Инициализация прямоугольного массива (z,y,x) заполненного нулевыми значениями 
          int[,,] arr = new int[r1, r2, r3];
-         // Инициализация зубчатого трехмерного массива на случайное количество строк
-         int[][][] arrZ = new int[rnd.Next(3, 6)][][];
+      
 
          // Метод заполнения прямоугольного 3-х мерного массива
          void FillArr()
@@ -326,54 +325,10 @@ namespace WrongWriteCodePartTwo
             }
          }
 
-         // Метод заполнения 3-х мерного зубчатого массива
-         void FillArrZ()
-         {
-            Random rand = new Random();
-            int L = arrZ.Length;
-            for (int i = 0; i < L; i++)
-            {
-               // Генерация случайного кол строк для каждой из стр 
-               arrZ[i] = new int[rand.Next(2, 9)][];
-               // Перебор строк 
-               for (int j = 0; j < arrZ[i].Length; j++)
-               {
-                  // Для каждой строки генерация рондомно кол элементов 
-                  arrZ[i][j] = new int[rand.Next(2, 9)];
-                  for (int k = 0; k < arrZ[i][j].Length; k++)
-                  {
-                     // Для каждого элемента генерация рондомно значения 
-                     arrZ[i][j][k] = rand.Next(100);
-                  }
-               }
-            }
-         }
-
-         // Метод вывода 3-х мерного зубчатого массива
-         void PrintArrZ()
-         {
-            Console.WriteLine("Трехмерный зубчатый массив:");
-            for (int i = 0; i < arrZ.Length; i++)
-            {
-               Console.WriteLine("Page №: " + (i));
-               for (int j = 0; j < arrZ[i].Length; j++)
-               {
-                  for (int k = 0; k < arrZ[i][j].Length; k++)
-                  {
-                     Console.Write("arr [" + i + ", " + j + ", " + k + "] = " + arrZ[i][j][k] + "; ");
-                  }
-
-                  Console.WriteLine();
-               }
-
-               Console.WriteLine("==============================================================================================");
-            }
-         }
+        
 
          FillArr();
          PrintArr();
-         FillArrZ();
-         PrintArrZ();
          Console.WriteLine();
 
          Console.WriteLine("-----------------------------------------------");
