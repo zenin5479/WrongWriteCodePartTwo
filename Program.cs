@@ -449,7 +449,6 @@ namespace WrongWriteCodePartTwo
          
          FillArr();
          PrintArr();
-
          FillArrZ();
          PrintArrZ();
 
