@@ -155,6 +155,7 @@ namespace WrongWriteCodePartTwo
          int strip = SizeRow();
          int verticals = SizeColumn(strip);
          int[,] cluster = new int[strip, verticals];
+         
          // Метод заполнения массива
          void CompletionMassif()
          {
