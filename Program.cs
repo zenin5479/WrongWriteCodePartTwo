@@ -251,9 +251,23 @@ namespace WrongWriteCodePartTwo
          Console.WriteLine("Введите количество строк и столбцов матрицы B");
          int row2 = Convert.ToInt32(Console.ReadLine());
          int column2 = Convert.ToInt32(Console.ReadLine());
-
          int[,] arr1 = new int[row1, column1];
          int[,] arr2 = new int[row2, column2];
+
+         // Метод заполнения массива
+         void FillArr1(int[,] array)
+         {
+            int row = array.GetLength(0);
+            int column = array.GetLength(1);
+            Random rand = new Random();
+            for (int i = 0; i < row; i++)
+            {
+               for (int j = 0; j < column; j++)
+               {
+                  array[i, j] = rand.Next(-9, 8);
+               }
+            }
+         }
 
          // Метод перемножения матриц
          int[,] Multiplication(int[,] a, int[,] b)
@@ -295,20 +309,7 @@ namespace WrongWriteCodePartTwo
             }
          }
 
-         // Метод заполнения массива
-         void FillArr1(int[,] array)
-         {
-            int row = array.GetLength(0);
-            int column = array.GetLength(1);
-            Random rand = new Random();
-            for (int i = 0; i < row; i++)
-            {
-               for (int j = 0; j < column; j++)
-               {
-                  array[i, j] = rand.Next(-9, 8);
-               }
-            }
-         }
+
 
          FillArr1(arr1);
          FillArr1(arr2);
