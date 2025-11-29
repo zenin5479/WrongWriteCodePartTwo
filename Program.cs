@@ -242,82 +242,9 @@ namespace WrongWriteCodePartTwo
          OutputMassif();
          MinSumRowElements(cluster);
 
-         Console.WriteLine("-------------------------------");
-         Console.WriteLine("Умножение двух двумерных матриц");
-         Console.WriteLine("-------------------------------");
-         Console.WriteLine("Введите количество строк и столбцов матрицы А");
-         int row1 = Convert.ToInt32(Console.ReadLine());
-         int column1 = Convert.ToInt32(Console.ReadLine());
-         Console.WriteLine("Введите количество строк и столбцов матрицы B");
-         int row2 = Convert.ToInt32(Console.ReadLine());
-         int column2 = Convert.ToInt32(Console.ReadLine());
-         int[,] arr1 = new int[row1, column1];
-         int[,] arr2 = new int[row2, column2];
+         
 
-         // Метод заполнения массива
-         void FillArr1(int[,] array)
-         {
-            int row = array.GetLength(0);
-            int column = array.GetLength(1);
-            Random rand = new Random();
-            for (int i = 0; i < row; i++)
-            {
-               for (int j = 0; j < column; j++)
-               {
-                  array[i, j] = rand.Next(-9, 8);
-               }
-            }
-         }
-
-         // Метод перемножения матриц
-         int[,] Multiplication(int[,] a, int[,] b)
-         {
-            if (a.GetLength(1) != b.GetLength(0))
-            {
-               if (a.GetLength(1) != b.GetLength(0))
-               {
-                  Console.WriteLine("Матрицы нельзя перемножить. Введите другие размерности матриц");
-               }
-            }
-
-            int[,] r = new int[a.GetLength(0), b.GetLength(1)];
-            for (int i = 0; i < a.GetLength(0); i++)
-            {
-               for (int j = 0; j < b.GetLength(1); j++)
-               {
-                  for (int k = 0; k < b.GetLength(0); k++)
-                  {
-                     r[i, j] += a[i, k] * b[k, j];
-                  }
-               }
-            }
-
-            return r;
-         }
-
-         // Метод вывода массива
-         void PrintArr1(int[,] c)
-         {
-            for (int i = 0; i < c.GetLength(0); i++)
-            {
-               for (int j = 0; j < c.GetLength(1); j++)
-               {
-                  Console.Write("{0} ", c[i, j]);
-               }
-
-               Console.WriteLine();
-            }
-         }
-
-         FillArr1(arr1);
-         FillArr1(arr2);
-         Console.WriteLine("Матрица А:");
-         PrintArr1(arr1);
-         Console.WriteLine("Матрица B:");
-         PrintArr1(arr2);
-         Console.WriteLine("Матрица С = А * В:");
-         Multiplication(arr1, arr2);
-         PrintArr1(Multiplication(arr1, arr2));
+        
 
          Console.WriteLine("-------------------------------------------------------------------");
          Console.WriteLine("Трёхмерный прямоугольный массив из неповторяющихся двузначных чисел");
