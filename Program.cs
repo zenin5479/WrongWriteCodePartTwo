@@ -451,9 +451,6 @@ namespace WrongWriteCodePartTwo
          PrintArr();
          FillArrZ();
          PrintArrZ();
-
-        
-
          Console.WriteLine();
 
          Console.WriteLine("-----------------------------------------------");
