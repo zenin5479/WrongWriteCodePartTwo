@@ -252,7 +252,6 @@ namespace WrongWriteCodePartTwo
          int r3 = rnd.Next(2, 5);
          // Инициализация прямоугольного массива (z,y,x) заполненного нулевыми значениями 
          int[,,] arr = new int[r1, r2, r3];
-      
 
          // Метод заполнения прямоугольного 3-х мерного массива
          void FillArr()
