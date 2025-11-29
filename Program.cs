@@ -101,6 +101,7 @@ namespace WrongWriteCodePartTwo
                m++;
             }
          }
+         
          FillingsMassif();
          Console.WriteLine("Исходный массив:");
          PrintMassif();
@@ -573,7 +574,5 @@ namespace WrongWriteCodePartTwo
          Zadacha1(array1);
          PrintArray1(array1);
       }
-
-     
    }
 }
