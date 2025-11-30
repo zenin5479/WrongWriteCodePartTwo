@@ -248,10 +248,10 @@ namespace WrongWriteCodePartTwo
          Console.WriteLine("Трёхмерный прямоугольный массив из неповторяющихся двузначных чисел");
          Console.WriteLine("-------------------------------------------------------------------");
 
-         Random rnd = new Random();
-         int r1 = rnd.Next(2, 5);
-         int r2 = rnd.Next(2, 5);
-         int r3 = rnd.Next(2, 5);
+         Random arbitrary = new Random();
+         int r1 = arbitrary.Next(2, 5);
+         int r2 = arbitrary.Next(2, 5);
+         int r3 = arbitrary.Next(2, 5);
          // Инициализация прямоугольного массива (z,y,x) заполненного нулевыми значениями 
          int[,,] arr = new int[r1, r2, r3];
 
@@ -307,14 +307,14 @@ namespace WrongWriteCodePartTwo
          {
             int l1 = arr.GetLength(0);
             int l2 = arr.GetLength(1);
-            int L3 = arr.GetLength(2);
-            Console.WriteLine("Прямоугольный трехмерный массив размерностью: [" + l1 + ", " + l2 + ", " + L3 + "] ");
+            int l3 = arr.GetLength(2);
+            Console.WriteLine("Прямоугольный трехмерный массив размерностью: [" + l1 + ", " + l2 + ", " + l3 + "] ");
             for (int m = 0; m < l1; m++)
             {
                Console.WriteLine("Page №: " + (m));
                for (int i = 0; i < l2; i++)
                {
-                  for (int j = 0; j < L3; j++)
+                  for (int j = 0; j < l3; j++)
                   {
                      Console.Write("arr [" + m + ", " + i + ", " + j + "] = " + arr[m, i, j] + "; ");
                   }
