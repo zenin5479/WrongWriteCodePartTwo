@@ -266,7 +266,7 @@ namespace WrongWriteCodePartTwo
             // Массив для проверки чисел на неповторяемость 
             int[] mass = new int[L4];
             mass[0] = 0;
-            int k = 0;
+            int k;
             int q = 0;
             int g = 0;
             for (int m = 0; m < L1; m++)
