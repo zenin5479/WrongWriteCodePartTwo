@@ -305,11 +305,11 @@ namespace WrongWriteCodePartTwo
          // Метод вывода 3-х мерного прямоугольного массива
          void PrintArr()
          {
-            int L1 = arr.GetLength(0);
+            int l1 = arr.GetLength(0);
             int L2 = arr.GetLength(1);
             int L3 = arr.GetLength(2);
-            Console.WriteLine("Прямоугольный трехмерный массив размерностью: [" + L1 + ", " + L2 + ", " + L3 + "] ");
-            for (int m = 0; m < L1; m++)
+            Console.WriteLine("Прямоугольный трехмерный массив размерностью: [" + l1 + ", " + L2 + ", " + L3 + "] ");
+            for (int m = 0; m < l1; m++)
             {
                Console.WriteLine("Page №: " + (m));
                for (int i = 0; i < L2; i++)
