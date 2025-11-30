@@ -266,7 +266,6 @@ namespace WrongWriteCodePartTwo
             // Массив для проверки чисел на неповторяемость 
             int[] range = new int[forcefour];
             range[0] = 0;
-            int l;
             int m = 0;
             int n = 0;
             for (int i = 0; i < forceone; i++)
@@ -277,7 +276,7 @@ namespace WrongWriteCodePartTwo
                   {
                      int numm = casual.Next(10, 98);
                      // Проверка на уникальность значений, вводимых в 3х мерный массив
-                     for (l = 0; l < forcefour; l++)
+                     for (int l = 0; l < forcefour; l++)
                      {
                         if (range[l] != numm)
                         {
@@ -325,7 +324,7 @@ namespace WrongWriteCodePartTwo
                Console.WriteLine("===========================================================================================");
             }
          }
-         
+
          FillArr();
          PrintArr();
          Console.WriteLine();
