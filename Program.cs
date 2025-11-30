@@ -249,11 +249,11 @@ namespace WrongWriteCodePartTwo
          Console.WriteLine("-------------------------------------------------------------------");
 
          Random arbitrary = new Random();
-         int r1 = arbitrary.Next(2, 5);
-         int r2 = arbitrary.Next(2, 5);
-         int r3 = arbitrary.Next(2, 5);
+         int chanceone = arbitrary.Next(2, 5);
+         int chancetwo = arbitrary.Next(2, 5);
+         int chancethree = arbitrary.Next(2, 5);
          // Инициализация прямоугольного массива (z,y,x) заполненного нулевыми значениями 
-         int[,,] arr = new int[r1, r2, r3];
+         int[,,] arr = new int[chanceone, chancetwo, chancethree];
 
          // Метод заполнения прямоугольного 3-х мерного массива
          void FillArr()
