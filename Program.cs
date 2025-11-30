@@ -258,7 +258,7 @@ namespace WrongWriteCodePartTwo
          // Метод заполнения прямоугольного 3-х мерного массива
          void FillArr()
          {
-            Random rand = new Random();
+            Random casual = new Random();
             int l1 = parade.GetLength(0);
             int l2 = parade.GetLength(1);
             int l3 = parade.GetLength(2);
@@ -275,7 +275,7 @@ namespace WrongWriteCodePartTwo
                {
                   for (int j = 0; j < l3; j++)
                   {
-                     int numm = rand.Next(10, 98);
+                     int numm = casual.Next(10, 98);
                      // Проверка на уникальность значений, вводимых в 3х мерный массив
                      for (k = 0; k < l4; k++)
                      {
