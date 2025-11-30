@@ -331,8 +331,6 @@ namespace WrongWriteCodePartTwo
 
                   Console.WriteLine();
                }
-
-               Console.WriteLine("===========================================================================================");
             }
          }
 
