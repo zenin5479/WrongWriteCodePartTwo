@@ -260,24 +260,24 @@ namespace WrongWriteCodePartTwo
          {
             Random casual = new Random();
             int forceone = parade.GetLength(0);
-            int l2 = parade.GetLength(1);
-            int l3 = parade.GetLength(2);
-            int l4 = forceone * l2 * l3;
+            int forcetwo = parade.GetLength(1);
+            int forcethree = parade.GetLength(2);
+            int forcefour = forceone * forcetwo * forcethree;
             // Массив для проверки чисел на неповторяемость 
-            int[] range = new int[l4];
+            int[] range = new int[forcefour];
             range[0] = 0;
             int k;
             int q = 0;
             int g = 0;
             for (int m = 0; m < forceone; m++)
             {
-               for (int i = 0; i < l2; i++)
+               for (int i = 0; i < forcetwo; i++)
                {
-                  for (int j = 0; j < l3; j++)
+                  for (int j = 0; j < forcethree; j++)
                   {
                      int numm = casual.Next(10, 98);
                      // Проверка на уникальность значений, вводимых в 3х мерный массив
-                     for (k = 0; k < l4; k++)
+                     for (k = 0; k < forcefour; k++)
                      {
                         if (range[k] != numm)
                         {
@@ -285,7 +285,7 @@ namespace WrongWriteCodePartTwo
                         }
                      }
 
-                     if (q == l4)
+                     if (q == forcefour)
                      {
                         parade[m, i, j] = numm;
                         q = 0;
