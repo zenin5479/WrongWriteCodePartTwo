@@ -253,19 +253,19 @@ namespace WrongWriteCodePartTwo
          int chancetwo = arbitrary.Next(2, 5);
          int chancethree = arbitrary.Next(2, 5);
          // Инициализация прямоугольного массива (z,y,x) заполненного нулевыми значениями 
-         int[,,] arr = new int[chanceone, chancetwo, chancethree];
+         int[,,] parade = new int[chanceone, chancetwo, chancethree];
 
          // Метод заполнения прямоугольного 3-х мерного массива
          void FillArr()
          {
             Random rand = new Random();
-            int l1 = arr.GetLength(0);
-            int l2 = arr.GetLength(1);
-            int l3 = arr.GetLength(2);
+            int l1 = parade.GetLength(0);
+            int l2 = parade.GetLength(1);
+            int l3 = parade.GetLength(2);
             int l4 = l1 * l2 * l3;
             // Массив для проверки чисел на неповторяемость 
-            int[] mass = new int[l4];
-            mass[0] = 0;
+            int[] range = new int[l4];
+            range[0] = 0;
             int k;
             int q = 0;
             int g = 0;
@@ -279,7 +279,7 @@ namespace WrongWriteCodePartTwo
                      // Проверка на уникальность значений, вводимых в 3х мерный массив
                      for (k = 0; k < l4; k++)
                      {
-                        if (mass[k] != numm)
+                        if (range[k] != numm)
                         {
                            q++;
                         }
@@ -287,9 +287,9 @@ namespace WrongWriteCodePartTwo
 
                      if (q == l4)
                      {
-                        arr[m, i, j] = numm;
+                        parade[m, i, j] = numm;
                         q = 0;
-                        mass[g] = numm;
+                        range[g] = numm;
                         g++;
                      }
                      else
@@ -305,9 +305,9 @@ namespace WrongWriteCodePartTwo
          // Метод вывода 3-х мерного прямоугольного массива
          void PrintArr()
          {
-            int l1 = arr.GetLength(0);
-            int l2 = arr.GetLength(1);
-            int l3 = arr.GetLength(2);
+            int l1 = parade.GetLength(0);
+            int l2 = parade.GetLength(1);
+            int l3 = parade.GetLength(2);
             Console.WriteLine("Прямоугольный трехмерный массив размерностью: [" + l1 + ", " + l2 + ", " + l3 + "] ");
             for (int m = 0; m < l1; m++)
             {
@@ -316,7 +316,7 @@ namespace WrongWriteCodePartTwo
                {
                   for (int j = 0; j < l3; j++)
                   {
-                     Console.Write("arr [" + m + ", " + i + ", " + j + "] = " + arr[m, i, j] + "; ");
+                     Console.Write("arr [" + m + ", " + i + ", " + j + "] = " + parade[m, i, j] + "; ");
                   }
 
                   Console.WriteLine();
