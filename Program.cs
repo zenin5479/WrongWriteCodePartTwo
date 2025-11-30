@@ -246,7 +246,6 @@ namespace WrongWriteCodePartTwo
          Console.WriteLine("-------------------------------------------------------------------");
          Console.WriteLine("Трёхмерный прямоугольный массив из неповторяющихся двузначных чисел");
          Console.WriteLine("-------------------------------------------------------------------");
-
          Random arbitrary = new Random();
          int chanceone = arbitrary.Next(2, 5);
          int chancetwo = arbitrary.Next(2, 5);
@@ -337,11 +336,9 @@ namespace WrongWriteCodePartTwo
          FillArr();
          PrintArr();
 
-         Console.WriteLine("-----------------------------------------------");
-         Console.WriteLine("Заполнение спирально двумерного массива 2 метод");
-         Console.WriteLine("-----------------------------------------------");
-
-         Console.WriteLine();
+         Console.WriteLine("---------------------------------------");
+         Console.WriteLine("Заполнение спирально двумерного массива");
+         Console.WriteLine("---------------------------------------");
          int sizeX = 3;
          int sizeY = 4;
          int[,] matrix = new int[sizeX, sizeY];
