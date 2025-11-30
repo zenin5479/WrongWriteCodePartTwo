@@ -278,12 +278,6 @@ namespace WrongWriteCodePartTwo
                   while (k < forcethree)
                   {
 
-
-
-                     k++;
-                  }
-                  for ( )
-                  {
                      int numm = casual.Next(10, 98);
                      // Проверка на уникальность значений, вводимых в 3х мерный массив
                      for (int l = 0; l < forcefour; l++)
@@ -306,9 +300,9 @@ namespace WrongWriteCodePartTwo
                         m = 0;
                         k--;
                      }
+
+                     k++;
                   }
-
-
 
                   j++;
                }
