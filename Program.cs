@@ -322,12 +322,12 @@ namespace WrongWriteCodePartTwo
             Console.WriteLine("Прямоугольный трехмерный массив размерностью: [" + l1 + ", " + l2 + ", " + l3 + "] ");
             for (int m = 0; m < l1; m++)
             {
-               Console.WriteLine("Слой №: " + (m));
+               Console.WriteLine("Глубина №: " + (m));
                for (int i = 0; i < l2; i++)
                {
                   for (int j = 0; j < l3; j++)
                   {
-                     Console.Write("Массив [" + m + ", " + i + ", " + j + "] = " + parade[m, i, j] + "; ");
+                     Console.Write("Элемент " + parade[m, i, j] + "; "+"Индекс [" + m + ", " + i + ", " + j + "] ");
                   }
 
                   Console.WriteLine();
