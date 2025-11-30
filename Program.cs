@@ -274,7 +274,15 @@ namespace WrongWriteCodePartTwo
                int j = 0;
                while (j < forcetwo)
                {
-                  for (int k = 0; k < forcethree; k++)
+                  int k = 0;
+                  while (k < forcethree)
+                  {
+
+
+
+                     k++;
+                  }
+                  for ( )
                   {
                      int numm = casual.Next(10, 98);
                      // Проверка на уникальность значений, вводимых в 3х мерный массив
