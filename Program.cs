@@ -269,11 +269,11 @@ namespace WrongWriteCodePartTwo
             int k;
             int q = 0;
             int g = 0;
-            for (int m = 0; m < forceone; m++)
+            for (int r = 0; r < forceone; r++)
             {
-               for (int i = 0; i < forcetwo; i++)
+               for (int x = 0; x < forcetwo; x++)
                {
-                  for (int j = 0; j < forcethree; j++)
+                  for (int z = 0; z < forcethree; z++)
                   {
                      int numm = casual.Next(10, 98);
                      // Проверка на уникальность значений, вводимых в 3х мерный массив
@@ -287,7 +287,7 @@ namespace WrongWriteCodePartTwo
 
                      if (q == forcefour)
                      {
-                        parade[m, i, j] = numm;
+                        parade[r, x, z] = numm;
                         q = 0;
                         range[g] = numm;
                         g++;
@@ -295,7 +295,7 @@ namespace WrongWriteCodePartTwo
                      else
                      {
                         q = 0;
-                        j--;
+                        z--;
                      }
                   }
                }
