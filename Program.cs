@@ -108,7 +108,6 @@ namespace WrongWriteCodePartTwo
          MaximumToMinimum();
          Console.WriteLine("Упорядоченный массив по убыванию в строке:");
          PrintMassif();
-         Console.WriteLine();
 
          Console.WriteLine("--------------------------------------------------------------------------------");
          Console.WriteLine("Находение строки с наименьшей суммой элементов прямоугольного двумерного массива");
