@@ -268,7 +268,8 @@ namespace WrongWriteCodePartTwo
             range[0] = 0;
             int m = 0;
             int n = 0;
-            for (int i = 0; i < forceone; i++)
+            int i = 0;
+            while (i < forceone)
             {
                for (int j = 0; j < forcetwo; j++)
                {
@@ -298,6 +299,8 @@ namespace WrongWriteCodePartTwo
                      }
                   }
                }
+               
+               i++;
             }
          }
 
