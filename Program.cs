@@ -259,17 +259,17 @@ namespace WrongWriteCodePartTwo
          void FillArr()
          {
             Random casual = new Random();
-            int l1 = parade.GetLength(0);
+            int forceone = parade.GetLength(0);
             int l2 = parade.GetLength(1);
             int l3 = parade.GetLength(2);
-            int l4 = l1 * l2 * l3;
+            int l4 = forceone * l2 * l3;
             // Массив для проверки чисел на неповторяемость 
             int[] range = new int[l4];
             range[0] = 0;
             int k;
             int q = 0;
             int g = 0;
-            for (int m = 0; m < l1; m++)
+            for (int m = 0; m < forceone; m++)
             {
                for (int i = 0; i < l2; i++)
                {
