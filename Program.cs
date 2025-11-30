@@ -247,9 +247,9 @@ namespace WrongWriteCodePartTwo
          Console.WriteLine("Трёхмерный прямоугольный массив из неповторяющихся двузначных чисел");
          Console.WriteLine("-------------------------------------------------------------------");
          Random arbitrary = new Random();
-         int chanceone = arbitrary.Next(2, 5);
-         int chancetwo = arbitrary.Next(2, 5);
-         int chancethree = arbitrary.Next(2, 5);
+         int chanceone = arbitrary.Next(2, 5); //
+         int chancetwo = arbitrary.Next(2, 5); //
+         int chancethree = arbitrary.Next(2, 5); //
          // Инициализация прямоугольного массива (z,y,x) заполненного нулевыми значениями 
          int[,,] parade = new int[chanceone, chancetwo, chancethree];
 
@@ -391,6 +391,7 @@ namespace WrongWriteCodePartTwo
                            "и элементов последней строки, элементами побочной диагонали");
          Console.WriteLine("---------------------------------------------------------------------------------");
          Console.WriteLine("Введите размерность массива");
+         //
          int rows1 = Convert.ToInt32(Console.ReadLine());
          int columns1 = Convert.ToInt32(Console.ReadLine()); ;
          int[,] array1 = new int[rows1, columns1];
