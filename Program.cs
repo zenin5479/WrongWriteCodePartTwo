@@ -260,9 +260,9 @@ namespace WrongWriteCodePartTwo
          {
             Random rand = new Random();
             int l1 = arr.GetLength(0);
-            int L2 = arr.GetLength(1);
+            int l2 = arr.GetLength(1);
             int L3 = arr.GetLength(2);
-            int L4 = l1 * L2 * L3;
+            int L4 = l1 * l2 * L3;
             // Массив для проверки чисел на неповторяемость 
             int[] mass = new int[L4];
             mass[0] = 0;
@@ -271,7 +271,7 @@ namespace WrongWriteCodePartTwo
             int g = 0;
             for (int m = 0; m < l1; m++)
             {
-               for (int i = 0; i < L2; i++)
+               for (int i = 0; i < l2; i++)
                {
                   for (int j = 0; j < L3; j++)
                   {
