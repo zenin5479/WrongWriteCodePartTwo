@@ -327,7 +327,7 @@ namespace WrongWriteCodePartTwo
                {
                   for (int j = 0; j < l3; j++)
                   {
-                     Console.Write("Элемент " + parade[m, i, j] + "; "+"Индекс [" + m + ", " + i + ", " + j + "] ");
+                     Console.Write("Элемент " + parade[m, i, j] + "; " + "Индекс [" + m + ", " + i + ", " + j + "] ");
                   }
 
                   Console.WriteLine();
