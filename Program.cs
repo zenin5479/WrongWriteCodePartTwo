@@ -336,7 +336,6 @@ namespace WrongWriteCodePartTwo
 
          FillArr();
          PrintArr();
-         Console.WriteLine();
 
          Console.WriteLine("-----------------------------------------------");
          Console.WriteLine("Заполнение спирально двумерного массива 2 метод");
