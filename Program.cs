@@ -274,14 +274,6 @@ namespace WrongWriteCodePartTwo
                int j = 0;
                while (j < forcetwo)
                {
-                  
-                  
-                  
-                  
-                  j++;
-               }
-               for ( )
-               {
                   for (int k = 0; k < forcethree; k++)
                   {
                      int numm = casual.Next(10, 98);
@@ -307,6 +299,10 @@ namespace WrongWriteCodePartTwo
                         k--;
                      }
                   }
+
+
+
+                  j++;
                }
 
                i++;
