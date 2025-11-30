@@ -306,13 +306,13 @@ namespace WrongWriteCodePartTwo
          void PrintArr()
          {
             int l1 = arr.GetLength(0);
-            int L2 = arr.GetLength(1);
+            int l2 = arr.GetLength(1);
             int L3 = arr.GetLength(2);
-            Console.WriteLine("Прямоугольный трехмерный массив размерностью: [" + l1 + ", " + L2 + ", " + L3 + "] ");
+            Console.WriteLine("Прямоугольный трехмерный массив размерностью: [" + l1 + ", " + l2 + ", " + L3 + "] ");
             for (int m = 0; m < l1; m++)
             {
                Console.WriteLine("Page №: " + (m));
-               for (int i = 0; i < L2; i++)
+               for (int i = 0; i < l2; i++)
                {
                   for (int j = 0; j < L3; j++)
                   {
