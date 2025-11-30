@@ -262,9 +262,9 @@ namespace WrongWriteCodePartTwo
             int l1 = arr.GetLength(0);
             int l2 = arr.GetLength(1);
             int l3 = arr.GetLength(2);
-            int L4 = l1 * l2 * l3;
+            int l4 = l1 * l2 * l3;
             // Массив для проверки чисел на неповторяемость 
-            int[] mass = new int[L4];
+            int[] mass = new int[l4];
             mass[0] = 0;
             int k;
             int q = 0;
@@ -277,7 +277,7 @@ namespace WrongWriteCodePartTwo
                   {
                      int numm = rand.Next(10, 98);
                      // Проверка на уникальность значений, вводимых в 3х мерный массив
-                     for (k = 0; k < L4; k++)
+                     for (k = 0; k < l4; k++)
                      {
                         if (mass[k] != numm)
                         {
@@ -285,7 +285,7 @@ namespace WrongWriteCodePartTwo
                         }
                      }
 
-                     if (q == L4)
+                     if (q == l4)
                      {
                         arr[m, i, j] = numm;
                         q = 0;
