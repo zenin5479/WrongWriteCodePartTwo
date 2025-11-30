@@ -390,8 +390,6 @@ namespace WrongWriteCodePartTwo
          Console.WriteLine("Замена в двумерном массиве элементов первой строки элементами главной диагонали\n" +
                            "и элементов последней строки, элементами побочной диагонали");
          Console.WriteLine("---------------------------------------------------------------------------------");
-
-         Console.WriteLine();
          Console.WriteLine("Введите размерность массива");
          int rows1 = Convert.ToInt32(Console.ReadLine());
          int columns1 = Convert.ToInt32(Console.ReadLine()); ;
