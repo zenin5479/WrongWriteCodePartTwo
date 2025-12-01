@@ -318,8 +318,11 @@ namespace WrongWriteCodePartTwo
             int y = parade.GetLength(1);
             int z = parade.GetLength(2);
             Console.WriteLine("Прямоугольный трехмерный массив размерностью: [" + x + ", " + y + ", " + z + "] ");
-            
-            
+
+            while (expression)
+            {
+               
+            }
             for (int m = 0; m < x; m++)
             {
                Console.WriteLine("Глубина №: " + (m));
