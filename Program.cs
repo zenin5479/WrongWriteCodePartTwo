@@ -399,7 +399,6 @@ namespace WrongWriteCodePartTwo
                            "и элементов последней строки, элементами побочной диагонали");
          Console.WriteLine("---------------------------------------------------------------------------------");
          Console.WriteLine("Введите размерность массива");
-         //
          int rows1 = Convert.ToInt32(Console.ReadLine()); //
          int columns1 = Convert.ToInt32(Console.ReadLine()); //
          int[,] array1 = new int[rows1, columns1];
