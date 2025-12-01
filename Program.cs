@@ -275,7 +275,7 @@ namespace WrongWriteCodePartTwo
                   int k = 0;
                   while (k < forcethree)
                   {
-                     int number = casual.Next(10, 98);
+                     int number = casual.Next(10, 100);
                      // Проверка на уникальность значений, вводимых в 3х мерный массив
                      int l = 0;
                      while (l < forcefour)
