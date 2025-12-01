@@ -314,16 +314,16 @@ namespace WrongWriteCodePartTwo
          // Метод вывода 3-х мерного прямоугольного массива
          void PrintArr()
          {
-            int l1 = parade.GetLength(0);
-            int l2 = parade.GetLength(1);
-            int l3 = parade.GetLength(2);
-            Console.WriteLine("Прямоугольный трехмерный массив размерностью: [" + l1 + ", " + l2 + ", " + l3 + "] ");
-            for (int m = 0; m < l1; m++)
+            int x = parade.GetLength(0);
+            int y = parade.GetLength(1);
+            int z = parade.GetLength(2);
+            Console.WriteLine("Прямоугольный трехмерный массив размерностью: [" + x + ", " + y + ", " + z + "] ");
+            for (int m = 0; m < x; m++)
             {
                Console.WriteLine("Глубина №: " + (m));
-               for (int i = 0; i < l2; i++)
+               for (int i = 0; i < y; i++)
                {
-                  for (int j = 0; j < l3; j++)
+                  for (int j = 0; j < z; j++)
                   {
                      Console.Write("Элемент " + parade[m, i, j] + "; " + "Индекс [" + m + ", " + i + ", " + j + "] ");
                   }
