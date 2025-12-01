@@ -321,13 +321,6 @@ namespace WrongWriteCodePartTwo
             int m = 0;
             while (m < x)
             {
-               
-               
-               
-               m++;
-            }
-            for ( )
-            {
                Console.WriteLine("Глубина №: " + (m));
                for (int r = 0; r < y; r++)
                {
@@ -338,6 +331,8 @@ namespace WrongWriteCodePartTwo
 
                   Console.WriteLine();
                }
+               
+               m++;
             }
          }
 
