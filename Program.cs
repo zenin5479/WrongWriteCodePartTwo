@@ -439,13 +439,9 @@ namespace WrongWriteCodePartTwo
             return m;
          }
 
-         int strip = SizeRow();
-         int verticals = SizeColumn(strip);
-         int[,] cluster = new int[strip, verticals];
-
-         int rows1 = Convert.ToInt32(Console.ReadLine()); //
-         int columns1 = Convert.ToInt32(Console.ReadLine()); //
-         int[,] array1 = new int[rows1, columns1];
+         int argument = DimensionRow();
+         int tower = DimensionColumn(argument);
+         int[,] formation = new int[argument, verticals];
 
          // Метод замены строк в массиве
          void Zadacha1(int[,] array)
@@ -496,12 +492,12 @@ namespace WrongWriteCodePartTwo
             }
          }
 
-         FillArray1(array1);
+         FillArray1(formation);
          Console.WriteLine("Исходный массив");
-         PrintArray1(array1);
+         PrintArray1(formation);
          Console.WriteLine("Упорядоченный массив c заменой строк");
-         Zadacha1(array1);
-         PrintArray1(array1);
+         Zadacha1(formation);
+         PrintArray1(formation);
       }
    }
 }
