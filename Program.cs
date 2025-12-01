@@ -325,14 +325,17 @@ namespace WrongWriteCodePartTwo
                int j = 0;
                while (j < y)
                {
+
+                  while ()
+                  {
+                     
+                  }
                   for (int k = 0; k < z; k++)
                   {
                      Console.Write("Элемент " + parade[i, j, k] + "; " + "Индекс [" + i + ", " + j + ", " + k + "] ");
                   }
 
                   Console.WriteLine();
-                  
-                  
                   j++;
                }
 
