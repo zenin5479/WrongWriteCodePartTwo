@@ -321,7 +321,7 @@ namespace WrongWriteCodePartTwo
             int i = 0;
             while (i < x)
             {
-               Console.WriteLine("Глубина №: " + (i));
+               Console.WriteLine("Глубина №: " + i);
                int j = 0;
                while (j < y)
                {
