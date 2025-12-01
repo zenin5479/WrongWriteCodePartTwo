@@ -363,7 +363,7 @@ namespace WrongWriteCodePartTwo
          // Для измения количества шагов
          int direction = 0;
          // matrix.Length - общее количество элементов массива
-         for (int i = 0; i < matrix.Length; i++)
+         for (int i = 0; i < matrix.Length; i++) //
          {
             matrix[indexX, indexY] = i + 1;
             steps--;
