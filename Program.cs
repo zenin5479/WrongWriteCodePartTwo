@@ -318,21 +318,21 @@ namespace WrongWriteCodePartTwo
             int y = parade.GetLength(1);
             int z = parade.GetLength(2);
             Console.WriteLine("Прямоугольный трехмерный массив размерностью: [" + x + ", " + y + ", " + z + "] ");
-            int m = 0;
-            while (m < x)
+            int i = 0;
+            while (i < x)
             {
-               Console.WriteLine("Глубина №: " + (m));
-               for (int r = 0; r < y; r++)
+               Console.WriteLine("Глубина №: " + (i));
+               for (int j = 0; j < y; j++)
                {
-                  for (int s = 0; s < z; s++)
+                  for (int k = 0; k < z; k++)
                   {
-                     Console.Write("Элемент " + parade[m, r, s] + "; " + "Индекс [" + m + ", " + r + ", " + s + "] ");
+                     Console.Write("Элемент " + parade[i, j, k] + "; " + "Индекс [" + i + ", " + j + ", " + k + "] ");
                   }
 
                   Console.WriteLine();
                }
                
-               m++;
+               i++;
             }
          }
 
