@@ -5,8 +5,6 @@
 // Напишите программу, которая упорядочит по убыванию элементы каждой строки двумерного массива
 // Задача: Задайте прямоугольный двумерный массив
 // Напишите программу, которая будет находить строку с наименьшей суммой элементов
-// Задача: Задайте две матрицы
-// Напишите программу, которая будет находить произведение двух матриц
 // Задача: Сформируйте трёхмерный массив из неповторяющихся двузначных чисел
 // Напишите программу, которая построчно выведет элементы и их индексы
 // Задача: Заполните спирально массив 4 на 4 числами от 1 до 16
@@ -21,7 +19,9 @@
 // - Задача: Найти минимальный по модулю элемент
 // Вывести все столбцы и строки, содержащие элементы, равные по модулю минимальному
 // - Задача: Заполните двумерный массив 3х3 числами от 1 до 9 змейкой
-// 1 6 7 2 5 8 3 4 9
+// 1 6 7
+// 2 5 8
+// 3 4 9
 
 namespace WrongWriteCodePartTwo
 {
@@ -101,13 +101,13 @@ namespace WrongWriteCodePartTwo
                m++;
             }
          }
+
          FillingsMassif();
          Console.WriteLine("Исходный массив:");
          PrintMassif();
          MaximumToMinimum();
          Console.WriteLine("Упорядоченный массив по убыванию в строке:");
          PrintMassif();
-         Console.WriteLine();
 
          Console.WriteLine("--------------------------------------------------------------------------------");
          Console.WriteLine("Находение строки с наименьшей суммой элементов прямоугольного двумерного массива");
@@ -154,6 +154,7 @@ namespace WrongWriteCodePartTwo
          int strip = SizeRow();
          int verticals = SizeColumn(strip);
          int[,] cluster = new int[strip, verticals];
+
          // Метод заполнения массива
          void CompletionMassif()
          {
@@ -191,7 +192,7 @@ namespace WrongWriteCodePartTwo
          }
 
          // Метод нахождения строки в массиве с наименьшей суммой элементов
-         void SumRowElements(int[,] inputArray)
+         void MinSumRowElements(int[,] inputArray)
          {
             Console.WriteLine("Одномерный массив сумм элементов строк двумерного массива");
             int[] sumArray = new int[inputArray.GetLength(0)];
@@ -240,227 +241,104 @@ namespace WrongWriteCodePartTwo
          CompletionMassif();
          Console.WriteLine("Прямоугольный массив");
          OutputMassif();
-         SumRowElements(cluster);
-
-         Console.WriteLine("-------------------------------");
-         Console.WriteLine("Умножение двух двумерных матриц");
-         Console.WriteLine("-------------------------------");
-         Console.WriteLine("Введите количество строк и столбцов матрицы А");
-         int row1 = Convert.ToInt32(Console.ReadLine());
-         int column1 = Convert.ToInt32(Console.ReadLine());
-         Console.WriteLine("Введите количество строк и столбцов матрицы B");
-         int row2 = Convert.ToInt32(Console.ReadLine());
-         int column2 = Convert.ToInt32(Console.ReadLine());
-
-         int[,] arr1 = new int[row1, column1];
-         int[,] arr2 = new int[row2, column2];
-
-         FillArr1(arr1);
-         FillArr1(arr2);
-         Console.WriteLine("Матрица А:");
-         PrintArr1(arr1);
-         Console.WriteLine("Матрица B:");
-         PrintArr1(arr2);
-         Console.WriteLine("Матрица С = А * В:");
-         Multiplication(arr1, arr2);
-         PrintArr1(Multiplication(arr1, arr2));
-
-         // Метод перемножения матриц
-         int[,] Multiplication(int[,] a, int[,] b)
-         {
-            if (a.GetLength(1) != b.GetLength(0))
-            {
-               if (a.GetLength(1) != b.GetLength(0))
-               {
-                  Console.WriteLine("Матрицы нельзя перемножить. Введите другие размерности матриц");
-               }
-            }
-
-            int[,] r = new int[a.GetLength(0), b.GetLength(1)];
-            for (int i = 0; i < a.GetLength(0); i++)
-            {
-               for (int j = 0; j < b.GetLength(1); j++)
-               {
-                  for (int k = 0; k < b.GetLength(0); k++)
-                  {
-                     r[i, j] += a[i, k] * b[k, j];
-                  }
-               }
-            }
-
-            return r;
-         }
-
-         // Метод вывода массива
-         void PrintArr1(int[,] c)
-         {
-            for (int i = 0; i < c.GetLength(0); i++)
-            {
-               for (int j = 0; j < c.GetLength(1); j++)
-               {
-                  Console.Write("{0} ", c[i, j]);
-               }
-
-               Console.WriteLine();
-            }
-         }
-
-         // Метод заполнения массива
-         void FillArr1(int[,] array)
-         {
-            int row = array.GetLength(0);
-            int column = array.GetLength(1);
-            Random rand = new Random();
-            for (int i = 0; i < row; i++)
-            {
-               for (int j = 0; j < column; j++)
-               {
-                  array[i, j] = rand.Next(-9, 8);
-               }
-            }
-         }
+         MinSumRowElements(cluster);
 
          Console.WriteLine("-------------------------------------------------------------------");
          Console.WriteLine("Трёхмерный прямоугольный массив из неповторяющихся двузначных чисел");
          Console.WriteLine("-------------------------------------------------------------------");
-
-         Random rnd = new Random();
-         int r1 = rnd.Next(2, 5);
-         int r2 = rnd.Next(2, 5);
-         int r3 = rnd.Next(2, 5);
-         // Инициализация прямоугольного массива (z,y,x) заполненный нулевыми значениями 
-         int[,,] arr = new int[r1, r2, r3];
-         // Инициализация зубчатого трехмерного массива на рондомное кол стр
-         int[][][] arrZ = new int[rnd.Next(3, 6)][][];
-
-         FillArr();
-         PrintArr();
-
-         FillArrZ();
-         PrintArrZ();
+         Random arbitrary = new Random();
+         int chanceone = arbitrary.Next(2, 5); //
+         int chancetwo = arbitrary.Next(2, 5); //
+         int chancethree = arbitrary.Next(2, 5); //
+         // Инициализация прямоугольного массива (z,y,x) заполненного нулевыми значениями 
+         int[,,] parade = new int[chanceone, chancetwo, chancethree];
 
          // Метод заполнения прямоугольного 3-х мерного массива
          void FillArr()
          {
-            Random rand = new Random();
-            int L1 = arr.GetLength(0);
-            int L2 = arr.GetLength(1);
-            int L3 = arr.GetLength(2);
-            int L4 = L1 * L2 * L3;
+            Random casual = new Random();
+            int forceone = parade.GetLength(0);
+            int forcetwo = parade.GetLength(1);
+            int forcethree = parade.GetLength(2);
+            int forcefour = forceone * forcetwo * forcethree;
             // Массив для проверки чисел на неповторяемость 
-            int[] mass = new int[L4];
-            mass[0] = 0;
-            int k = 0;
-            int q = 0;
-            int g = 0;
-            for (int m = 0; m < L1; m++)
+            int[] range = new int[forcefour];
+            range[0] = 0;
+            int m = 0;
+            int n = 0;
+            int i = 0;
+            while (i < forceone)
             {
-               for (int i = 0; i < L2; i++)
+               int j = 0;
+               while (j < forcetwo)
                {
-                  for (int j = 0; j < L3; j++)
+                  int k = 0;
+                  while (k < forcethree)
                   {
-                     int numm = rand.Next(10, 98);
+                     int number = casual.Next(10, 98);
                      // Проверка на уникальность значений, вводимых в 3х мерный массив
-                     for (k = 0; k < L4; k++)
+                     int l = 0;
+                     while (l < forcefour)
                      {
-                        if (mass[k] != numm)
+                        if (range[l] != number)
                         {
-                           q++;
+                           m++;
                         }
+
+                        l++;
                      }
 
-                     if (q == L4)
+                     if (m == forcefour)
                      {
-                        arr[m, i, j] = numm;
-                        q = 0;
-                        mass[g] = numm;
-                        g++;
+                        parade[i, j, k] = number;
+                        m = 0;
+                        range[n] = number;
+                        n++;
                      }
                      else
                      {
-                        q = 0;
-                        j--;
+                        m = 0;
+                        k--;
                      }
+
+                     k++;
                   }
+
+                  j++;
                }
+
+               i++;
             }
          }
 
-         // Метод вывода 3х мерного прямоугольного массива
+         // Метод вывода 3-х мерного прямоугольного массива
          void PrintArr()
          {
-            int L1 = arr.GetLength(0);
-            int L2 = arr.GetLength(1);
-            int L3 = arr.GetLength(2);
-            Console.WriteLine("Прямоугольный трехмерный массив размерностью: [" + L1 + ", " + L2 + ", " + L3 + "] ");
-            for (int m = 0; m < L1; m++)
+            int l1 = parade.GetLength(0);
+            int l2 = parade.GetLength(1);
+            int l3 = parade.GetLength(2);
+            Console.WriteLine("Прямоугольный трехмерный массив размерностью: [" + l1 + ", " + l2 + ", " + l3 + "] ");
+            for (int m = 0; m < l1; m++)
             {
-               Console.WriteLine("Page №: " + (m));
-               for (int i = 0; i < L2; i++)
+               Console.WriteLine("Глубина №: " + (m));
+               for (int i = 0; i < l2; i++)
                {
-                  for (int j = 0; j < L3; j++)
+                  for (int j = 0; j < l3; j++)
                   {
-                     Console.Write("arr [" + m + ", " + i + ", " + j + "] = " + arr[m, i, j] + "; ");
+                     Console.Write("Элемент " + parade[m, i, j] + "; " + "Индекс [" + m + ", " + i + ", " + j + "] ");
                   }
 
                   Console.WriteLine();
                }
-
-               Console.WriteLine("===========================================================================================");
             }
          }
 
-         // Метод заполнения зубчатого 3-х мерного массива
-         void FillArrZ()
-         {
-            Random rand = new Random();
-            int L = arrZ.Length;
-            for (int i = 0; i < L; i++)
-            {
-               // Генерация случайного кол строк для каждой из стр 
-               arrZ[i] = new int[rand.Next(2, 9)][];
-               // Перебор строк 
-               for (int j = 0; j < arrZ[i].Length; j++)
-               {
-                  // Для каждой строки генерация рондомно кол элементов 
-                  arrZ[i][j] = new int[rand.Next(2, 9)];
-                  for (int k = 0; k < arrZ[i][j].Length; k++)
-                  {
-                     // Для каждого элемента генерация рондомно значения 
-                     arrZ[i][j][k] = rand.Next(100);
-                  }
-               }
-            }
-         }
+         FillArr();
+         PrintArr();
 
-         // Метод вывода 3-х мерного зубчатого массива
-         void PrintArrZ()
-         {
-            Console.WriteLine("Трехмерный зубчатый массив:");
-            for (int i = 0; i < arrZ.Length; i++)
-            {
-               Console.WriteLine("Page №: " + (i));
-               for (int j = 0; j < arrZ[i].Length; j++)
-               {
-                  for (int k = 0; k < arrZ[i][j].Length; k++)
-                  {
-                     Console.Write("arr [" + i + ", " + j + ", " + k + "] = " + arrZ[i][j][k] + "; ");
-                  }
-
-                  Console.WriteLine();
-               }
-
-               Console.WriteLine("==============================================================================================");
-            }
-         }
-
-         Console.WriteLine();
-
-         Console.WriteLine("-----------------------------------------------");
-         Console.WriteLine("Заполнение спирально двумерного массива 2 метод");
-         Console.WriteLine("-----------------------------------------------");
-
-         Console.WriteLine();
+         Console.WriteLine("---------------------------------------");
+         Console.WriteLine("Заполнение спирально двумерного массива");
+         Console.WriteLine("---------------------------------------");
          int sizeX = 3;
          int sizeY = 4;
          int[,] matrix = new int[sizeX, sizeY];
@@ -512,10 +390,8 @@ namespace WrongWriteCodePartTwo
          Console.WriteLine("Замена в двумерном массиве элементов первой строки элементами главной диагонали\n" +
                            "и элементов последней строки, элементами побочной диагонали");
          Console.WriteLine("---------------------------------------------------------------------------------");
-
-         Console.WriteLine();
          Console.WriteLine("Введите размерность массива");
-
+         //
          int rows1 = Convert.ToInt32(Console.ReadLine());
          int columns1 = Convert.ToInt32(Console.ReadLine()); ;
          int[,] array1 = new int[rows1, columns1];
@@ -575,44 +451,6 @@ namespace WrongWriteCodePartTwo
          Console.WriteLine("Упорядоченный массив c заменой строк");
          Zadacha1(array1);
          PrintArray1(array1);
-      }
-
-      public static int[] FindMaxInt(int[,] inputArray)
-      {
-         // Поиск максимального элемента строки (без флагов bool)
-         int[] arrayMax = new int[inputArray.GetLength(0)];
-         int rowOut = 0;
-         int columnOut = 0;
-         while (rowOut < inputArray.GetLength(0))
-         {
-            // Cчитаем, что максимум - это первый элемент строки
-            int maxOut = inputArray[rowOut, 0];
-            while (columnOut < inputArray.GetLength(1))
-            {
-               if (maxOut < inputArray[rowOut, columnOut])
-               {
-                  maxOut = inputArray[rowOut, columnOut];
-               }
-
-               columnOut++;
-            }
-
-            arrayMax[rowOut] = maxOut;
-            //Console.WriteLine("Максимум в строке {0} равен: {1}", rowOut, maxOut);
-            columnOut = 0;
-            rowOut++;
-         }
-
-         Console.WriteLine("Массив максимальных значений строк");
-         int indexMax = 0;
-         while (indexMax < arrayMax.Length)
-         {
-            Console.Write("{0} ", arrayMax[indexMax]);
-            indexMax++;
-         }
-
-         Console.WriteLine();
-         return arrayMax;
       }
    }
 }
