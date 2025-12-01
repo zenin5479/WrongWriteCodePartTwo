@@ -328,12 +328,12 @@ namespace WrongWriteCodePartTwo
                   int k = 0;
                   while (k < z)
                   {
-
+                     Console.Write("Элемент " + parade[i, j, k] + "; " + "Индекс [" + i + ", " + j + ", " + k + "] ");
                      k++;
                   }
                   for ( )
                   {
-                     Console.Write("Элемент " + parade[i, j, k] + "; " + "Индекс [" + i + ", " + j + ", " + k + "] ");
+
                   }
 
                   Console.WriteLine();
