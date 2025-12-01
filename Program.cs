@@ -359,7 +359,6 @@ namespace WrongWriteCodePartTwo
          for (int i = 0; i < matrix.Length; i++)
          {
             matrix[indexX, indexY] = i + 1;
-            //'Console.Write( matrix[indexX,indexY] + "\t");
             steps--;
             if (steps == 0)
             {
