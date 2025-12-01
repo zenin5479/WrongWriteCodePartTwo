@@ -247,9 +247,9 @@ namespace WrongWriteCodePartTwo
          Console.WriteLine("Трёхмерный прямоугольный массив из неповторяющихся двузначных чисел");
          Console.WriteLine("-------------------------------------------------------------------");
          Random arbitrary = new Random();
-         int chanceone = arbitrary.Next(2, 5); //
-         int chancetwo = arbitrary.Next(2, 5); //
-         int chancethree = arbitrary.Next(2, 5); //
+         int chanceone = arbitrary.Next(2, 6); //
+         int chancetwo = arbitrary.Next(2, 6); //
+         int chancethree = arbitrary.Next(2, 6); //
          // Инициализация прямоугольного массива (z,y,x) заполненного нулевыми значениями 
          int[,,] parade = new int[chanceone, chancetwo, chancethree];
 
