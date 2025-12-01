@@ -400,8 +400,8 @@ namespace WrongWriteCodePartTwo
          Console.WriteLine("---------------------------------------------------------------------------------");
          Console.WriteLine("Введите размерность массива");
          //
-         int rows1 = Convert.ToInt32(Console.ReadLine());
-         int columns1 = Convert.ToInt32(Console.ReadLine()); ;
+         int rows1 = Convert.ToInt32(Console.ReadLine()); //
+         int columns1 = Convert.ToInt32(Console.ReadLine()); //
          int[,] array1 = new int[rows1, columns1];
 
          // Метод замены строк в массиве
