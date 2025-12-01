@@ -363,7 +363,9 @@ namespace WrongWriteCodePartTwo
             if (steps == 0)
             {
                steps = sizeY * ((direction) % 2) + sizeX * ((direction + 1) % 2) - 1 - direction / 2;
-               // Изменение кол шага после каждого второго поворота (при повороте четное кол раз: sizeX - 1 dairection/2,  при повороте нечетное кол раз : sizeY - 1 dairection/2)
+               // Изменение кол шага после каждого второго поворота
+               // при повороте четное кол раз: sizeX - 1 dairection/2,
+               // при повороте нечетное кол раз : sizeY - 1 dairection/2
                int temp = changeX;
                changeX = changeY;
                changeY = -temp;
