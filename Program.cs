@@ -399,6 +399,50 @@ namespace WrongWriteCodePartTwo
                            "и элементов последней строки, элементами побочной диагонали");
          Console.WriteLine("---------------------------------------------------------------------------------");
          Console.WriteLine("Введите размерность массива");
+
+         // Метод ввода количества строк
+         int DimensionRow()
+         {
+            int n;
+            do
+            {
+               Console.Write("Введите количество строк массива: ");
+               int.TryParse(Console.ReadLine(), out n);
+               if (n <= 0 || n > 20)
+               {
+                  Console.WriteLine("Введено неверное значение");
+               }
+            } while (n <= 0 || n > 20);
+
+            return n;
+         }
+
+         // Метод ввода количества столбцов и проверка на прямоугольность массива
+         int DimensionColumn(int rank)
+         {
+            int m;
+            do
+            {
+               Console.Write("Введите количество столбцов массива: ");
+               int.TryParse(Console.ReadLine(), out m);
+               // Проверка на прямоугольность массива
+               if (rank == m)
+               {
+                  Console.WriteLine("Количество строк массива равно количеству столбцов: матрица");
+               }
+               else if (m <= 0 || m > 20)
+               {
+                  Console.WriteLine("Введено неверное значение");
+               }
+            } while (m <= 0 || m > 20 || rank == m);
+
+            return m;
+         }
+
+         int strip = SizeRow();
+         int verticals = SizeColumn(strip);
+         int[,] cluster = new int[strip, verticals];
+
          int rows1 = Convert.ToInt32(Console.ReadLine()); //
          int columns1 = Convert.ToInt32(Console.ReadLine()); //
          int[,] array1 = new int[rows1, columns1];
