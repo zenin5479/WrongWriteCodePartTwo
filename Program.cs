@@ -474,7 +474,7 @@ namespace WrongWriteCodePartTwo
          }
 
          // Метод вывода массива
-         void PrintArray1(int[,] array)
+         void printingArray1(int[,] array)
          {
             int rows = array.GetLength(0);
             int columns = array.GetLength(1); ;
@@ -491,10 +491,10 @@ namespace WrongWriteCodePartTwo
 
          FillingArray(formation);
          Console.WriteLine("Исходный массив");
-         PrintArray1(formation);
+         printingArray1(formation);
          Console.WriteLine("Упорядоченный массив c заменой строк");
          ReplacementRows(formation);
-         PrintArray1(formation);
+         printingArray1(formation);
       }
    }
 }
