@@ -441,7 +441,7 @@ namespace WrongWriteCodePartTwo
 
          int argument = DimensionRow();
          int tower = DimensionColumn(argument);
-         int[,] formation = new int[argument, verticals];
+         int[,] formation = new int[argument, tower];
 
          // Метод замены строк в массиве
          void Zadacha1(int[,] array)
