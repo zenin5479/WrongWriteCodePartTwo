@@ -455,7 +455,6 @@ namespace WrongWriteCodePartTwo
             }
          }
 
-
          // Метод замены строк в массиве
          void Zadacha1(int[,] array)
          {
@@ -473,8 +472,6 @@ namespace WrongWriteCodePartTwo
 
             array[l1 - 1, j - 1] = temp;
          }
-
-
 
          // Метод вывода массива
          void PrintArray1(int[,] array)
