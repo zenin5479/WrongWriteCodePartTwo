@@ -456,7 +456,7 @@ namespace WrongWriteCodePartTwo
          }
 
          // Метод замены строк в массиве
-         void replacement(int[,] array)
+         void ReplacementRows(int[,] array)
          {
             int temp = 0;
             int j;
@@ -493,7 +493,7 @@ namespace WrongWriteCodePartTwo
          Console.WriteLine("Исходный массив");
          PrintArray1(formation);
          Console.WriteLine("Упорядоченный массив c заменой строк");
-         replacement(formation);
+         ReplacementRows(formation);
          PrintArray1(formation);
       }
    }
