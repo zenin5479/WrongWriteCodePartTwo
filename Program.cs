@@ -441,7 +441,7 @@ namespace WrongWriteCodePartTwo
          int[,] formation = new int[argument, tower];
 
          // Метод заполения массива
-         void FillArray1(int[,] array)
+         void FillingArray1(int[,] array)
          {
             Random rand = new Random();
             int rows = array.GetLength(0);
@@ -489,7 +489,7 @@ namespace WrongWriteCodePartTwo
             }
          }
 
-         FillArray1(formation);
+         FillingArray1(formation);
          Console.WriteLine("Исходный массив");
          PrintArray1(formation);
          Console.WriteLine("Упорядоченный массив c заменой строк");
