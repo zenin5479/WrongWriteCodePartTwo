@@ -251,7 +251,7 @@ namespace WrongWriteCodePartTwo
          int[,,] parade = new int[chanceone, chancetwo, chancethree];
 
          // Метод заполнения прямоугольного 3-х мерного массива
-         void FillArr()
+         void completionArr()
          {
             Random casual = new Random();
             int forceone = parade.GetLength(0);
@@ -337,7 +337,7 @@ namespace WrongWriteCodePartTwo
             }
          }
 
-         FillArr();
+         completionArr();
          PrintArr();
 
          Console.WriteLine("---------------------------------------");
