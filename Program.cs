@@ -309,7 +309,7 @@ namespace WrongWriteCodePartTwo
          }
 
          // Метод вывода 3-х мерного прямоугольного массива
-         void PrintArr()
+         void PrintCollection()
          {
             int x = parade.GetLength(0);
             int y = parade.GetLength(1);
@@ -338,7 +338,7 @@ namespace WrongWriteCodePartTwo
          }
 
          CompletionArr();
-         PrintArr();
+         PrintCollection();
 
          Console.WriteLine("---------------------------------------");
          Console.WriteLine("Заполнение спирально двумерного массива");
