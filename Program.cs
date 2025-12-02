@@ -440,6 +440,22 @@ namespace WrongWriteCodePartTwo
          int tower = DimensionColumn(argument);
          int[,] formation = new int[argument, tower];
 
+         // Метод заполения массива
+         void FillArray1(int[,] array)
+         {
+            Random rand = new Random();
+            int rows = array.GetLength(0);
+            int columns = array.GetLength(1); ;
+            for (int i = 0; i < rows; i++)
+            {
+               for (int j = 0; j < columns; j++)
+               {
+                  array[i, j] = rand.Next(-10, 9);
+               }
+            }
+         }
+
+
          // Метод замены строк в массиве
          void Zadacha1(int[,] array)
          {
@@ -458,20 +474,7 @@ namespace WrongWriteCodePartTwo
             array[l1 - 1, j - 1] = temp;
          }
 
-         // Метод заполения массива
-         void FillArray1(int[,] array)
-         {
-            Random rand = new Random();
-            int rows = array.GetLength(0);
-            int columns = array.GetLength(1); ;
-            for (int i = 0; i < rows; i++)
-            {
-               for (int j = 0; j < columns; j++)
-               {
-                  array[i, j] = rand.Next(-10, 9);
-               }
-            }
-         }
+
 
          // Метод вывода массива
          void PrintArray1(int[,] array)
