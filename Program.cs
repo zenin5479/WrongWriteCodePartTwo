@@ -441,7 +441,7 @@ namespace WrongWriteCodePartTwo
          int[,] formation = new int[argument, tower];
 
          // Метод заполения массива
-         void FillingArray1(int[,] array)
+         void FillingArray(int[,] array)
          {
             Random rand = new Random();
             int rows = array.GetLength(0);
@@ -456,7 +456,7 @@ namespace WrongWriteCodePartTwo
          }
 
          // Метод замены строк в массиве
-         void Zadacha1(int[,] array)
+         void replacement(int[,] array)
          {
             int temp = 0;
             int j;
@@ -489,11 +489,11 @@ namespace WrongWriteCodePartTwo
             }
          }
 
-         FillingArray1(formation);
+         FillingArray(formation);
          Console.WriteLine("Исходный массив");
          PrintArray1(formation);
          Console.WriteLine("Упорядоченный массив c заменой строк");
-         Zadacha1(formation);
+         replacement(formation);
          PrintArray1(formation);
       }
    }
