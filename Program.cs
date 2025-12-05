@@ -459,11 +459,11 @@ namespace WrongWriteCodePartTwo
          void FillingArray(int[,] array)
          {
             Random rand = new Random();
-            int rows = array.GetLength(0);
-            int columns = array.GetLength(1); ;
-            for (int i = 0; i < rows; i++)
+            int row = array.GetLength(0);
+            int column = array.GetLength(1); ;
+            for (int i = 0; i < row; i++)
             {
-               for (int j = 0; j < columns; j++)
+               for (int j = 0; j < column; j++)
                {
                   array[i, j] = rand.Next(-10, 9);
                }
