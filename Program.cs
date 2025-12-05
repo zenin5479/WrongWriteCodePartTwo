@@ -360,7 +360,17 @@ namespace WrongWriteCodePartTwo
          // Для измения количества шагов
          int direction = 0;
          // matrix.Length - общее количество элементов массива
-         for (int i = 0; i < matrix.Length; i++) //
+         int i = 0;
+         while (i < matrix.Length)
+         {
+            
+            
+            
+            
+            i++;
+         }
+
+         for ( )
          {
             matrix[indexX, indexY] = i + 1;
             steps--;
@@ -381,11 +391,11 @@ namespace WrongWriteCodePartTwo
             indexY += changeY;
          }
 
-         for (int i = 0; i < matrix.GetLength(0); i++)
+         for (int k = 0; k < matrix.GetLength(0); k++)
          {
-            for (int j = 0; j < matrix.GetLength(1); j++)
+            for (int l = 0; l < matrix.GetLength(1); l++)
             {
-               Console.Write(matrix[i, j] + "\t");
+               Console.Write(matrix[k, l] + "\t");
             }
 
             Console.WriteLine();
