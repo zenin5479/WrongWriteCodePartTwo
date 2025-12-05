@@ -347,55 +347,63 @@ namespace WrongWriteCodePartTwo
          int sizeY = 4;
          int[,] matrix = new int[sizeX, sizeY];
 
-         int indexX = 0;
-         int indexY = 0;
-
-         // Для изменения индекса строки
-         int changeX = 0;
-         // Для изменения индекса столбца
-         int changeY = 1;
-
-         // Считает шаги когда надо повернуть
-         int steps = sizeY;
-         // Для измения количества шагов
-         int direction = 0;
-         // matrix.Length - общее количество элементов массива
-         int i = 0;
-         while (i < matrix.Length)
+         void FillingSpirally()
          {
-            matrix[indexX, indexY] = i + 1;
-            steps--;
-            if (steps == 0)
-            {
-               steps = sizeY * (direction % 2) + sizeX * ((direction + 1) % 2) - 1 - direction / 2;
-               // Изменение количества шагов после каждого второго поворота
-               // при повороте четное количество раз: sizeX - 1 dairection/2,
-               // при повороте нечетное количество раз : sizeY - 1 dairection/2
-               int temp = changeX;
-               changeX = changeY;
-               changeY = -temp;
-               // Меняем направление 
-               direction++;
-            }
+            int indexX = 0;
+            int indexY = 0;
 
-            indexX += changeX;
-            indexY += changeY;
-            i++;
+            // Для изменения индекса строки
+            int changeX = 0;
+            // Для изменения индекса столбца
+            int changeY = 1;
+
+            // Считает шаги когда надо повернуть
+            int steps = sizeY;
+            // Для измения количества шагов
+            int direction = 0;
+            // matrix.Length - общее количество элементов массива
+            int i = 0;
+            while (i < matrix.Length)
+            {
+               matrix[indexX, indexY] = i + 1;
+               steps--;
+               if (steps == 0)
+               {
+                  steps = sizeY * (direction % 2) + sizeX * ((direction + 1) % 2) - 1 - direction / 2;
+                  // Изменение количества шагов после каждого второго поворота
+                  // при повороте четное количество раз: sizeX - 1 dairection/2,
+                  // при повороте нечетное количество раз : sizeY - 1 dairection/2
+                  int temp = changeX;
+                  changeX = changeY;
+                  changeY = -temp;
+                  // Меняем направление 
+                  direction++;
+               }
+
+               indexX += changeX;
+               indexY += changeY;
+               i++;
+            }
+         };
+
+         void OutputList()
+         {
+            int k = 0;
+            while (k < matrix.GetLength(0))
+            {
+               int l = 0;
+               while (l < matrix.GetLength(1))
+               {
+                  Console.Write(matrix[k, l] + "\t");
+                  l++;
+               }
+
+               k++;
+               Console.WriteLine();
+            }
          }
 
-         int k = 0;
-         while (k < matrix.GetLength(0))
-         {
-            int l = 0;
-            while (l < matrix.GetLength(1))
-            {
-               Console.Write(matrix[k, l] + "\t");
-               l++;
-            }
 
-            k++;
-            Console.WriteLine();
-         }
 
          Console.WriteLine("---------------------------------------------------------------------------------");
          Console.WriteLine("Замена в двумерном массиве элементов первой строки элементами главной диагонали\n" +
