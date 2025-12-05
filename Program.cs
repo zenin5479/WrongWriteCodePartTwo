@@ -503,7 +503,8 @@ namespace WrongWriteCodePartTwo
          {
             int row = set.GetLength(0);
             int column = set.GetLength(1);
-            for (int i = 0; i < row; i++)
+            int i = 0;
+            while (i < row)
             {
                for (int j = 0; j < column; j++)
                {
@@ -511,6 +512,9 @@ namespace WrongWriteCodePartTwo
                }
 
                Console.WriteLine();
+               
+               
+               i++;
             }
          }
 
