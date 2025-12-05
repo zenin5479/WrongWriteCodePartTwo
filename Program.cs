@@ -483,7 +483,8 @@ namespace WrongWriteCodePartTwo
             int j;
             int l1 = set.GetLength(0);
             int l2 = set.GetLength(1);
-            for (j = 0; j < l2; j++)
+            j = 0;
+            while (j < l2)
             {
                if (j > l1 - 1)
                {
@@ -493,6 +494,13 @@ namespace WrongWriteCodePartTwo
                temp = set[l1 - 1 - j, j];
                set[0, j] = set[j, j];
                set[l1 - 1, j] = set[l1 - 1 - j, j];
+
+
+               j++;
+            }
+            for ()
+            {
+
             }
 
             set[l1 - 1, j - 1] = temp;
