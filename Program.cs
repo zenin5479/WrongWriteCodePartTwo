@@ -491,11 +491,11 @@ namespace WrongWriteCodePartTwo
          // Метод вывода массива
          void PrintingArray(int[,] array)
          {
-            int rows = array.GetLength(0);
-            int columns = array.GetLength(1); ;
-            for (int i = 0; i < rows; i++)
+            int row = array.GetLength(0);
+            int column = array.GetLength(1); ;
+            for (int i = 0; i < row; i++)
             {
-               for (int j = 0; j < columns; j++)
+               for (int j = 0; j < column; j++)
                {
                   Console.Write(array[i, j] + "   ");
                }
