@@ -467,8 +467,7 @@ namespace WrongWriteCodePartTwo
                int j = 0;
                while (j < column)
                {
-
-                  set[i, j] = sporadic.Next(-10, 9);
+                  set[i, j] = sporadic.Next(-10, 11);
                   j++;
                }
 
@@ -480,10 +479,9 @@ namespace WrongWriteCodePartTwo
          void ReplacementRows(int[,] set)
          {
             int temp = 0;
-            int j;
             int l1 = set.GetLength(0);
             int l2 = set.GetLength(1);
-            j = 0;
+            var j = 0;
             while (j < l2)
             {
                if (j > l1 - 1)
@@ -496,7 +494,6 @@ namespace WrongWriteCodePartTwo
                set[l1 - 1, j] = set[l1 - 1 - j, j];
                j++;
             }
-           
 
             set[l1 - 1, j - 1] = temp;
          }
