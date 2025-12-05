@@ -456,27 +456,27 @@ namespace WrongWriteCodePartTwo
          int[,] formation = new int[argument, tower];
 
          // Метод заполения массива
-         void FillingArray(int[,] array)
+         void FillingArray(int[,] set)
          {
             Random rand = new Random();
-            int row = array.GetLength(0);
-            int column = array.GetLength(1);
+            int row = set.GetLength(0);
+            int column = set.GetLength(1);
             for (int i = 0; i < row; i++)
             {
                for (int j = 0; j < column; j++)
                {
-                  array[i, j] = rand.Next(-10, 9);
+                  set[i, j] = rand.Next(-10, 9);
                }
             }
          }
 
          // Метод замены строк в массиве
-         void ReplacementRows(int[,] array)
+         void ReplacementRows(int[,] set)
          {
             int temp = 0;
             int j;
-            int l1 = array.GetLength(0);
-            int l2 = array.GetLength(1);
+            int l1 = set.GetLength(0);
+            int l2 = set.GetLength(1);
             for (j = 0; j < l2; j++)
             {
                if (j > l1 - 1)
@@ -484,24 +484,24 @@ namespace WrongWriteCodePartTwo
                   break;
                }
 
-               temp = array[l1 - 1 - j, j];
-               array[0, j] = array[j, j];
-               array[l1 - 1, j] = array[l1 - 1 - j, j];
+               temp = set[l1 - 1 - j, j];
+               set[0, j] = set[j, j];
+               set[l1 - 1, j] = set[l1 - 1 - j, j];
             }
 
-            array[l1 - 1, j - 1] = temp;
+            set[l1 - 1, j - 1] = temp;
          }
 
          // Метод вывода массива
-         void PrintingArray(int[,] array)
+         void PrintingArray(int[,] set)
          {
-            int row = array.GetLength(0);
-            int column = array.GetLength(1);
+            int row = set.GetLength(0);
+            int column = set.GetLength(1);
             for (int i = 0; i < row; i++)
             {
                for (int j = 0; j < column; j++)
                {
-                  Console.Write(array[i, j] + "   ");
+                  Console.Write(set[i, j] + "   ");
                }
 
                Console.WriteLine();
