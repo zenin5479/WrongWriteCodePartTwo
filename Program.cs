@@ -464,21 +464,15 @@ namespace WrongWriteCodePartTwo
             int i = 0;
             while (i < row)
             {
-int j = 0;
+               int j = 0;
                while (j < column)
                {
-                  
+
                   set[i, j] = sporadic.Next(-10, 9);
                   j++;
                }
-              
+
                i++;
-            }
-            
-            
-            for ( )
-            {
-               
             }
          }
 
