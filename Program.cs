@@ -458,14 +458,14 @@ namespace WrongWriteCodePartTwo
          // Метод заполения массива
          void FillingArray(int[,] set)
          {
-            Random rand = new Random();
+            Random sporadic = new Random();
             int row = set.GetLength(0);
             int column = set.GetLength(1);
             for (int i = 0; i < row; i++)
             {
                for (int j = 0; j < column; j++)
                {
-                  set[i, j] = rand.Next(-10, 9);
+                  set[i, j] = sporadic.Next(-10, 9);
                }
             }
          }
