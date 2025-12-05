@@ -511,10 +511,8 @@ namespace WrongWriteCodePartTwo
                   Console.Write(set[i, j] + "   ");
                }
 
-               Console.WriteLine();
-               
-               
                i++;
+               Console.WriteLine();
             }
          }
 
