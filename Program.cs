@@ -367,7 +367,7 @@ namespace WrongWriteCodePartTwo
             steps--;
             if (steps == 0)
             {
-               steps = sizeY * ((direction) % 2) + sizeX * ((direction + 1) % 2) - 1 - direction / 2;
+               steps = sizeY * (direction % 2) + sizeX * ((direction + 1) % 2) - 1 - direction / 2;
                // Изменение количества шагов после каждого второго поворота
                // при повороте четное количество раз: sizeX - 1 dairection/2,
                // при повороте нечетное количество раз : sizeY - 1 dairection/2
@@ -383,15 +383,22 @@ namespace WrongWriteCodePartTwo
             i++;
          }
 
-
-         for (int k = 0; k < matrix.GetLength(0); k++)
+         int k = 0;
+         while (k < matrix.GetLength(0))
          {
-            for (int l = 0; l < matrix.GetLength(1); l++)
+            
+             for (int l = 0; l < matrix.GetLength(1); l++)
             {
                Console.Write(matrix[k, l] + "\t");
             }
 
             Console.WriteLine();
+            
+            k++;
+         }
+         for ()
+         {
+           
          }
 
          Console.WriteLine("---------------------------------------------------------------------------------");
