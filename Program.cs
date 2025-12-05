@@ -363,16 +363,7 @@ namespace WrongWriteCodePartTwo
          int i = 0;
          while (i < matrix.Length)
          {
-            
-            
-            
-            
-            i++;
-         }
-
-         for ( )
-         {
-            matrix[indexX, indexY] = i + 1;
+             matrix[indexX, indexY] = i + 1;
             steps--;
             if (steps == 0)
             {
@@ -389,7 +380,9 @@ namespace WrongWriteCodePartTwo
 
             indexX += changeX;
             indexY += changeY;
+            i++;
          }
+
 
          for (int k = 0; k < matrix.GetLength(0); k++)
          {
