@@ -461,12 +461,24 @@ namespace WrongWriteCodePartTwo
             Random sporadic = new Random();
             int row = set.GetLength(0);
             int column = set.GetLength(1);
-            for (int i = 0; i < row; i++)
+            int i = 0;
+            while (i < row)
             {
-               for (int j = 0; j < column; j++)
+int j = 0;
+               while (j < column)
                {
+                  
                   set[i, j] = sporadic.Next(-10, 9);
+                  j++;
                }
+              
+               i++;
+            }
+            
+            
+            for ( )
+            {
+               
             }
          }
 
