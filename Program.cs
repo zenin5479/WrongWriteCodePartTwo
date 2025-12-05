@@ -494,14 +494,9 @@ namespace WrongWriteCodePartTwo
                temp = set[l1 - 1 - j, j];
                set[0, j] = set[j, j];
                set[l1 - 1, j] = set[l1 - 1 - j, j];
-
-
                j++;
             }
-            for ()
-            {
-
-            }
+           
 
             set[l1 - 1, j - 1] = temp;
          }
