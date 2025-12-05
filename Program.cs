@@ -479,23 +479,23 @@ namespace WrongWriteCodePartTwo
          void ReplacementRows(int[,] set)
          {
             int temp = 0;
-            int l1 = set.GetLength(0);
-            int l2 = set.GetLength(1);
+            int lineone = set.GetLength(0);
+            int linetwo = set.GetLength(1);
             var j = 0;
-            while (j < l2)
+            while (j < linetwo)
             {
-               if (j > l1 - 1)
+               if (j > lineone - 1)
                {
                   break;
                }
 
-               temp = set[l1 - 1 - j, j];
+               temp = set[lineone - 1 - j, j];
                set[0, j] = set[j, j];
-               set[l1 - 1, j] = set[l1 - 1 - j, j];
+               set[lineone - 1, j] = set[lineone - 1 - j, j];
                j++;
             }
 
-            set[l1 - 1, j - 1] = temp;
+            set[lineone - 1, j - 1] = temp;
          }
 
          // Метод вывода массива
