@@ -363,7 +363,7 @@ namespace WrongWriteCodePartTwo
          int i = 0;
          while (i < matrix.Length)
          {
-             matrix[indexX, indexY] = i + 1;
+            matrix[indexX, indexY] = i + 1;
             steps--;
             if (steps == 0)
             {
