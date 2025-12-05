@@ -386,19 +386,19 @@ namespace WrongWriteCodePartTwo
          int k = 0;
          while (k < matrix.GetLength(0))
          {
-            
-             for (int l = 0; l < matrix.GetLength(1); l++)
+
+            for (int l = 0; l < matrix.GetLength(1); l++)
             {
                Console.Write(matrix[k, l] + "\t");
             }
 
             Console.WriteLine();
-            
+
             k++;
          }
          for ()
          {
-           
+
          }
 
          Console.WriteLine("---------------------------------------------------------------------------------");
