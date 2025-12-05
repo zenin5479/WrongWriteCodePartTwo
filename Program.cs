@@ -384,7 +384,7 @@ namespace WrongWriteCodePartTwo
                indexY += changeY;
                i++;
             }
-         };
+         }
 
          void OutputList()
          {
@@ -460,7 +460,7 @@ namespace WrongWriteCodePartTwo
          {
             Random rand = new Random();
             int row = array.GetLength(0);
-            int column = array.GetLength(1); ;
+            int column = array.GetLength(1);
             for (int i = 0; i < row; i++)
             {
                for (int j = 0; j < column; j++)
@@ -479,7 +479,11 @@ namespace WrongWriteCodePartTwo
             int l2 = array.GetLength(1);
             for (j = 0; j < l2; j++)
             {
-               if (j > l1 - 1) break;
+               if (j > l1 - 1)
+               {
+                  break;
+               }
+
                temp = array[l1 - 1 - j, j];
                array[0, j] = array[j, j];
                array[l1 - 1, j] = array[l1 - 1 - j, j];
@@ -492,7 +496,7 @@ namespace WrongWriteCodePartTwo
          void PrintingArray(int[,] array)
          {
             int row = array.GetLength(0);
-            int column = array.GetLength(1); ;
+            int column = array.GetLength(1);
             for (int i = 0; i < row; i++)
             {
                for (int j = 0; j < column; j++)
