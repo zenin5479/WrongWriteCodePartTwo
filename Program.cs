@@ -510,6 +510,8 @@ namespace WrongWriteCodePartTwo
          Console.WriteLine("Упорядоченный массив c заменой строк");
          ReplacementRows(formation);
          PrintingArray(formation);
+
+         Console.ReadKey();
       }
    }
 }
