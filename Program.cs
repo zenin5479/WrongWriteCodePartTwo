@@ -393,9 +393,9 @@ namespace WrongWriteCodePartTwo
                l++;
             }
 
+            k++;
             Console.WriteLine();
 
-            k++;
          }
 
          Console.WriteLine("---------------------------------------------------------------------------------");
