@@ -509,7 +509,7 @@ namespace WrongWriteCodePartTwo
                int j = 0;
                while (j < column)
                {
-                  Console.Write(set[i, j] + "   ");
+                  Console.Write(set[i, j] + "\t");
                   j++;
                }
 
