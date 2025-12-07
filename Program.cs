@@ -575,17 +575,11 @@ namespace WrongWriteCodePartTwo
          FillingsMas();
          Console.WriteLine("Исходный массив:");
          PrintMas();
-
-
-
-       
-
          Console.WriteLine(new string('-', 30));
 
          // Создаем словарь для подсчета частоты чисел
          // Ключ - число, значение - количество вхождений
          Dictionary<int, int> frequency = new Dictionary<int, int>();
-
          // Подсчитываем частоту вхождения каждого числа
          for (int i = 0; i < ro; i++)
          {
