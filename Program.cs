@@ -550,7 +550,7 @@ namespace WrongWriteCodePartTwo
             {
                // Генерация числа от -9 до 9 включительно
                lineup[i, j] = fortuitous.Next(-9, 10);
-               Console.Write($"{lineup[i, j],4}");
+               Console.Write("{0,4}", lineup[i, j]);
             }
 
             Console.WriteLine();
