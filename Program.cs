@@ -540,7 +540,7 @@ namespace WrongWriteCodePartTwo
          int item = 5;
 
          // Создаем двумерный массив
-         int[,] array = new int[rowing, item];
+         int[,] lineup = new int[rowing, item];
 
          Console.WriteLine("Исходный массив:");
          Console.WriteLine(new string('-', 30));
@@ -550,8 +550,8 @@ namespace WrongWriteCodePartTwo
          {
             for (int j = 0; j < item; j++)
             {
-               array[i, j] = fortuitous.Next(-9, 10); // Генерация числа от -9 до 9 включительно
-               Console.Write($"{array[i, j],4}");
+               lineup[i, j] = fortuitous.Next(-9, 10); // Генерация числа от -9 до 9 включительно
+               Console.Write($"{lineup[i, j],4}");
             }
             Console.WriteLine();
          }
@@ -567,7 +567,7 @@ namespace WrongWriteCodePartTwo
          {
             for (int j = 0; j < item; j++)
             {
-               int number = array[i, j];
+               int number = lineup[i, j];
 
                // Если число уже есть в словаре, увеличиваем счетчик
                if (frequency.ContainsKey(number))
