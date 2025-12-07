@@ -532,6 +532,54 @@ namespace WrongWriteCodePartTwo
          Console.WriteLine("Расчет частоты вхождения каждого числа двумерного массива с использованием словаря");
          Console.WriteLine("----------------------------------------------------------------------------------");
 
+
+         Console.Write("Введите количество строк массива: ");
+         int ro = Convert.ToInt32(Console.ReadLine());
+         Console.Write("Введите количество столбцов массива: ");
+         int col = Convert.ToInt32(Console.ReadLine());
+         int[,] mass = new int[ro, col];
+         // Метод заполнения массива
+         void FillingsMas()
+         {
+            Random chance = new Random();
+            int i = 0;
+            while (i < ro)
+            {
+               int j = 0;
+               while (j < col)
+               {
+                  mass[i, j] = chance.Next(10, 100);
+                  j++;
+               }
+
+               i++;
+            }
+         }
+
+         // Метод вывода массива
+         void PrintMas()
+         {
+            int i = 0;
+            while (i < ro)
+            {
+               int j = 0;
+               while (j < col)
+               {
+                  Console.Write("{0}\t", mass[i, j]);
+                  j++;
+               }
+
+               i++;
+               Console.WriteLine();
+            }
+         }
+
+         FillingsMas();
+         Console.WriteLine("Исходный массив:");
+         PrintMas();
+
+
+
          // Создаем генератор случайных чисел
          Random fortuitous = new Random();
          // Задаем размеры массива (можно изменить)
