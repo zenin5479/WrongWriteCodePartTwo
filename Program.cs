@@ -583,15 +583,6 @@ namespace WrongWriteCodePartTwo
          Console.WriteLine("\nЧастота вхождения чисел:");
          Console.WriteLine(new string('-', 30));
 
-         // Сортируем ключи для красивого вывода
-         //var sortedKeys = new List<int>(frequency.Keys);
-         //sortedKeys.Sort();
-
-         //foreach (int key in sortedKeys)
-         //{
-         //   Console.WriteLine($"Число {key,3}: {frequency[key],2} раз(а)");
-         //}
-
          Console.WriteLine("\nЧастота вхождения чисел:");
          foreach (var pair in frequency)
          {
