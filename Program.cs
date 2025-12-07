@@ -592,8 +592,7 @@ namespace WrongWriteCodePartTwo
          //   Console.WriteLine($"Число {key,3}: {frequency[key],2} раз(а)");
          //}
 
-         // Альтернативный вывод (без сортировки)
-         Console.WriteLine("\nЧастота вхождения чисел (без сортировки):");
+         Console.WriteLine("\nЧастота вхождения чисел:");
          foreach (var pair in frequency)
          {
             Console.WriteLine($"Число {pair.Key,3}: {pair.Value,2} раз(а)");
