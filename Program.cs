@@ -533,19 +533,19 @@ namespace WrongWriteCodePartTwo
          Random random = new Random();
 
          // Задаем размеры массива (можно изменить)
-         int ros = 5;
-         int cols = 5;
+         int rowing = 5;
+         int item = 5;
 
          // Создаем двумерный массив
-         int[,] array = new int[ros, cols];
+         int[,] array = new int[rowing, item];
 
          Console.WriteLine("Исходный массив:");
          Console.WriteLine(new string('-', 30));
 
          // Заполняем массив случайными числами от -9 до 9 и выводим его
-         for (int i = 0; i < ros; i++)
+         for (int i = 0; i < rowing; i++)
          {
-            for (int j = 0; j < cols; j++)
+            for (int j = 0; j < item; j++)
             {
                array[i, j] = random.Next(-9, 10); // Генерация числа от -9 до 9 включительно
                Console.Write($"{array[i, j],4}");
@@ -560,9 +560,9 @@ namespace WrongWriteCodePartTwo
          Dictionary<int, int> frequency = new Dictionary<int, int>();
 
          // Подсчитываем частоту вхождения каждого числа
-         for (int i = 0; i < ros; i++)
+         for (int i = 0; i < rowing; i++)
          {
-            for (int j = 0; j < cols; j++)
+            for (int j = 0; j < item; j++)
             {
                int number = array[i, j];
 
@@ -591,7 +591,7 @@ namespace WrongWriteCodePartTwo
 
          // Вывод статистики
          Console.WriteLine(new string('-', 30));
-         Console.WriteLine($"Всего элементов в массиве: {ros * cols}");
+         Console.WriteLine($"Всего элементов в массиве: {rowing * item}");
          Console.WriteLine($"Уникальных чисел: {frequency.Count}");
 
          Console.ReadKey();
