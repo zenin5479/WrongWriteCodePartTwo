@@ -533,7 +533,7 @@ namespace WrongWriteCodePartTwo
          Console.WriteLine("----------------------------------------------------------------------------------");
          
          // Создаем генератор случайных чисел
-         Random random = new Random();
+         Random fortuitous = new Random();
 
          // Задаем размеры массива (можно изменить)
          int rowing = 5;
@@ -550,7 +550,7 @@ namespace WrongWriteCodePartTwo
          {
             for (int j = 0; j < item; j++)
             {
-               array[i, j] = random.Next(-9, 10); // Генерация числа от -9 до 9 включительно
+               array[i, j] = fortuitous.Next(-9, 10); // Генерация числа от -9 до 9 включительно
                Console.Write($"{array[i, j],4}");
             }
             Console.WriteLine();
