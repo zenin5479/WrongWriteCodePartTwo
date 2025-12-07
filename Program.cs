@@ -531,8 +531,6 @@ namespace WrongWriteCodePartTwo
          Console.WriteLine("----------------------------------------------------------------------------------");
          Console.WriteLine("Расчет частоты вхождения каждого числа двумерного массива с использованием словаря");
          Console.WriteLine("----------------------------------------------------------------------------------");
-
-
          Console.Write("Введите количество строк массива: ");
          int ro = Convert.ToInt32(Console.ReadLine());
          Console.Write("Введите количество столбцов массива: ");
@@ -548,7 +546,7 @@ namespace WrongWriteCodePartTwo
                int j = 0;
                while (j < col)
                {
-                  mass[i, j] = chance.Next(10, 100);
+                  mass[i, j] = chance.Next(-9, 10);
                   j++;
                }
 
@@ -580,29 +578,7 @@ namespace WrongWriteCodePartTwo
 
 
 
-         // Создаем генератор случайных чисел
-         Random fortuitous = new Random();
-         // Задаем размеры массива (можно изменить)
-         int rowing = 5;
-         int items = 5;
-         // Создаем двумерный массив
-         int[,] lineup = new int[rowing, items];
-
-         Console.WriteLine("Исходный массив:");
-         Console.WriteLine(new string('-', 30));
-
-         // Заполняем массив случайными числами от -9 до 9 и выводим его
-         for (int i = 0; i < rowing; i++)
-         {
-            for (int j = 0; j < items; j++)
-            {
-               // Генерация числа от -9 до 9 включительно
-               lineup[i, j] = fortuitous.Next(-9, 10);
-               Console.Write("{0,4}", lineup[i, j]);
-            }
-
-            Console.WriteLine();
-         }
+       
 
          Console.WriteLine(new string('-', 30));
 
@@ -611,11 +587,11 @@ namespace WrongWriteCodePartTwo
          Dictionary<int, int> frequency = new Dictionary<int, int>();
 
          // Подсчитываем частоту вхождения каждого числа
-         for (int i = 0; i < rowing; i++)
+         for (int i = 0; i < ro; i++)
          {
-            for (int j = 0; j < items; j++)
+            for (int j = 0; j < col; j++)
             {
-               int number = lineup[i, j];
+               int number = mass[i, j];
 
                // Если число уже есть в словаре, увеличиваем счетчик
                if (frequency.ContainsKey(number))
@@ -642,7 +618,7 @@ namespace WrongWriteCodePartTwo
 
          // Вывод статистики
          Console.WriteLine(new string('-', 30));
-         Console.WriteLine($"Всего элементов в массиве: {rowing * items}");
+         Console.WriteLine($"Всего элементов в массиве: {ro * col}");
          Console.WriteLine($"Уникальных чисел: {frequency.Count}");
 
          Console.ReadKey();
