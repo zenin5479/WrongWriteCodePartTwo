@@ -584,20 +584,20 @@ namespace WrongWriteCodePartTwo
          Console.WriteLine(new string('-', 30));
 
          // Сортируем ключи для красивого вывода
-         var sortedKeys = new List<int>(frequency.Keys);
-         sortedKeys.Sort();
+         //var sortedKeys = new List<int>(frequency.Keys);
+         //sortedKeys.Sort();
 
-         foreach (int key in sortedKeys)
-         {
-            Console.WriteLine($"Число {key,3}: {frequency[key],2} раз(а)");
-         }
+         //foreach (int key in sortedKeys)
+         //{
+         //   Console.WriteLine($"Число {key,3}: {frequency[key],2} раз(а)");
+         //}
 
          // Альтернативный вывод (без сортировки)
-         // Console.WriteLine("\nЧастота вхождения чисел (без сортировки):");
-         // foreach (var pair in frequency)
-         // {
-         //     Console.WriteLine($"Число {pair.Key,3}: {pair.Value,2} раз(а)");
-         // }
+         Console.WriteLine("\nЧастота вхождения чисел (без сортировки):");
+         foreach (var pair in frequency)
+         {
+            Console.WriteLine($"Число {pair.Key,3}: {pair.Value,2} раз(а)");
+         }
 
          // Вывод статистики
          Console.WriteLine(new string('-', 30));
