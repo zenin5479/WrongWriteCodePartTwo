@@ -536,9 +536,9 @@ namespace WrongWriteCodePartTwo
          Random fortuitous = new Random();
          // Задаем размеры массива (можно изменить)
          int rowing = 5;
-         int item = 5;
+         int items = 5;
          // Создаем двумерный массив
-         int[,] lineup = new int[rowing, item];
+         int[,] lineup = new int[rowing, items];
 
          Console.WriteLine("Исходный массив:");
          Console.WriteLine(new string('-', 30));
@@ -546,7 +546,7 @@ namespace WrongWriteCodePartTwo
          // Заполняем массив случайными числами от -9 до 9 и выводим его
          for (int i = 0; i < rowing; i++)
          {
-            for (int j = 0; j < item; j++)
+            for (int j = 0; j < items; j++)
             {
                // Генерация числа от -9 до 9 включительно
                lineup[i, j] = fortuitous.Next(-9, 10);
@@ -565,7 +565,7 @@ namespace WrongWriteCodePartTwo
          // Подсчитываем частоту вхождения каждого числа
          for (int i = 0; i < rowing; i++)
          {
-            for (int j = 0; j < item; j++)
+            for (int j = 0; j < items; j++)
             {
                int number = lineup[i, j];
 
@@ -587,14 +587,14 @@ namespace WrongWriteCodePartTwo
          Console.WriteLine(new string('-', 30));
 
          Console.WriteLine("\nЧастота вхождения чисел:");
-         foreach (var pair in frequency)
+         foreach (KeyValuePair<int, int> pair in frequency)
          {
             Console.WriteLine("Число {0,3}: {1,2} раз(а)", pair.Key, pair.Value);
          }
 
          // Вывод статистики
          Console.WriteLine(new string('-', 30));
-         Console.WriteLine($"Всего элементов в массиве: {rowing * item}");
+         Console.WriteLine($"Всего элементов в массиве: {rowing * items}");
          Console.WriteLine($"Уникальных чисел: {frequency.Count}");
 
          Console.ReadKey();
