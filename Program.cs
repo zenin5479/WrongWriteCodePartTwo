@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 // Как не нужно писать код часть вторая
 // Задача: Задайте двумерный массив
@@ -527,6 +528,81 @@ namespace WrongWriteCodePartTwo
 
          // - Задача: Дан двумерный массив, заполненный случайными числами от -9 до 9
          // Подсчитать частоту вхождения каждого числа в массив, используя словарь
+
+         // Создаем генератор случайных чисел
+         Random random = new Random();
+
+         // Задаем размеры массива (можно изменить)
+         int ros = 5;
+         int cols = 5;
+
+         // Создаем двумерный массив
+         int[,] array = new int[ros, cols];
+
+         Console.WriteLine("Исходный массив:");
+         Console.WriteLine(new string('-', 30));
+
+         // Заполняем массив случайными числами от -9 до 9 и выводим его
+         for (int i = 0; i < ros; i++)
+         {
+            for (int j = 0; j < cols; j++)
+            {
+               array[i, j] = random.Next(-9, 10); // Генерация числа от -9 до 9 включительно
+               Console.Write($"{array[i, j],4}");
+            }
+            Console.WriteLine();
+         }
+
+         Console.WriteLine(new string('-', 30));
+
+         // Создаем словарь для подсчета частоты чисел
+         // Ключ - число, значение - количество вхождений
+         Dictionary<int, int> frequency = new Dictionary<int, int>();
+
+         // Подсчитываем частоту вхождения каждого числа
+         for (int i = 0; i < ros; i++)
+         {
+            for (int j = 0; j < cols; j++)
+            {
+               int number = array[i, j];
+
+               // Если число уже есть в словаре, увеличиваем счетчик
+               if (frequency.ContainsKey(number))
+               {
+                  frequency[number]++;
+               }
+               // Иначе добавляем число в словарь с начальным значением 1
+               else
+               {
+                  frequency[number] = 1;
+               }
+            }
+         }
+
+         // Выводим результаты подсчета
+         Console.WriteLine("\nЧастота вхождения чисел:");
+         Console.WriteLine(new string('-', 30));
+
+         // Сортируем ключи для красивого вывода
+         var sortedKeys = new List<int>(frequency.Keys);
+         sortedKeys.Sort();
+
+         foreach (int key in sortedKeys)
+         {
+            Console.WriteLine($"Число {key,3}: {frequency[key],2} раз(а)");
+         }
+
+         // Альтернативный вывод (без сортировки)
+         // Console.WriteLine("\nЧастота вхождения чисел (без сортировки):");
+         // foreach (var pair in frequency)
+         // {
+         //     Console.WriteLine($"Число {pair.Key,3}: {pair.Value,2} раз(а)");
+         // }
+
+         // Вывод статистики
+         Console.WriteLine(new string('-', 30));
+         Console.WriteLine($"Всего элементов в массиве: {ros * cols}");
+         Console.WriteLine($"Уникальных чисел: {frequency.Count}");
 
          Console.ReadKey();
       }
