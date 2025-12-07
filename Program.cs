@@ -531,7 +531,7 @@ namespace WrongWriteCodePartTwo
          Console.WriteLine("----------------------------------------------------------------------------------");
          Console.WriteLine("Расчет частоты вхождения каждого числа двумерного массива с использованием словаря");
          Console.WriteLine("----------------------------------------------------------------------------------");
-         
+
          // Создаем генератор случайных чисел
          Random fortuitous = new Random();
          // Задаем размеры массива (можно изменить)
@@ -549,7 +549,7 @@ namespace WrongWriteCodePartTwo
             for (int j = 0; j < item; j++)
             {
                // Генерация числа от -9 до 9 включительно
-               lineup[i, j] = fortuitous.Next(-9, 10); 
+               lineup[i, j] = fortuitous.Next(-9, 10);
                Console.Write($"{lineup[i, j],4}");
             }
 
