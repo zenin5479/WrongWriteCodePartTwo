@@ -534,11 +534,9 @@ namespace WrongWriteCodePartTwo
          
          // Создаем генератор случайных чисел
          Random fortuitous = new Random();
-
          // Задаем размеры массива (можно изменить)
          int rowing = 5;
          int item = 5;
-
          // Создаем двумерный массив
          int[,] lineup = new int[rowing, item];
 
