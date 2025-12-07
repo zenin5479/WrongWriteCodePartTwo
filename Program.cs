@@ -548,9 +548,11 @@ namespace WrongWriteCodePartTwo
          {
             for (int j = 0; j < item; j++)
             {
-               lineup[i, j] = fortuitous.Next(-9, 10); // Генерация числа от -9 до 9 включительно
+               // Генерация числа от -9 до 9 включительно
+               lineup[i, j] = fortuitous.Next(-9, 10); 
                Console.Write($"{lineup[i, j],4}");
             }
+
             Console.WriteLine();
          }
 
