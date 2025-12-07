@@ -589,7 +589,7 @@ namespace WrongWriteCodePartTwo
          Console.WriteLine("\nЧастота вхождения чисел:");
          foreach (var pair in frequency)
          {
-            Console.WriteLine($"Число {pair.Key,3}: {pair.Value,2} раз(а)");
+            Console.WriteLine("Число {0,3}: {1,2} раз(а)", pair.Key, pair.Value);
          }
 
          // Вывод статистики
