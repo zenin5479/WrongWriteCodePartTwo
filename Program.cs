@@ -555,7 +555,7 @@ namespace WrongWriteCodePartTwo
          }
 
          // Метод вывода массива
-         void Printcollection()
+         void PrintMasCollection()
          {
             int i = 0;
             while (i < rowing)
@@ -574,7 +574,7 @@ namespace WrongWriteCodePartTwo
 
          FillingsCollection();
          Console.WriteLine("Исходный массив:");
-         PrintMas();
+         PrintMasCollection();
          Console.WriteLine(new string('-', 30));
 
          // Создаем словарь для подсчета частоты чисел
