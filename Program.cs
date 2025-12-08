@@ -557,6 +557,7 @@ namespace WrongWriteCodePartTwo
          // Метод вывода массива
          void PrintingCollection()
          {
+            Console.WriteLine("Исходный массив:");
             int i = 0;
             while (i < rowing)
             {
@@ -573,7 +574,7 @@ namespace WrongWriteCodePartTwo
          }
 
          FillingsCollection();
-         Console.WriteLine("Исходный массив:");
+
          PrintingCollection();
 
          // Создаем словарь для подсчета частоты чисел
@@ -607,7 +608,6 @@ namespace WrongWriteCodePartTwo
          void OutputResults()
          {
             Console.WriteLine("\nЧастота вхождения чисел:");
-
             Console.WriteLine("\nЧастота вхождения чисел:");
             foreach (KeyValuePair<int, int> pair in frequency)
             {
@@ -617,10 +617,10 @@ namespace WrongWriteCodePartTwo
             Console.WriteLine(new string('-', 30));
             Console.WriteLine($"Всего элементов в массиве: {rowing * pier}");
             Console.WriteLine($"Уникальных чисел: {frequency.Count}");
-
          }
 
-
+         CalculateFrequency();
+         OutputResults();
 
          Console.ReadKey();
       }
