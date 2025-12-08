@@ -602,7 +602,7 @@ namespace WrongWriteCodePartTwo
          // Метод вывода результатов подсчета
          void OutputResults()
          {
-            Console.WriteLine("\nЧастота вхождения чисел:");
+            Console.WriteLine("Частота вхождения чисел:");
             foreach (KeyValuePair<int, int> pair in frequency)
             {
                Console.WriteLine("Число {0,3}: {1,2} раз(а)", pair.Key, pair.Value);
