@@ -608,8 +608,8 @@ namespace WrongWriteCodePartTwo
                Console.WriteLine("Число {0,3}: {1,2} раз(а)", pair.Key, pair.Value);
             }
 
-            Console.WriteLine(string.Format("Всего элементов в массиве: {0}", rowing * pier));
-            Console.WriteLine(string.Format("Уникальных чисел: {0}", frequency.Count));
+            Console.WriteLine("Всего элементов в массиве: {0}", rowing * pier);
+            Console.WriteLine("Уникальных чисел: {0}", frequency.Count);
          }
 
          FillingsCollection();
