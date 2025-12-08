@@ -575,27 +575,30 @@ namespace WrongWriteCodePartTwo
          FillingsCollection();
          Console.WriteLine("Исходный массив:");
          PrintingCollection();
-         Console.WriteLine(new string('-', 30));
 
          // Создаем словарь для подсчета частоты чисел
          // Ключ - число, значение - количество вхождений
-         Dictionary<int, int> frequency = new Dictionary<int, int>();
-         // Подсчитываем частоту вхождения каждого числа
-         for (int i = 0; i < rowing; i++)
-         {
-            for (int j = 0; j < pier; j++)
-            {
-               int number = mass[i, j];
 
-               // Если число уже есть в словаре, увеличиваем счетчик
-               if (frequency.ContainsKey(number))
+         void CalculateFrequency()
+         {
+            Dictionary<int, int> frequency = new Dictionary<int, int>();
+            // Подсчитываем частоту вхождения каждого числа
+            for (int i = 0; i < rowing; i++)
+            {
+               for (int j = 0; j < pier; j++)
                {
-                  frequency[number]++;
-               }
-               // Иначе добавляем число в словарь с начальным значением 1
-               else
-               {
-                  frequency[number] = 1;
+                  int number = mass[i, j];
+
+                  // Если число уже есть в словаре, увеличиваем счетчик
+                  if (frequency.ContainsKey(number))
+                  {
+                     frequency[number]++;
+                  }
+                  // Иначе добавляем число в словарь с начальным значением 1
+                  else
+                  {
+                     frequency[number] = 1;
+                  }
                }
             }
          }
