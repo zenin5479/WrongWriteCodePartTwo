@@ -576,14 +576,6 @@ namespace WrongWriteCodePartTwo
             }
          }
 
-         
-         
-         FillingsCollection();
-
-         PrintingCollection();
-
-
-
          // Метод подсчета частоты чисел
          void CalculateFrequency()
          {
@@ -621,6 +613,13 @@ namespace WrongWriteCodePartTwo
             Console.WriteLine($"Всего элементов в массиве: {rowing * pier}");
             Console.WriteLine($"Уникальных чисел: {frequency.Count}");
          }
+
+         FillingsCollection();
+         PrintingCollection();
+
+
+
+
 
          CalculateFrequency();
          OutputResults();
