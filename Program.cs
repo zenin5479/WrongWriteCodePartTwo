@@ -537,7 +537,7 @@ namespace WrongWriteCodePartTwo
          int pier = Convert.ToInt32(Console.ReadLine());
          int[,] mass = new int[rowing, pier];
          // Метод заполнения массива
-         void FillingsMas()
+         void FillingsCollection()
          {
             Random chance = new Random();
             int i = 0;
@@ -555,7 +555,7 @@ namespace WrongWriteCodePartTwo
          }
 
          // Метод вывода массива
-         void PrintMas()
+         void Printcollection()
          {
             int i = 0;
             while (i < rowing)
@@ -572,7 +572,7 @@ namespace WrongWriteCodePartTwo
             }
          }
 
-         FillingsMas();
+         FillingsCollection();
          Console.WriteLine("Исходный массив:");
          PrintMas();
          Console.WriteLine(new string('-', 30));
