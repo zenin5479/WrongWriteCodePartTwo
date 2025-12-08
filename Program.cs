@@ -538,7 +538,7 @@ namespace WrongWriteCodePartTwo
          int rowing = Convert.ToInt32(Console.ReadLine());
          Console.Write("Введите количество столбцов массива: ");
          int pier = Convert.ToInt32(Console.ReadLine());
-         int[,] mass = new int[rowing, pier];
+         int[,] massive = new int[rowing, pier];
          // Метод заполнения массива
          void FillingsCollection()
          {
@@ -549,7 +549,7 @@ namespace WrongWriteCodePartTwo
                int j = 0;
                while (j < pier)
                {
-                  mass[i, j] = chance.Next(-9, 10);
+                  massive[i, j] = chance.Next(-9, 10);
                   j++;
                }
 
@@ -567,7 +567,7 @@ namespace WrongWriteCodePartTwo
                int j = 0;
                while (j < pier)
                {
-                  Console.Write("{0}\t", mass[i, j]);
+                  Console.Write("{0}\t", massive[i, j]);
                   j++;
                }
 
@@ -583,7 +583,7 @@ namespace WrongWriteCodePartTwo
             {
                for (int j = 0; j < pier; j++)
                {
-                  int number = mass[i, j];
+                  int number = massive[i, j];
 
                   // Если число уже есть в словаре, увеличиваем счетчик
                   if (frequency.ContainsKey(number))
