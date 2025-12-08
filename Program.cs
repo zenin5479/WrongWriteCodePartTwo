@@ -609,8 +609,8 @@ namespace WrongWriteCodePartTwo
             }
 
             Console.WriteLine(new string('-', 30));
-            Console.WriteLine($"Всего элементов в массиве: {rowing * pier}");
-            Console.WriteLine($"Уникальных чисел: {frequency.Count}");
+            Console.WriteLine(string.Format("Всего элементов в массиве: {0}", rowing * pier));
+            Console.WriteLine(string.Format("Уникальных чисел: {0}", frequency.Count));
          }
 
          FillingsCollection();
