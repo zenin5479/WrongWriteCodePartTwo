@@ -532,19 +532,19 @@ namespace WrongWriteCodePartTwo
          Console.WriteLine("Расчет частоты вхождения каждого числа двумерного массива с использованием словаря");
          Console.WriteLine("----------------------------------------------------------------------------------");
          Console.Write("Введите количество строк массива: ");
-         int ro = Convert.ToInt32(Console.ReadLine());
+         int rowing = Convert.ToInt32(Console.ReadLine());
          Console.Write("Введите количество столбцов массива: ");
-         int col = Convert.ToInt32(Console.ReadLine());
-         int[,] mass = new int[ro, col];
+         int pier = Convert.ToInt32(Console.ReadLine());
+         int[,] mass = new int[rowing, pier];
          // Метод заполнения массива
          void FillingsMas()
          {
             Random chance = new Random();
             int i = 0;
-            while (i < ro)
+            while (i < rowing)
             {
                int j = 0;
-               while (j < col)
+               while (j < pier)
                {
                   mass[i, j] = chance.Next(-9, 10);
                   j++;
@@ -558,10 +558,10 @@ namespace WrongWriteCodePartTwo
          void PrintMas()
          {
             int i = 0;
-            while (i < ro)
+            while (i < rowing)
             {
                int j = 0;
-               while (j < col)
+               while (j < pier)
                {
                   Console.Write("{0}\t", mass[i, j]);
                   j++;
@@ -581,9 +581,9 @@ namespace WrongWriteCodePartTwo
          // Ключ - число, значение - количество вхождений
          Dictionary<int, int> frequency = new Dictionary<int, int>();
          // Подсчитываем частоту вхождения каждого числа
-         for (int i = 0; i < ro; i++)
+         for (int i = 0; i < rowing; i++)
          {
-            for (int j = 0; j < col; j++)
+            for (int j = 0; j < pier; j++)
             {
                int number = mass[i, j];
 
@@ -612,7 +612,7 @@ namespace WrongWriteCodePartTwo
 
          // Вывод статистики
          Console.WriteLine(new string('-', 30));
-         Console.WriteLine($"Всего элементов в массиве: {ro * col}");
+         Console.WriteLine($"Всего элементов в массиве: {rowing * pier}");
          Console.WriteLine($"Уникальных чисел: {frequency.Count}");
 
          Console.ReadKey();
