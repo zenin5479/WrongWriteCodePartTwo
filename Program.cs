@@ -534,7 +534,6 @@ namespace WrongWriteCodePartTwo
          // Создаем словарь для подсчета частоты чисел
          // Ключ - число, значение - количество вхождений
          Dictionary<int, int> frequency = new Dictionary<int, int>();
-
          Console.Write("Введите количество строк массива: ");
          int rowing = Convert.ToInt32(Console.ReadLine());
          Console.Write("Введите количество столбцов массива: ");
@@ -577,6 +576,8 @@ namespace WrongWriteCodePartTwo
             }
          }
 
+         
+         
          FillingsCollection();
 
          PrintingCollection();
