@@ -614,9 +614,15 @@ namespace WrongWriteCodePartTwo
          }
 
          // Вывод статистики
-         Console.WriteLine(new string('-', 30));
-         Console.WriteLine($"Всего элементов в массиве: {rowing * pier}");
-         Console.WriteLine($"Уникальных чисел: {frequency.Count}");
+         void OutputResults()
+         {
+            Console.WriteLine(new string('-', 30));
+            Console.WriteLine($"Всего элементов в массиве: {rowing * pier}");
+            Console.WriteLine($"Уникальных чисел: {frequency.Count}");
+
+         }
+
+
 
          Console.ReadKey();
       }
