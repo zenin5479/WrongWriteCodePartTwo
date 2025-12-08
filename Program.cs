@@ -606,9 +606,7 @@ namespace WrongWriteCodePartTwo
          // Метод вывода результатов подсчета
          void OutputResults()
          {
-
             Console.WriteLine("\nЧастота вхождения чисел:");
-            Console.WriteLine(new string('-', 30));
 
             Console.WriteLine("\nЧастота вхождения чисел:");
             foreach (KeyValuePair<int, int> pair in frequency)
