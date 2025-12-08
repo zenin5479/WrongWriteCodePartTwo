@@ -616,11 +616,6 @@ namespace WrongWriteCodePartTwo
 
          FillingsCollection();
          PrintingCollection();
-
-
-
-
-
          CalculateFrequency();
          OutputResults();
 
