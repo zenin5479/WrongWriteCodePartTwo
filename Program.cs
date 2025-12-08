@@ -580,11 +580,9 @@ namespace WrongWriteCodePartTwo
          // Ключ - число, значение - количество вхождений
          Dictionary<int, int> frequency = new Dictionary<int, int>();
 
-         // Метод вывода массива
+         // Метод подсчета частоты чисел
          void CalculateFrequency()
          {
-            
-            // Подсчитываем частоту вхождения каждого числа
             for (int i = 0; i < rowing; i++)
             {
                for (int j = 0; j < pier; j++)
