@@ -603,7 +603,6 @@ namespace WrongWriteCodePartTwo
          void OutputResults()
          {
             Console.WriteLine("\nЧастота вхождения чисел:");
-            Console.WriteLine("\nЧастота вхождения чисел:");
             foreach (KeyValuePair<int, int> pair in frequency)
             {
                Console.WriteLine("Число {0,3}: {1,2} раз(а)", pair.Key, pair.Value);
