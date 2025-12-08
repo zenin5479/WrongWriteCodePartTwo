@@ -603,11 +603,10 @@ namespace WrongWriteCodePartTwo
             }
          }
 
-
-         // Вывод статистики
+         // Метод вывода результатов подсчета
          void OutputResults()
          {
-            // Выводим результаты подсчета
+
             Console.WriteLine("\nЧастота вхождения чисел:");
             Console.WriteLine(new string('-', 30));
 
