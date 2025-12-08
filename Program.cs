@@ -603,19 +603,20 @@ namespace WrongWriteCodePartTwo
             }
          }
 
-         // Выводим результаты подсчета
-         Console.WriteLine("\nЧастота вхождения чисел:");
-         Console.WriteLine(new string('-', 30));
-
-         Console.WriteLine("\nЧастота вхождения чисел:");
-         foreach (KeyValuePair<int, int> pair in frequency)
-         {
-            Console.WriteLine("Число {0,3}: {1,2} раз(а)", pair.Key, pair.Value);
-         }
 
          // Вывод статистики
          void OutputResults()
          {
+            // Выводим результаты подсчета
+            Console.WriteLine("\nЧастота вхождения чисел:");
+            Console.WriteLine(new string('-', 30));
+
+            Console.WriteLine("\nЧастота вхождения чисел:");
+            foreach (KeyValuePair<int, int> pair in frequency)
+            {
+               Console.WriteLine("Число {0,3}: {1,2} раз(а)", pair.Key, pair.Value);
+            }
+
             Console.WriteLine(new string('-', 30));
             Console.WriteLine($"Всего элементов в массиве: {rowing * pier}");
             Console.WriteLine($"Уникальных чисел: {frequency.Count}");
