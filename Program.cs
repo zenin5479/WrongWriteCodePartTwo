@@ -635,12 +635,12 @@ namespace WrongWriteCodePartTwo
          // 1. Находим минимальный по модулю элемент
          double minAbsValue = double.MaxValue;
          int wrangle = matri.GetLength(0);
-         int cols = matri.GetLength(1);
+         int piece = matri.GetLength(1);
 
          // Проходим по всем элементам матрицы
          for (int i = 0; i < wrangle; i++)
          {
-            for (int j = 0; j < cols; j++)
+            for (int j = 0; j < piece; j++)
             {
                double absValue = Math.Abs(matri[i, j]);
                if (absValue < minAbsValue)
@@ -654,12 +654,12 @@ namespace WrongWriteCodePartTwo
 
          // 2. Создаем массивы для отметки строк и столбцов
          bool[] rowsContainingMin = new bool[wrangle];
-         bool[] colsContainingMin = new bool[cols];
+         bool[] colsContainingMin = new bool[piece];
 
          // 3. Отмечаем строки и столбцы, содержащие минимальный по модулю элемент
          for (int i = 0; i < wrangle; i++)
          {
-            for (int j = 0; j < cols; j++)
+            for (int j = 0; j < piece; j++)
             {
                if (Math.Abs(matri[i, j]) == minAbsValue)
                {
@@ -676,7 +676,7 @@ namespace WrongWriteCodePartTwo
             if (rowsContainingMin[i])
             {
                Console.Write($"Строка {i + 1}: ");
-               for (int j = 0; j < cols; j++)
+               for (int j = 0; j < piece; j++)
                {
                   Console.Write($"{matri[i, j]} ");
                }
@@ -685,7 +685,7 @@ namespace WrongWriteCodePartTwo
          }
 
          Console.WriteLine("\nСтолбцы, содержащие минимальный по модулю элемент:");
-         for (int j = 0; j < cols; j++)
+         for (int j = 0; j < piece; j++)
          {
             if (colsContainingMin[j])
             {
@@ -709,7 +709,7 @@ namespace WrongWriteCodePartTwo
          }
 
          Console.WriteLine("\n\nНомера столбцов с минимальным по модулю элементом:");
-         for (int j = 0; j < cols; j++)
+         for (int j = 0; j < piece; j++)
          {
             if (colsContainingMin[j])
             {
