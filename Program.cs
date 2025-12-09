@@ -582,7 +582,7 @@ namespace WrongWriteCodePartTwo
                int j = 0;
                while (j < pier)
                {
-int number = massive[i, j];
+                  int number = massive[i, j];
 
                   // Если число уже есть в словаре, увеличиваем счетчик
                   if (frequency.ContainsKey(number))
@@ -594,14 +594,7 @@ int number = massive[i, j];
                   {
                      frequency[number] = 1;
                   }
-
-
-
                   j++;
-               }
-               for ( )
-               {
-                  
                }
 
                i++;
