@@ -597,11 +597,6 @@ namespace WrongWriteCodePartTwo
 
                i++;
             }
-
-            for ( )
-            {
-
-            }
          }
 
          // Метод вывода результатов подсчета
