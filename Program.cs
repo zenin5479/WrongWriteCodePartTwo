@@ -634,11 +634,11 @@ namespace WrongWriteCodePartTwo
 
          // 1. Находим минимальный по модулю элемент
          double minAbsValue = double.MaxValue;
-         int ro = matri.GetLength(0);
+         int wrangle = matri.GetLength(0);
          int cols = matri.GetLength(1);
 
          // Проходим по всем элементам матрицы
-         for (int i = 0; i < ro; i++)
+         for (int i = 0; i < wrangle; i++)
          {
             for (int j = 0; j < cols; j++)
             {
@@ -653,11 +653,11 @@ namespace WrongWriteCodePartTwo
          Console.WriteLine($"\nМинимальный элемент по модулю: {minAbsValue}");
 
          // 2. Создаем массивы для отметки строк и столбцов
-         bool[] rowsContainingMin = new bool[ro];
+         bool[] rowsContainingMin = new bool[wrangle];
          bool[] colsContainingMin = new bool[cols];
 
          // 3. Отмечаем строки и столбцы, содержащие минимальный по модулю элемент
-         for (int i = 0; i < ro; i++)
+         for (int i = 0; i < wrangle; i++)
          {
             for (int j = 0; j < cols; j++)
             {
@@ -671,7 +671,7 @@ namespace WrongWriteCodePartTwo
 
          // 4. Выводим результаты
          Console.WriteLine("\nСтроки, содержащие минимальный по модулю элемент:");
-         for (int i = 0; i < ro; i++)
+         for (int i = 0; i < wrangle; i++)
          {
             if (rowsContainingMin[i])
             {
@@ -690,7 +690,7 @@ namespace WrongWriteCodePartTwo
             if (colsContainingMin[j])
             {
                Console.Write($"Столбец {j + 1}: ");
-               for (int i = 0; i < ro; i++)
+               for (int i = 0; i < wrangle; i++)
                {
                   Console.Write($"{matri[i, j]} ");
                }
@@ -700,7 +700,7 @@ namespace WrongWriteCodePartTwo
 
          // Дополнительный вариант: вывод только номеров строк и столбцов
          Console.WriteLine("\nНомера строк с минимальным по модулю элементом:");
-         for (int i = 0; i < ro; i++)
+         for (int i = 0; i < wrangle; i++)
          {
             if (rowsContainingMin[i])
             {
