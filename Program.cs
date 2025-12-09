@@ -579,7 +579,7 @@ namespace WrongWriteCodePartTwo
             int i = 0;
             while (i < rowing)
             {
-for (int j = 0; j < pier; j++)
+               for (int j = 0; j < pier; j++)
                {
                   int number = massive[i, j];
 
@@ -595,14 +595,12 @@ for (int j = 0; j < pier; j++)
                   }
                }
 
-               
-               
                i++;
             }
 
             for ( )
             {
-               
+
             }
          }
 
