@@ -576,9 +576,10 @@ namespace WrongWriteCodePartTwo
          // Метод подсчета частоты чисел
          void CalculateFrequency()
          {
-            for (int i = 0; i < rowing; i++)
+            int i = 0;
+            while (i < rowing)
             {
-               for (int j = 0; j < pier; j++)
+for (int j = 0; j < pier; j++)
                {
                   int number = massive[i, j];
 
@@ -593,6 +594,15 @@ namespace WrongWriteCodePartTwo
                      frequency[number] = 1;
                   }
                }
+
+               
+               
+               i++;
+            }
+
+            for ( )
+            {
+               
             }
          }
 
