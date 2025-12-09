@@ -619,6 +619,9 @@ namespace WrongWriteCodePartTwo
          CalculateFrequency();
          OutputResults();
 
+         // - Задача: Найти минимальный по модулю элемент
+         // Вывести все столбцы и строки, содержащие элементы, равные по модулю минимальному
+
          Console.ReadKey();
       }
    }
