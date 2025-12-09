@@ -621,8 +621,120 @@ namespace WrongWriteCodePartTwo
 
          // - Задача: Найти минимальный по модулю элемент
          // Вывести все столбцы и строки, содержащие элементы, равные по модулю минимальному
+         // Пример матрицы для тестирования
+         double[,] matri = {
+            { 3.5, -2.1, 4.8 },
+            { -1.2, 0.5, -2.1 },
+            { 7.3, 2.1, -0.9 }
+        };
+
+         Console.WriteLine("Исходная матрица:");
+         PrintMatrix(matri);
+
+         // 1. Находим минимальный по модулю элемент
+         double minAbsValue = double.MaxValue;
+         int ro = matri.GetLength(0);
+         int cols = matri.GetLength(1);
+
+         // Проходим по всем элементам матрицы
+         for (int i = 0; i < ro; i++)
+         {
+            for (int j = 0; j < cols; j++)
+            {
+               double absValue = Math.Abs(matri[i, j]);
+               if (absValue < minAbsValue)
+               {
+                  minAbsValue = absValue;
+               }
+            }
+         }
+
+         Console.WriteLine($"\nМинимальный элемент по модулю: {minAbsValue}");
+
+         // 2. Создаем массивы для отметки строк и столбцов
+         bool[] rowsContainingMin = new bool[ro];
+         bool[] colsContainingMin = new bool[cols];
+
+         // 3. Отмечаем строки и столбцы, содержащие минимальный по модулю элемент
+         for (int i = 0; i < ro; i++)
+         {
+            for (int j = 0; j < cols; j++)
+            {
+               if (Math.Abs(matri[i, j]) == minAbsValue)
+               {
+                  rowsContainingMin[i] = true;
+                  colsContainingMin[j] = true;
+               }
+            }
+         }
+
+         // 4. Выводим результаты
+         Console.WriteLine("\nСтроки, содержащие минимальный по модулю элемент:");
+         for (int i = 0; i < ro; i++)
+         {
+            if (rowsContainingMin[i])
+            {
+               Console.Write($"Строка {i + 1}: ");
+               for (int j = 0; j < cols; j++)
+               {
+                  Console.Write($"{matri[i, j]} ");
+               }
+               Console.WriteLine();
+            }
+         }
+
+         Console.WriteLine("\nСтолбцы, содержащие минимальный по модулю элемент:");
+         for (int j = 0; j < cols; j++)
+         {
+            if (colsContainingMin[j])
+            {
+               Console.Write($"Столбец {j + 1}: ");
+               for (int i = 0; i < ro; i++)
+               {
+                  Console.Write($"{matri[i, j]} ");
+               }
+               Console.WriteLine();
+            }
+         }
+
+         // Дополнительный вариант: вывод только номеров строк и столбцов
+         Console.WriteLine("\nНомера строк с минимальным по модулю элементом:");
+         for (int i = 0; i < ro; i++)
+         {
+            if (rowsContainingMin[i])
+            {
+               Console.Write($"{i + 1} ");
+            }
+         }
+
+         Console.WriteLine("\n\nНомера столбцов с минимальным по модулю элементом:");
+         for (int j = 0; j < cols; j++)
+         {
+            if (colsContainingMin[j])
+            {
+               Console.Write($"{j + 1} ");
+            }
+         }
 
          Console.ReadKey();
+      }
+
+
+
+      // Метод для вывода матрицы
+      static void PrintMatrix(double[,] matrix)
+      {
+         int rows = matrix.GetLength(0);
+         int cols = matrix.GetLength(1);
+
+         for (int i = 0; i < rows; i++)
+         {
+            for (int j = 0; j < cols; j++)
+            {
+               Console.Write($"{matrix[i, j],8:F2}");
+            }
+            Console.WriteLine();
+         }
       }
    }
 }
