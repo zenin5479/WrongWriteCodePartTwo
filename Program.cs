@@ -719,8 +719,6 @@ namespace WrongWriteCodePartTwo
          Console.ReadKey();
       }
 
-
-
       // Метод для вывода матрицы
       static void PrintMatrix(double[,] matrix)
       {
