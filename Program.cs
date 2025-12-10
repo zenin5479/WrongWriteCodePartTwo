@@ -691,11 +691,9 @@ namespace WrongWriteCodePartTwo
             }
          }
 
-
          Console.WriteLine("Исходная матрица:");
          PrintMatrix(table);
          FillingsTable();
-
 
          // 1. Находим минимальный по модулю элемент
          double minAbsValue = double.MaxValue;
