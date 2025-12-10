@@ -673,6 +673,25 @@ namespace WrongWriteCodePartTwo
          int entry = DimensionRank(bank);
          int[,] table = new int[bank, entry];
 
+         // Метод заполнения массива
+         void FillingsCollection()
+         {
+            Random chance = new Random();
+            int i = 0;
+            while (i < rowing)
+            {
+               int j = 0;
+               while (j < pier)
+               {
+                  massive[i, j] = chance.Next(-9, 10);
+                  j++;
+               }
+
+               i++;
+            }
+         }
+
+
          Console.WriteLine("Исходная матрица:");
          PrintMatrix(table);
 
