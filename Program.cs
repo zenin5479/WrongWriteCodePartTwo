@@ -783,10 +783,12 @@ namespace WrongWriteCodePartTwo
          //   Console.WriteLine("Элемент противоречащий условию отсутствует");
          //}
 
+         SearchingMinPositivInt(table);
+
          Console.ReadKey();
       }
 
-      public static int SearchingMinPositivInt(int[,] search, string nameArray)
+      public static int SearchingMinPositivInt(int[,] search)
       {
          int min = search[0, 0];
          int i = 0;
@@ -811,7 +813,7 @@ namespace WrongWriteCodePartTwo
             i++;
          }
 
-         Console.WriteLine("Минимальное значение среди положительных элементов двумерного массива {0}: {1}", nameArray, min);
+         Console.WriteLine("Минимальное значение среди положительных элементов двумерного массива: {0}", min);
          return min;
       }
 
