@@ -669,9 +669,9 @@ namespace WrongWriteCodePartTwo
             return m;
          }
 
-         int argument = DimensionRow();
-         int entry = DimensionColumn(argument);
-         int[,] formation = new int[argument, entry];
+         int bank = DimensionRow();
+         int entry = DimensionColumn(bank);
+         int[,] formation = new int[bank, entry];
 
 
 
