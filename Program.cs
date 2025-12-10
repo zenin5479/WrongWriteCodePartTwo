@@ -669,11 +669,9 @@ namespace WrongWriteCodePartTwo
             return m;
          }
 
-         int bank = DimensionRow();
-         int entry = DimensionColumn(bank);
+         int bank = DimensionLine();
+         int entry = DimensionRank(bank);
          int[,] table = new int[bank, entry];
-
-
 
          Console.WriteLine("Исходная матрица:");
          PrintMatrix(matri);
