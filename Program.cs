@@ -670,8 +670,8 @@ namespace WrongWriteCodePartTwo
          }
 
          int argument = DimensionRow();
-         int tower = DimensionColumn(argument);
-         int[,] formation = new int[argument, tower];
+         int entry = DimensionColumn(argument);
+         int[,] formation = new int[argument, entry];
 
 
 
