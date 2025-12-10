@@ -629,7 +629,6 @@ namespace WrongWriteCodePartTwo
          //   { 7.3, 2.1, -0.9 }
          //};
 
-
          // Метод ввода количества строк
          int DimensionLine()
          {
