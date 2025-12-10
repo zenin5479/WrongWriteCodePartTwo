@@ -671,7 +671,7 @@ namespace WrongWriteCodePartTwo
 
          int bank = DimensionRow();
          int entry = DimensionColumn(bank);
-         int[,] formation = new int[bank, entry];
+         int[,] table = new int[bank, entry];
 
 
 
