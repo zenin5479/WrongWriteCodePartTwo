@@ -622,12 +622,12 @@ namespace WrongWriteCodePartTwo
          // Задача: Найти минимальный по модулю элемент
          // Вывести все столбцы и строки, содержащие элементы, равные по модулю минимальному
          // Пример матрицы для тестирования
-         double[,] matri =
-         {
-            { 3.5, -2.1, 4.8 },
-            { -1.2, 0.5, -2.1 },
-            { 7.3, 2.1, -0.9 }
-         };
+         //double[,] matri =
+         //{
+         //   { 3.5, -2.1, 4.8 },
+         //   { -1.2, 0.5, -2.1 },
+         //   { 7.3, 2.1, -0.9 }
+         //};
 
 
          // Метод ввода количества строк
@@ -678,15 +678,15 @@ namespace WrongWriteCodePartTwo
 
          // 1. Находим минимальный по модулю элемент
          double minAbsValue = double.MaxValue;
-         int wrangle = matri.GetLength(0);
-         int piece = matri.GetLength(1);
+         int wrangle = table.GetLength(0);
+         int piece = table.GetLength(1);
 
          // Проходим по всем элементам матрицы
          for (int i = 0; i < wrangle; i++)
          {
             for (int j = 0; j < piece; j++)
             {
-               double absValue = Math.Abs(matri[i, j]);
+               double absValue = Math.Abs(table[i, j]);
                if (absValue < minAbsValue)
                {
                   minAbsValue = absValue;
@@ -705,7 +705,7 @@ namespace WrongWriteCodePartTwo
          {
             for (int j = 0; j < piece; j++)
             {
-               if (Math.Abs(matri[i, j]) == minAbsValue)
+               if (Math.Abs(table[i, j]) == minAbsValue)
                {
                   rowsContainingMin[i] = true;
                   colsContainingMin[j] = true;
@@ -722,7 +722,7 @@ namespace WrongWriteCodePartTwo
                Console.Write($"Строка {i + 1}: ");
                for (int j = 0; j < piece; j++)
                {
-                  Console.Write($"{matri[i, j]} ");
+                  Console.Write($"{table[i, j]} ");
                }
                Console.WriteLine();
             }
@@ -736,7 +736,7 @@ namespace WrongWriteCodePartTwo
                Console.Write($"Столбец {j + 1}: ");
                for (int i = 0; i < wrangle; i++)
                {
-                  Console.Write($"{matri[i, j]} ");
+                  Console.Write($"{table[i, j]} ");
                }
                Console.WriteLine();
             }
