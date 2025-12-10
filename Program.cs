@@ -648,13 +648,9 @@ namespace WrongWriteCodePartTwo
                Console.Write("Введите количество столбцов массива: ");
                int.TryParse(Console.ReadLine(), out m);
                // Проверка на прямоугольность массива
-               if (rank == m)
+               if ((m <= 0 || m > 20))
                {
-                  Console.WriteLine("Количество строк массива равно количеству столбцов: матрица");
-               }
-               else if (m <= 0 || m > 20)
-               {
-                  Console.WriteLine("Введено неверное значение");
+                 Console.WriteLine("Введено неверное значение");
                }
             } while (m <= 0 || m > 20 || rank == m);
 
