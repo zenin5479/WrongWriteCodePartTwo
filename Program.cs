@@ -696,6 +696,7 @@ namespace WrongWriteCodePartTwo
          PrintMatrix(table);
 
 
+
          // 1. Находим минимальный по модулю элемент
          double minAbsValue = double.MaxValue;
          int wrangle = table.GetLength(0);
