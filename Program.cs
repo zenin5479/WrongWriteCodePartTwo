@@ -676,14 +676,14 @@ namespace WrongWriteCodePartTwo
          // Метод заполнения массива
          void Fillingstable()
          {
-            Random chance = new Random();
+            Random blind = new Random();
             int i = 0;
             while (i < rowing)
             {
                int j = 0;
                while (j < pier)
                {
-                  massive[i, j] = chance.Next(-9, 10);
+                  table[i, j] = blind.Next(-9, 10);
                   j++;
                }
 
@@ -694,6 +694,7 @@ namespace WrongWriteCodePartTwo
 
          Console.WriteLine("Исходная матрица:");
          PrintMatrix(table);
+
 
          // 1. Находим минимальный по модулю элемент
          double minAbsValue = double.MaxValue;
