@@ -674,7 +674,7 @@ namespace WrongWriteCodePartTwo
          int[,] table = new int[bank, entry];
 
          // Метод заполнения массива
-         void Fillingstable()
+         void FillingsTable()
          {
             Random blind = new Random();
             int i = 0;
