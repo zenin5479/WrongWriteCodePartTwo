@@ -674,7 +674,7 @@ namespace WrongWriteCodePartTwo
          int[,] table = new int[bank, entry];
 
          Console.WriteLine("Исходная матрица:");
-         PrintMatrix(matri);
+         PrintMatrix(table);
 
          // 1. Находим минимальный по модулю элемент
          double minAbsValue = double.MaxValue;
@@ -765,7 +765,7 @@ namespace WrongWriteCodePartTwo
       }
 
       // Метод для вывода матрицы
-      static void PrintMatrix(double[,] matrix)
+      static void PrintMatrix(int[,] matrix)
       {
          int rows = matrix.GetLength(0);
          int cols = matrix.GetLength(1);
