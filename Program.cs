@@ -675,7 +675,7 @@ namespace WrongWriteCodePartTwo
                int j = 0;
                while (j < pier)
                {
-                  table[i, j] = blind.Next(-9, 10);
+                  table[i, j] = blind.Next(-99, 100);
                   j++;
                }
 
