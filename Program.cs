@@ -767,7 +767,62 @@ namespace WrongWriteCodePartTwo
             }
          }
 
+
+         // Переводит (,) в (.)
+         //System.Threading.Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
+
+         
+         
+
+         // Счетчик попадания в цикл (больше 0 величина имеется или если отсутствует равна 0)
+         bool fl = true;
+         for (int k = 0; k < n; k += 1)
+         {
+            if (Math.Abs(arrayA[k]) > v)
+            {
+               Console.WriteLine("Номер элемента противоречащего условию {0:D}", k);
+               fl = false;
+            }
+         }
+
+         if (fl)
+         {
+            Console.WriteLine("Элемент противоречащий условию отсутствует");
+         }
+
+
+
+
          Console.ReadKey();
+      }
+
+      public static int SearchingMinPositivInt(int[,] search, string nameArray)
+      {
+         int min = search[0, 0];
+         int i = 0;
+         while (i < search.GetLength(0))
+         {
+            int j = 0;
+            while (j < search.GetLength(1))
+            {
+               if (min < 0 && search[i, j] > min)
+               {
+                  min = search[i, j];
+               }
+
+               if (search[i, j] > 0 && search[i, j] < min)
+               {
+                  min = search[i, j];
+               }
+
+               j++;
+            }
+
+            i++;
+         }
+
+         Console.WriteLine("Минимальное значение среди положительных элементов двумерного массива {0}: {1}", nameArray, min);
+         return min;
       }
 
       // Метод для вывода матрицы
