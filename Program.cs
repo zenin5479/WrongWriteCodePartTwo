@@ -631,7 +631,7 @@ namespace WrongWriteCodePartTwo
 
 
          // Метод ввода количества строк
-         int Dimensionline()
+         int DimensionLine()
          {
             int n;
             do
