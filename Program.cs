@@ -783,7 +783,7 @@ namespace WrongWriteCodePartTwo
          //   Console.WriteLine("Элемент противоречащий условию отсутствует");
          //}
 
-         SearchingMinPositivInt(table);
+        int hj = SearchingMinPositivInt(table);
 
          Console.ReadKey();
       }
@@ -827,8 +827,9 @@ namespace WrongWriteCodePartTwo
          {
             for (int j = 0; j < cols; j++)
             {
-               Console.Write("{0}", matrix[i, j]);
+               Console.Write("{0}\t", matrix[i, j]);
             }
+
             Console.WriteLine();
          }
       }
