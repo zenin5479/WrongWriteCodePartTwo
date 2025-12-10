@@ -639,7 +639,7 @@ namespace WrongWriteCodePartTwo
             return n;
          }
 
-         // Метод ввода количества столбцов и проверка на прямоугольность массива
+         // Метод ввода количества столбцов
          int DimensionRank(int rank)
          {
             int m;
