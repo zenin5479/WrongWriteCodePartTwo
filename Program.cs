@@ -650,7 +650,7 @@ namespace WrongWriteCodePartTwo
                // Проверка на прямоугольность массива
                if ((m <= 0 || m > 20))
                {
-                 Console.WriteLine("Введено неверное значение");
+                  Console.WriteLine("Введено неверное значение");
                }
             } while (m <= 0 || m > 20 || rank == m);
 
@@ -666,10 +666,10 @@ namespace WrongWriteCodePartTwo
          {
             Random blind = new Random();
             int i = 0;
-            while (i < rowing)
+            while (i < bank)
             {
                int j = 0;
-               while (j < pier)
+               while (j < entry)
                {
                   table[i, j] = blind.Next(-99, 100);
                   j++;
@@ -680,9 +680,8 @@ namespace WrongWriteCodePartTwo
          }
 
          Console.WriteLine("Исходная матрица:");
-         PrintMatrix(table);
          FillingsTable();
-
+         PrintMatrix(table);
          // 1. Находим минимальный по модулю элемент
          double minAbsValue = double.MaxValue;
          int wrangle = table.GetLength(0);
@@ -781,7 +780,7 @@ namespace WrongWriteCodePartTwo
          {
             for (int j = 0; j < cols; j++)
             {
-               Console.Write($"{matrix[i, j],8:F2}");
+               Console.Write("{0}", matrix[i, j]);
             }
             Console.WriteLine();
          }
