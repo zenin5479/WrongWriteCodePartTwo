@@ -648,7 +648,7 @@ namespace WrongWriteCodePartTwo
          }
 
          // Метод ввода количества столбцов и проверка на прямоугольность массива
-         int DimensionColumn(int rank)
+         int Dimensionrank(int rank)
          {
             int m;
             do
