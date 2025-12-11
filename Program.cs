@@ -800,7 +800,7 @@ namespace WrongWriteCodePartTwo
             int j = 0;
             while (j < search.GetLength(1))
             {
-               if ((Math.Abs(search[i, j])) < min)
+               if (Math.Abs(search[i, j]) < min && Math.Abs(search[i, j]) > 0)
                {
                   min = search[i, j];
                }
