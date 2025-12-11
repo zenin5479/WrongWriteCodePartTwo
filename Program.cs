@@ -783,7 +783,7 @@ namespace WrongWriteCodePartTwo
          //   Console.WriteLine("Элемент противоречащий условию отсутствует");
          //}
 
-        int hj = SearchingMinPositivInt(table);
+         int hj = SearchingMinPositivInt(table);
 
          Console.ReadKey();
       }
