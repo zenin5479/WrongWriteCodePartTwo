@@ -679,6 +679,9 @@ namespace WrongWriteCodePartTwo
             }
          }
 
+
+
+
          Console.WriteLine("Исходная матрица:");
          FillingsTable();
          PrintMatrix(table);
@@ -798,11 +801,6 @@ namespace WrongWriteCodePartTwo
             while (j < search.GetLength(1))
             {
                if (min < 0 && search[i, j] > min)
-               {
-                  min = search[i, j];
-               }
-
-               if (search[i, j] > 0 && search[i, j] < min)
                {
                   min = search[i, j];
                }
