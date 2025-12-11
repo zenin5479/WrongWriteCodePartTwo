@@ -679,9 +679,6 @@ namespace WrongWriteCodePartTwo
             }
          }
 
-
-
-
          Console.WriteLine("Исходная матрица:");
          FillingsTable();
          PrintMatrix(table);
