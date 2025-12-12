@@ -748,8 +748,6 @@ namespace WrongWriteCodePartTwo
             }
          }
 
-         
-
          // Счетчик попадания в цикл (больше 0 величина имеется или если отсутствует равна 0)
          //bool fl = true;
          //for (int k = 0; k < n; k += 1)
@@ -791,7 +789,7 @@ namespace WrongWriteCodePartTwo
             i++;
          }
 
-         Console.WriteLine("Минимальное значение среди положительных элементов двумерного массива: {0}", min);
+         Console.WriteLine("*Минимальное значение среди положительных элементов двумерного массива: {0}", min);
          return min;
       }
 
