@@ -751,24 +751,7 @@ namespace WrongWriteCodePartTwo
             }
          }
 
-         // Дополнительный вариант: вывод только номеров строк и столбцов
-         Console.WriteLine("\nНомера строк с минимальным по модулю элементом:");
-         for (int i = 0; i < wrangle; i++)
-         {
-            if (rowsContainingMin[i])
-            {
-               Console.Write($"{i + 1} ");
-            }
-         }
-
-         Console.WriteLine("\n\nНомера столбцов с минимальным по модулю элементом:");
-         for (int j = 0; j < piece; j++)
-         {
-            if (colsContainingMin[j])
-            {
-               Console.Write($"{j + 1} ");
-            }
-         }
+         
 
          // Счетчик попадания в цикл (больше 0 величина имеется или если отсутствует равна 0)
          //bool fl = true;
