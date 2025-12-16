@@ -771,7 +771,7 @@ namespace WrongWriteCodePartTwo
 
       public static int SearchingMinPositivInt(int[,] search)
       {
-         int min = search[0, 0];
+         int min = 0;
          int i = 0;
          while (i < search.GetLength(0))
          {
