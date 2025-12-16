@@ -683,7 +683,7 @@ namespace WrongWriteCodePartTwo
          FillingsTable();
          PrintMatrix(table);
          // 1. Находим минимальный по модулю элемент
-         double minAbsValue = double.MaxValue;
+         int minAbsValue = table[0,0];
          int wrangle = table.GetLength(0);
          int piece = table.GetLength(1);
 
@@ -692,7 +692,7 @@ namespace WrongWriteCodePartTwo
          {
             for (int j = 0; j < piece; j++)
             {
-               double absValue = Math.Abs(table[i, j]);
+               int absValue = Math.Abs(table[i, j]);
                if (absValue < minAbsValue)
                {
                   minAbsValue = absValue;
