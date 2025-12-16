@@ -697,24 +697,25 @@ namespace WrongWriteCodePartTwo
                int j = 0;
                while (j < piece)
                {
-                  j++;
-               }
-               for ( )
-               {
                   int absValue = Math.Abs(table[i, j]);
                   if (absValue < minAbsValue)
                   {
                      minAbsValue = absValue;
                   }
+                  
+                  j++;
+               }
+
+
+               for ( )
+               {
+                 
                }
 
 
                i++;
             }
          }
-
-
-
 
          Console.WriteLine($"\nМинимальный элемент по модулю: {minAbsValue}");
 
