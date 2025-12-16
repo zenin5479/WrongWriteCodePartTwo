@@ -694,9 +694,12 @@ namespace WrongWriteCodePartTwo
             int i = 0;
             while (i < wrangle)
             {
-
-
-               for (int j = 0; j < piece; j++)
+               int j = 0;
+               while (j < piece)
+               {
+                  j++;
+               }
+               for ( )
                {
                   int absValue = Math.Abs(table[i, j]);
                   if (absValue < minAbsValue)
@@ -707,10 +710,6 @@ namespace WrongWriteCodePartTwo
 
 
                i++;
-            }
-            for ( )
-            {
-
             }
          }
 
