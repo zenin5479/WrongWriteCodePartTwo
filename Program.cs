@@ -764,12 +764,12 @@ namespace WrongWriteCodePartTwo
          //   Console.WriteLine("Элемент противоречащий условию отсутствует");
          //}
 
-         int hj = SearchingMinPositivInt(table);
+         int hj = SearchingMinModuleInt(table);
 
          Console.ReadKey();
       }
 
-      public static int SearchingMinPositivInt(int[,] search)
+      public static int SearchingMinModuleInt(int[,] search)
       {
          int min = Math.Abs(search[0, 0]);
          int i = 0;
