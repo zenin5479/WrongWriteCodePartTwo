@@ -682,13 +682,33 @@ namespace WrongWriteCodePartTwo
          Console.WriteLine("Исходная матрица:");
          FillingsTable();
          PrintMatrix(table);
-         // 1. Находим минимальный по модулю элемент
-         int minAbsValue = table[0,0];
+         // Находим минимальный по модулю элемент
+         int minAbsValue = table[0, 0];
          int wrangle = table.GetLength(0);
          int piece = table.GetLength(1);
 
          // Проходим по всем элементам матрицы
-         for (int i = 0; i < wrangle; i++)
+
+         void GetMimumModulus()
+         {
+
+         }
+
+
+
+
+
+         int i = 0;
+         while (i < wrangle)
+         {
+            
+            
+            
+            
+            
+            i++;
+         }
+         for ( )
          {
             for (int j = 0; j < piece; j++)
             {
