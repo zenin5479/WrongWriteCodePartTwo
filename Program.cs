@@ -790,7 +790,7 @@ namespace WrongWriteCodePartTwo
             i++;
          }
 
-         Console.WriteLine("*Минимальное значение среди положительных элементов двумерного массива: {0}", min);
+         Console.WriteLine("Минимальное значение среди положительных элементов двумерного массива: {0}", min);
          return min;
       }
 
