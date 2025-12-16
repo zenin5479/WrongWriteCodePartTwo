@@ -748,22 +748,6 @@ namespace WrongWriteCodePartTwo
             }
          }
 
-         // Счетчик попадания в цикл (больше 0 величина имеется или если отсутствует равна 0)
-         //bool fl = true;
-         //for (int k = 0; k < n; k += 1)
-         //{
-         //   if (Math.Abs(arrayA[k]) > v)
-         //   {
-         //      Console.WriteLine("Номер элемента противоречащего условию {0:D}", k);
-         //      fl = false;
-         //   }
-         //}
-
-         //if (fl)
-         //{
-         //   Console.WriteLine("Элемент противоречащий условию отсутствует");
-         //}
-
          int minmodule = SearchingMinModuleInt(table);
 
          Console.ReadKey();
