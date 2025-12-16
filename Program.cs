@@ -691,34 +691,31 @@ namespace WrongWriteCodePartTwo
 
          void GetMimumModulus()
          {
-
-         }
-
-
-
-
-
-         int i = 0;
-         while (i < wrangle)
-         {
-            
-            
-            
-            
-            
-            i++;
-         }
-         for ( )
-         {
-            for (int j = 0; j < piece; j++)
+            int i = 0;
+            while (i < wrangle)
             {
-               int absValue = Math.Abs(table[i, j]);
-               if (absValue < minAbsValue)
+
+
+               for (int j = 0; j < piece; j++)
                {
-                  minAbsValue = absValue;
+                  int absValue = Math.Abs(table[i, j]);
+                  if (absValue < minAbsValue)
+                  {
+                     minAbsValue = absValue;
+                  }
                }
+
+
+               i++;
+            }
+            for ( )
+            {
+
             }
          }
+
+
+
 
          Console.WriteLine($"\nМинимальный элемент по модулю: {minAbsValue}");
 
