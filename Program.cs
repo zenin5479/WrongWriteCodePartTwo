@@ -764,7 +764,7 @@ namespace WrongWriteCodePartTwo
          //   Console.WriteLine("Элемент противоречащий условию отсутствует");
          //}
 
-         int minModule = SearchingMinModuleInt(table);
+         int minmodule = SearchingMinModuleInt(table);
 
          Console.ReadKey();
       }
