@@ -702,16 +702,9 @@ namespace WrongWriteCodePartTwo
                   {
                      minAbsValue = absValue;
                   }
-                  
+
                   j++;
                }
-
-
-               for ( )
-               {
-                 
-               }
-
 
                i++;
             }
