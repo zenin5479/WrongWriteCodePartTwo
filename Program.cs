@@ -736,7 +736,6 @@ namespace WrongWriteCodePartTwo
             // Создаем массивы для отметки строк и столбцов
             bool[] rowsMin = new bool[package.GetLength(0)];
             bool[] colsMin = new bool[package.GetLength(1)];
-
             // Отмечаем строки и столбцы, содержащие минимальный по модулю элемент
             int i = 0;
             while (i < package.GetLength(0))
@@ -768,8 +767,6 @@ namespace WrongWriteCodePartTwo
                   while (l < package.GetLength(1))
                   {
                      Console.Write("{0} ", table[k, l]);
-
-
                      l++;
                   }
 
