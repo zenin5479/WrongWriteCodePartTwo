@@ -758,8 +758,7 @@ namespace WrongWriteCodePartTwo
                   j++;
                }
 
-               i++;
-            }
+            i++;
          }
 
 
