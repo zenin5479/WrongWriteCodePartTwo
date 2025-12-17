@@ -757,7 +757,7 @@ namespace WrongWriteCodePartTwo
             }
          }
 
-         int minmodule = SearchingMinModuleInt(table);
+         int minModule = SearchingMinModuleInt(table);
 
          Console.ReadKey();
       }
