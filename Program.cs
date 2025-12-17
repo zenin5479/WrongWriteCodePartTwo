@@ -777,7 +777,8 @@ namespace WrongWriteCodePartTwo
             }
 
             Console.WriteLine("Столбцы, содержащие минимальный по модулю элемент:");
-            for (int m = 0; m < package.GetLength(1); m++)
+            int m = 0;
+            while (m < package.GetLength(1))
             {
                if (colsMin[m])
                {
@@ -788,6 +789,8 @@ namespace WrongWriteCodePartTwo
                   }
                   Console.WriteLine();
                }
+
+               m++;
             }
          }
 
