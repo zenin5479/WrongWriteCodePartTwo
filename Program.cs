@@ -763,10 +763,10 @@ namespace WrongWriteCodePartTwo
             {
                if (rowsMin[k])
                {
-                  Console.Write($"Строка {k + 1}: ");
+                  Console.Write(string.Format("Строка {0}: ", k + 1));
                   for (int l = 0; l < package.GetLength(1); l++)
                   {
-                     Console.Write($"{table[k, l]} ");
+                     Console.Write(string.Format("{0} ", table[k, l]));
                   }
                   Console.WriteLine();
                }
@@ -777,10 +777,10 @@ namespace WrongWriteCodePartTwo
             {
                if (colsMin[m])
                {
-                  Console.Write($"Столбец {m + 1}: ");
+                  Console.Write("Столбец {0}: ", m + 1);
                   for (int n = 0; n < package.GetLength(0); n++)
                   {
-                     Console.Write($"{table[n, m]} ");
+                     Console.Write("{0} ", table[n, m]);
                   }
                   Console.WriteLine();
                }
