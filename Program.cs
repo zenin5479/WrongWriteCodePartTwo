@@ -689,14 +689,17 @@ namespace WrongWriteCodePartTwo
             Console.WriteLine("Исходная матрица:");
             int row = selection.GetLength(0);
             int column = selection.GetLength(1);
-
-            for (int i = 0; i < row; i++)
+            int i = 0;
+            while (i < row)
             {
+
+
                for (int j = 0; j < column; j++)
                {
                   Console.Write("{0}\t", selection[i, j]);
                }
 
+               i++;
                Console.WriteLine();
             }
          }
