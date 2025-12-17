@@ -729,11 +729,11 @@ namespace WrongWriteCodePartTwo
          GetMimumModulus(table);
          Console.WriteLine($"Минимальный элемент по модулю: {minAbs}");
 
-         // 2. Создаем массивы для отметки строк и столбцов
+         // Создаем массивы для отметки строк и столбцов
          bool[] rowsMin = new bool[wrangle];
          bool[] colsMin = new bool[piece];
 
-         // 3. Отмечаем строки и столбцы, содержащие минимальный по модулю элемент
+         // Отмечаем строки и столбцы, содержащие минимальный по модулю элемент
          for (int i = 0; i < wrangle; i++)
          {
             for (int j = 0; j < piece; j++)
@@ -746,7 +746,7 @@ namespace WrongWriteCodePartTwo
             }
          }
 
-         // 4. Выводим результаты
+         // Выводим результаты
          Console.WriteLine("Строки, содержащие минимальный по модулю элемент:");
          for (int i = 0; i < wrangle; i++)
          {
