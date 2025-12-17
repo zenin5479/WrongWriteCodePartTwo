@@ -764,10 +764,15 @@ namespace WrongWriteCodePartTwo
                if (rowsMin[k])
                {
                   Console.Write("Строка {0}: ", k + 1);
-                  for (int l = 0; l < package.GetLength(1); l++)
+                  int l = 0;
+                  while (l < package.GetLength(1))
                   {
                      Console.Write("{0} ", table[k, l]);
+
+
+                     l++;
                   }
+
                   Console.WriteLine();
                }
 
