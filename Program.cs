@@ -766,7 +766,7 @@ namespace WrongWriteCodePartTwo
                   int l = 0;
                   while (l < package.GetLength(1))
                   {
-                     Console.Write("{0} ", table[k, l]);
+                     Console.Write("{0} ", package[k, l]);
                      l++;
                   }
 
@@ -786,7 +786,7 @@ namespace WrongWriteCodePartTwo
                   int n = 0;
                   while (n < package.GetLength(0))
                   {
-                     Console.Write("{0} ", table[n, m]);
+                     Console.Write("{0} ", package[n, m]);
                      n++;
                   }
 
