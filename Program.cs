@@ -688,7 +688,6 @@ namespace WrongWriteCodePartTwo
          int piece = table.GetLength(1);
 
          // Проходим по всем элементам матрицы
-
          void GetMimumModulus()
          {
             int i = 0;
