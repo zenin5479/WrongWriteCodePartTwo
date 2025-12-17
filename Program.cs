@@ -731,7 +731,7 @@ namespace WrongWriteCodePartTwo
 
 
 
-         Console.WriteLine($"\nМинимальный элемент по модулю: {minAbs}");
+         Console.WriteLine($"Минимальный элемент по модулю: {minAbs}");
 
          // 2. Создаем массивы для отметки строк и столбцов
          bool[] rowsMin = new bool[wrangle];
@@ -751,7 +751,7 @@ namespace WrongWriteCodePartTwo
          }
 
          // 4. Выводим результаты
-         Console.WriteLine("\nСтроки, содержащие минимальный по модулю элемент:");
+         Console.WriteLine("Строки, содержащие минимальный по модулю элемент:");
          for (int i = 0; i < wrangle; i++)
          {
             if (rowsMin[i])
@@ -765,7 +765,7 @@ namespace WrongWriteCodePartTwo
             }
          }
 
-         Console.WriteLine("\nСтолбцы, содержащие минимальный по модулю элемент:");
+         Console.WriteLine("Столбцы, содержащие минимальный по модулю элемент:");
          for (int j = 0; j < piece; j++)
          {
             if (colsMin[j])
