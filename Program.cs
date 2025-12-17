@@ -683,7 +683,7 @@ namespace WrongWriteCodePartTwo
          FillingsTable();
          PrintMatrix(table);
          // Находим минимальный по модулю элемент
-         int minAbsValue = table[0, 0];
+         int minAbs = table[0, 0];
          int wrangle = table.GetLength(0);
          int piece = table.GetLength(1);
 
@@ -697,9 +697,9 @@ namespace WrongWriteCodePartTwo
                while (j < piece)
                {
                   int absValue = Math.Abs(table[i, j]);
-                  if (absValue < minAbsValue)
+                  if (absValue < minAbs)
                   {
-                     minAbsValue = absValue;
+                     minAbs = absValue;
                   }
 
                   j++;
@@ -709,21 +709,21 @@ namespace WrongWriteCodePartTwo
             }
          }
 
-         Console.WriteLine($"\nМинимальный элемент по модулю: {minAbsValue}");
+         Console.WriteLine($"\nМинимальный элемент по модулю: {minAbs}");
 
          // 2. Создаем массивы для отметки строк и столбцов
-         bool[] rowsContainingMin = new bool[wrangle];
-         bool[] colsContainingMin = new bool[piece];
+         bool[] rowsMin = new bool[wrangle];
+         bool[] colsMin = new bool[piece];
 
          // 3. Отмечаем строки и столбцы, содержащие минимальный по модулю элемент
          for (int i = 0; i < wrangle; i++)
          {
             for (int j = 0; j < piece; j++)
             {
-               if (Math.Abs(table[i, j]) == minAbsValue)
+               if (Math.Abs(table[i, j]) == minAbs)
                {
-                  rowsContainingMin[i] = true;
-                  colsContainingMin[j] = true;
+                  rowsMin[i] = true;
+                  colsMin[j] = true;
                }
             }
          }
@@ -732,7 +732,7 @@ namespace WrongWriteCodePartTwo
          Console.WriteLine("\nСтроки, содержащие минимальный по модулю элемент:");
          for (int i = 0; i < wrangle; i++)
          {
-            if (rowsContainingMin[i])
+            if (rowsMin[i])
             {
                Console.Write($"Строка {i + 1}: ");
                for (int j = 0; j < piece; j++)
@@ -746,7 +746,7 @@ namespace WrongWriteCodePartTwo
          Console.WriteLine("\nСтолбцы, содержащие минимальный по модулю элемент:");
          for (int j = 0; j < piece; j++)
          {
-            if (colsContainingMin[j])
+            if (colsMin[j])
             {
                Console.Write($"Столбец {j + 1}: ");
                for (int i = 0; i < wrangle; i++)
