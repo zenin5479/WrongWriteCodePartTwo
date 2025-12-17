@@ -696,21 +696,19 @@ namespace WrongWriteCodePartTwo
             }
          }
 
-
+         // Находим минимальный по модулю элемент
+         int minAbs = table[0, 0];
+         int wrangle = table.GetLength(0);
+         int piece = table.GetLength(1);
 
          // Метод нахождения минимального по модулю элемента
          void GetMimumModulus(int[,] scheme)
          {
-            // Находим минимальный по модулю элемент
-            int minAbs = table[0, 0];
-            int wrangle = table.GetLength(0);
-            int piece = table.GetLength(1);
-
             int i = 0;
-            while (i < wrangle)
+            while (i < scheme.GetLength(0))
             {
                int j = 0;
-               while (j < piece)
+               while (j < scheme.GetLength(1))
                {
                   int absValue = Math.Abs(scheme[i, j]);
                   if (absValue < minAbs)
