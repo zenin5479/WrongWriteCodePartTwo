@@ -726,7 +726,7 @@ namespace WrongWriteCodePartTwo
          Console.WriteLine("Исходная матрица:");
          FillingsTable(table);
          PrintSet(table);
-
+         GetMimumModulus(table);
 
 
 
