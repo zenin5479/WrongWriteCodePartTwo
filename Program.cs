@@ -734,46 +734,58 @@ namespace WrongWriteCodePartTwo
          bool[] colsMin = new bool[piece];
 
          // Отмечаем строки и столбцы, содержащие минимальный по модулю элемент
-         for (int i = 0; i < wrangle; i++)
+         int i = 0;
+         while (i < wrangle)
          {
-            for (int j = 0; j < piece; j++)
+            int j = 0;
+            while (j < piece)
             {
                if (Math.Abs(table[i, j]) == minAbs)
                {
                   rowsMin[i] = true;
                   colsMin[j] = true;
                }
+               
+               
+               j++;
             }
+            for ( )
+            {
+               
+            }
+
+
+            i++;
          }
 
          // Выводим результаты
-         Console.WriteLine("Строки, содержащие минимальный по модулю элемент:");
-         for (int i = 0; i < wrangle; i++)
-         {
-            if (rowsMin[i])
-            {
-               Console.Write($"Строка {i + 1}: ");
-               for (int j = 0; j < piece; j++)
-               {
-                  Console.Write($"{table[i, j]} ");
-               }
-               Console.WriteLine();
-            }
-         }
+         //Console.WriteLine("Строки, содержащие минимальный по модулю элемент:");
+         //for (int i = 0; i < wrangle; i++)
+         //{
+         //   if (rowsMin[i])
+         //   {
+         //      Console.Write($"Строка {i + 1}: ");
+         //      for (int j = 0; j < piece; j++)
+         //      {
+         //         Console.Write($"{table[i, j]} ");
+         //      }
+         //      Console.WriteLine();
+         //   }
+         //}
 
-         Console.WriteLine("Столбцы, содержащие минимальный по модулю элемент:");
-         for (int j = 0; j < piece; j++)
-         {
-            if (colsMin[j])
-            {
-               Console.Write($"Столбец {j + 1}: ");
-               for (int i = 0; i < wrangle; i++)
-               {
-                  Console.Write($"{table[i, j]} ");
-               }
-               Console.WriteLine();
-            }
-         }
+         //Console.WriteLine("Столбцы, содержащие минимальный по модулю элемент:");
+         //for (int j = 0; j < piece; j++)
+         //{
+         //   if (colsMin[j])
+         //   {
+         //      Console.Write($"Столбец {j + 1}: ");
+         //      for (int i = 0; i < wrangle; i++)
+         //      {
+         //         Console.Write($"{table[i, j]} ");
+         //      }
+         //      Console.WriteLine();
+         //   }
+         //}
 
          Console.ReadKey();
       }
