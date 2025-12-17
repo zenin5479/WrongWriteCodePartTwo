@@ -759,44 +759,43 @@ namespace WrongWriteCodePartTwo
                i++;
             }
 
-
-
             // Выводим результаты
-            //Console.WriteLine("Строки, содержащие минимальный по модулю элемент:");
-            //for (int i = 0; i < wrangle; i++)
-            //{
-            //   if (rowsMin[i])
-            //   {
-            //      Console.Write($"Строка {i + 1}: ");
-            //      for (int j = 0; j < piece; j++)
-            //      {
-            //         Console.Write($"{table[i, j]} ");
-            //      }
-            //      Console.WriteLine();
-            //   }
-            //}
+            Console.WriteLine("Строки, содержащие минимальный по модулю элемент:");
+            
+            for (int k = 0; k < wrangle; k++)
+            {
+               if (rowsMin[k])
+               {
+                  Console.Write($"Строка {k + 1}: ");
+                  for (int l = 0; l < piece; l++)
+                  {
+                     Console.Write($"{table[k, l]} ");
+                  }
+                  Console.WriteLine();
+               }
+            }
 
-            //Console.WriteLine("Столбцы, содержащие минимальный по модулю элемент:");
-            //for (int j = 0; j < piece; j++)
-            //{
-            //   if (colsMin[j])
-            //   {
-            //      Console.Write($"Столбец {j + 1}: ");
-            //      for (int i = 0; i < wrangle; i++)
-            //      {
-            //         Console.Write($"{table[i, j]} ");
-            //      }
-            //      Console.WriteLine();
-            //   }
-            //}
-
-            Console.ReadKey();
+            Console.WriteLine("Столбцы, содержащие минимальный по модулю элемент:");
+            for (int m = 0; m < piece; m++)
+            {
+               if (colsMin[m])
+               {
+                  Console.Write($"Столбец {m + 1}: ");
+                  for (int n = 0; n < wrangle; n++)
+                  {
+                     Console.Write($"{table[n, m]} ");
+                  }
+                  Console.WriteLine();
+               }
+            }
          }
 
          FillingsTable(table);
          PrintSet(table);
          GetMimumModulus(table);
          MarkingsRowAndColumn(table);
+
+         Console.ReadKey();
       }
    }
 }
