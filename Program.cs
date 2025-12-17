@@ -783,12 +783,12 @@ namespace WrongWriteCodePartTwo
                if (colsMin[m])
                {
                   Console.Write("Столбец {0}: ", m + 1);
-
-                  while ()
+                  int n = 0;
+                  while (n < package.GetLength(0))
                   {
-                     
+                     n++;
                   }
-                  for (int n = 0; n < package.GetLength(0); n++)
+                  for ( )
                   {
                      Console.Write("{0} ", table[n, m]);
                   }
