@@ -745,15 +745,9 @@ namespace WrongWriteCodePartTwo
                   rowsMin[i] = true;
                   colsMin[j] = true;
                }
-               
-               
+
                j++;
             }
-            for ( )
-            {
-               
-            }
-
 
             i++;
          }
