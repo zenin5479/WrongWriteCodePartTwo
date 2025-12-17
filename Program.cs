@@ -706,8 +706,6 @@ namespace WrongWriteCodePartTwo
             }
          }
 
-
-
          // Метод нахождения минимального по модулю элемента
          void GetMimumModulus(int[,] scheme)
          {
