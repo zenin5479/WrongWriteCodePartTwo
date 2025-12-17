@@ -664,6 +664,8 @@ namespace WrongWriteCodePartTwo
          int bank = DimensionLine();
          int entry = DimensionRank(bank);
          int[,] table = new int[bank, entry];
+         // Минимальный по модулю элемент
+         int minAbs;
 
          // Метод заполнения массива
          void FillingsTable(int[,] grouping)
@@ -704,10 +706,7 @@ namespace WrongWriteCodePartTwo
             }
          }
 
-         // Находим минимальный по модулю элемент
-         int minAbs;
-         int wrangle = table.GetLength(0);
-         int piece = table.GetLength(1);
+
 
          // Метод нахождения минимального по модулю элемента
          void GetMimumModulus(int[,] scheme)
@@ -737,15 +736,15 @@ namespace WrongWriteCodePartTwo
          void MarkingsRowAndColumn(int[,] package)
          {
             // Создаем массивы для отметки строк и столбцов
-            bool[] rowsMin = new bool[wrangle];
-            bool[] colsMin = new bool[piece];
+            bool[] rowsMin = new bool[package.GetLength(0)];
+            bool[] colsMin = new bool[package.GetLength(1)];
 
             // Отмечаем строки и столбцы, содержащие минимальный по модулю элемент
             int i = 0;
-            while (i < wrangle)
+            while (i < package.GetLength(0))
             {
                int j = 0;
-               while (j < piece)
+               while (j < package.GetLength(1))
                {
                   if (Math.Abs(package[i, j]) == minAbs)
                   {
@@ -761,13 +760,13 @@ namespace WrongWriteCodePartTwo
 
             // Выводим результаты
             Console.WriteLine("Строки, содержащие минимальный по модулю элемент:");
-            
-            for (int k = 0; k < wrangle; k++)
+
+            for (int k = 0; k < package.GetLength(0); k++)
             {
                if (rowsMin[k])
                {
                   Console.Write($"Строка {k + 1}: ");
-                  for (int l = 0; l < piece; l++)
+                  for (int l = 0; l < package.GetLength(1); l++)
                   {
                      Console.Write($"{table[k, l]} ");
                   }
@@ -776,12 +775,12 @@ namespace WrongWriteCodePartTwo
             }
 
             Console.WriteLine("Столбцы, содержащие минимальный по модулю элемент:");
-            for (int m = 0; m < piece; m++)
+            for (int m = 0; m < package.GetLength(1); m++)
             {
                if (colsMin[m])
                {
                   Console.Write($"Столбец {m + 1}: ");
-                  for (int n = 0; n < wrangle; n++)
+                  for (int n = 0; n < package.GetLength(0); n++)
                   {
                      Console.Write($"{table[n, m]} ");
                   }
