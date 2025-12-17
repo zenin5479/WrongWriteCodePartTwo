@@ -734,7 +734,7 @@ namespace WrongWriteCodePartTwo
             Console.WriteLine($"Минимальный элемент по модулю: {minAbs}");
          }
 
-         void MarkingsRowAndColumn()
+         void MarkingsRowAndColumn(int[,] package)
          {
             // Создаем массивы для отметки строк и столбцов
             bool[] rowsMin = new bool[wrangle];
@@ -747,7 +747,7 @@ namespace WrongWriteCodePartTwo
                int j = 0;
                while (j < piece)
                {
-                  if (Math.Abs(table[i, j]) == minAbs)
+                  if (Math.Abs(package[i, j]) == minAbs)
                   {
                      rowsMin[i] = true;
                      colsMin[j] = true;
@@ -796,7 +796,7 @@ namespace WrongWriteCodePartTwo
          FillingsTable(table);
          PrintSet(table);
          GetMimumModulus(table);
-         MarkingsRowAndColumn();
+         MarkingsRowAndColumn(table);
       }
    }
 }
