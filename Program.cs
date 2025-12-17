@@ -692,11 +692,12 @@ namespace WrongWriteCodePartTwo
             int i = 0;
             while (i < row)
             {
-
-
-               for (int j = 0; j < column; j++)
+               int j = 0;
+               while (j < column)
                {
+
                   Console.Write("{0}\t", selection[i, j]);
+                  j++;
                }
 
                i++;
