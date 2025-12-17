@@ -786,11 +786,13 @@ namespace WrongWriteCodePartTwo
                   int n = 0;
                   while (n < package.GetLength(0))
                   {
+                     
+                     Console.Write("{0} ", table[n, m]);
                      n++;
                   }
                   for ( )
                   {
-                     Console.Write("{0} ", table[n, m]);
+                     
                   }
                   Console.WriteLine();
                }
