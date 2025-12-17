@@ -775,35 +775,7 @@ namespace WrongWriteCodePartTwo
             }
          }
 
-         int minModule = SearchingMinModuleInt(table);
-
          Console.ReadKey();
       }
-
-      public static int SearchingMinModuleInt(int[,] search)
-      {
-         int min = Math.Abs(search[0, 0]);
-         int i = 0;
-         while (i < search.GetLength(0))
-         {
-            int j = 0;
-            while (j < search.GetLength(1))
-            {
-               int abs = Math.Abs(search[i, j]);
-               if (abs < min)
-               {
-                  min = abs;
-               }
-
-               j++;
-            }
-
-            i++;
-         }
-
-         Console.WriteLine("Минимальное значение среди положительных элементов двумерного массива: {0}", min);
-         return min;
-      }
-
    }
 }
