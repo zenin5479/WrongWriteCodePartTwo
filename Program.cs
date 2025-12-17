@@ -721,36 +721,46 @@ namespace WrongWriteCodePartTwo
 
                i++;
             }
+            Console.WriteLine($"Минимальный элемент по модулю: {minAbs}");
+
          }
 
          Console.WriteLine("Исходная матрица:");
          FillingsTable(table);
          PrintSet(table);
          GetMimumModulus(table);
-         Console.WriteLine($"Минимальный элемент по модулю: {minAbs}");
+
 
          // Создаем массивы для отметки строк и столбцов
          bool[] rowsMin = new bool[wrangle];
          bool[] colsMin = new bool[piece];
+         // MarkingsRowAndColumn 
 
-         // Отмечаем строки и столбцы, содержащие минимальный по модулю элемент
-         int i = 0;
-         while (i < wrangle)
+         void MarkingsRowAndColumn()
          {
-            int j = 0;
-            while (j < piece)
+
+
+            // Отмечаем строки и столбцы, содержащие минимальный по модулю элемент
+            int i = 0;
+            while (i < wrangle)
             {
-               if (Math.Abs(table[i, j]) == minAbs)
+               int j = 0;
+               while (j < piece)
                {
-                  rowsMin[i] = true;
-                  colsMin[j] = true;
+                  if (Math.Abs(table[i, j]) == minAbs)
+                  {
+                     rowsMin[i] = true;
+                     colsMin[j] = true;
+                  }
+
+                  j++;
                }
 
-               j++;
+               i++;
             }
-
-            i++;
          }
+
+
 
          // Выводим результаты
          //Console.WriteLine("Строки, содержащие минимальный по модулю элемент:");
