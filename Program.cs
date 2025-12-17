@@ -702,7 +702,7 @@ namespace WrongWriteCodePartTwo
          int piece = table.GetLength(1);
 
          // Метод нахождения минимального по модулю элемента
-         void GetMimumModulus()
+         void GetMimumModulus(int[,] scheme)
          {
             int i = 0;
             while (i < wrangle)
@@ -710,7 +710,7 @@ namespace WrongWriteCodePartTwo
                int j = 0;
                while (j < piece)
                {
-                  int absValue = Math.Abs(table[i, j]);
+                  int absValue = Math.Abs(scheme[i, j]);
                   if (absValue < minAbs)
                   {
                      minAbs = absValue;
