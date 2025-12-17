@@ -679,15 +679,35 @@ namespace WrongWriteCodePartTwo
             }
          }
 
+         // Метод для вывода матрицы
+         void PrintSet(int[,] selection)
+         {
+            int row = selection.GetLength(0);
+            int column = selection.GetLength(1);
+
+            for (int i = 0; i < row; i++)
+            {
+               for (int j = 0; j < column; j++)
+               {
+                  Console.Write("{0}\t", selection[i, j]);
+               }
+
+               Console.WriteLine();
+            }
+         }
+
+
+
+
          Console.WriteLine("Исходная матрица:");
          FillingsTable();
-         PrintMatrix(table);
+         PrintSet(table);
          // Находим минимальный по модулю элемент
          int minAbs = table[0, 0];
          int wrangle = table.GetLength(0);
          int piece = table.GetLength(1);
 
-         // Проходим по всем элементам матрицы
+         // Находим минимальный по модулю элемент
          void GetMimumModulus()
          {
             int i = 0;
