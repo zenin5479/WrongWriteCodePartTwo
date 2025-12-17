@@ -696,18 +696,12 @@ namespace WrongWriteCodePartTwo
             }
          }
 
-
-
-
-         Console.WriteLine("Исходная матрица:");
-         FillingsTable();
-         PrintSet(table);
          // Находим минимальный по модулю элемент
          int minAbs = table[0, 0];
          int wrangle = table.GetLength(0);
          int piece = table.GetLength(1);
 
-         // Находим минимальный по модулю элемент
+         // Метод нахождения минимального по модулю элемента
          void GetMimumModulus()
          {
             int i = 0;
@@ -728,6 +722,14 @@ namespace WrongWriteCodePartTwo
                i++;
             }
          }
+
+         Console.WriteLine("Исходная матрица:");
+         FillingsTable();
+         PrintSet(table);
+
+
+
+
 
          Console.WriteLine($"\nМинимальный элемент по модулю: {minAbs}");
 
