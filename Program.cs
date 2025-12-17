@@ -662,7 +662,7 @@ namespace WrongWriteCodePartTwo
          int[,] table = new int[bank, entry];
 
          // Метод заполнения массива
-         void FillingsTable()
+         void FillingsTable(int[,] grouping)
          {
             Random blind = new Random();
             int i = 0;
@@ -671,7 +671,7 @@ namespace WrongWriteCodePartTwo
                int j = 0;
                while (j < entry)
                {
-                  table[i, j] = blind.Next(-99, 100);
+                  grouping[i, j] = blind.Next(-99, 100);
                   j++;
                }
 
@@ -724,7 +724,7 @@ namespace WrongWriteCodePartTwo
          }
 
          Console.WriteLine("Исходная матрица:");
-         FillingsTable();
+         FillingsTable(TODO);
          PrintSet(table);
 
 
