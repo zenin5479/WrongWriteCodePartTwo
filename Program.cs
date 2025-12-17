@@ -727,10 +727,6 @@ namespace WrongWriteCodePartTwo
          FillingsTable(table);
          PrintSet(table);
          GetMimumModulus(table);
-
-
-
-
          Console.WriteLine($"Минимальный элемент по модулю: {minAbs}");
 
          // 2. Создаем массивы для отметки строк и столбцов
