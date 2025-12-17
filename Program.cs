@@ -758,15 +758,14 @@ namespace WrongWriteCodePartTwo
 
             // Выводим результаты
             Console.WriteLine("Строки, содержащие минимальный по модулю элемент:");
-
             for (int k = 0; k < package.GetLength(0); k++)
             {
                if (rowsMin[k])
                {
-                  Console.Write(string.Format("Строка {0}: ", k + 1));
+                  Console.Write("Строка {0}: ", k + 1);
                   for (int l = 0; l < package.GetLength(1); l++)
                   {
-                     Console.Write(string.Format("{0} ", table[k, l]));
+                     Console.Write("{0} ", table[k, l]);
                   }
                   Console.WriteLine();
                }
