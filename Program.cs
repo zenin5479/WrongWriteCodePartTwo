@@ -35,6 +35,7 @@ namespace WrongWriteCodePartTwo
          Console.Write("Введите количество столбцов массива: ");
          int columns = Convert.ToInt32(Console.ReadLine());
          int[,] massif = new int[rows, columns];
+
          // Метод заполнения массива
          void FillingsMassif()
          {
@@ -110,6 +111,7 @@ namespace WrongWriteCodePartTwo
          Console.WriteLine("--------------------------------------------------------------------------------");
          Console.WriteLine("Находение строки с наименьшей суммой элементов прямоугольного двумерного массива");
          Console.WriteLine("--------------------------------------------------------------------------------");
+
          // Метод ввода количества строк
          int SizeRow()
          {
@@ -536,6 +538,7 @@ namespace WrongWriteCodePartTwo
          Console.Write("Введите количество столбцов массива: ");
          int pier = Convert.ToInt32(Console.ReadLine());
          int[,] massive = new int[rowing, pier];
+
          // Метод заполнения массива
          void FillingsCollection()
          {
@@ -594,6 +597,7 @@ namespace WrongWriteCodePartTwo
                   {
                      frequency[number] = 1;
                   }
+
                   j++;
                }
 
@@ -727,7 +731,7 @@ namespace WrongWriteCodePartTwo
             Console.WriteLine($"Минимальный элемент по модулю: {minAbs}");
          }
 
-         
+
          FillingsTable(table);
          PrintSet(table);
          GetMimumModulus(table);
@@ -758,41 +762,42 @@ namespace WrongWriteCodePartTwo
                   j++;
                }
 
-            i++;
+               i++;
+            }
+
+
+
+            // Выводим результаты
+            //Console.WriteLine("Строки, содержащие минимальный по модулю элемент:");
+            //for (int i = 0; i < wrangle; i++)
+            //{
+            //   if (rowsMin[i])
+            //   {
+            //      Console.Write($"Строка {i + 1}: ");
+            //      for (int j = 0; j < piece; j++)
+            //      {
+            //         Console.Write($"{table[i, j]} ");
+            //      }
+            //      Console.WriteLine();
+            //   }
+            //}
+
+            //Console.WriteLine("Столбцы, содержащие минимальный по модулю элемент:");
+            //for (int j = 0; j < piece; j++)
+            //{
+            //   if (colsMin[j])
+            //   {
+            //      Console.Write($"Столбец {j + 1}: ");
+            //      for (int i = 0; i < wrangle; i++)
+            //      {
+            //         Console.Write($"{table[i, j]} ");
+            //      }
+            //      Console.WriteLine();
+            //   }
+            //}
+
+            Console.ReadKey();
          }
-
-
-
-         // Выводим результаты
-         //Console.WriteLine("Строки, содержащие минимальный по модулю элемент:");
-         //for (int i = 0; i < wrangle; i++)
-         //{
-         //   if (rowsMin[i])
-         //   {
-         //      Console.Write($"Строка {i + 1}: ");
-         //      for (int j = 0; j < piece; j++)
-         //      {
-         //         Console.Write($"{table[i, j]} ");
-         //      }
-         //      Console.WriteLine();
-         //   }
-         //}
-
-         //Console.WriteLine("Столбцы, содержащие минимальный по модулю элемент:");
-         //for (int j = 0; j < piece; j++)
-         //{
-         //   if (colsMin[j])
-         //   {
-         //      Console.Write($"Столбец {j + 1}: ");
-         //      for (int i = 0; i < wrangle; i++)
-         //      {
-         //         Console.Write($"{table[i, j]} ");
-         //      }
-         //      Console.WriteLine();
-         //   }
-         //}
-
-         Console.ReadKey();
       }
    }
 }
