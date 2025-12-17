@@ -724,7 +724,7 @@ namespace WrongWriteCodePartTwo
          }
 
          Console.WriteLine("Исходная матрица:");
-         FillingsTable(TODO);
+         FillingsTable(table);
          PrintSet(table);
 
 
