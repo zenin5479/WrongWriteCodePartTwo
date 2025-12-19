@@ -813,13 +813,17 @@ namespace WrongWriteCodePartTwo
          // Вертикальная змейка
          int[,] array = new int[3, 3];
          int num = 1;
-         for (int col = 0; col < 3; col++)
+
+         int col = 0;
+         while (col < 3)
          {
             if (col % 2 == 0)
             {
                // Четные столбцы
                for (int row = 0; row < 3; row++)
+               {
                   array[row, col] = num++;
+               }
             }
             else
             {
@@ -829,6 +833,8 @@ namespace WrongWriteCodePartTwo
                   array[row, col] = num++;
                }
             }
+
+            col++;
          }
 
          // Вывод массива
