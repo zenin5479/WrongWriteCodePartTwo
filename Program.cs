@@ -842,13 +842,17 @@ namespace WrongWriteCodePartTwo
          }
 
          // Вывод массива
-         for (int i = 0; i < 3; i++)
+         int i = 0;
+         while (i < 3)
          {
-            for (int j = 0; j < 3; j++)
+            int j = 0;
+            while (j < 3)
             {
                Console.Write("{0}\t", array[i, j]);
+               j++;
             }
 
+            i++;
             Console.WriteLine();
          }
 
