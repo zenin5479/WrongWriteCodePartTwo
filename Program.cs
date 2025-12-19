@@ -802,11 +802,6 @@ namespace WrongWriteCodePartTwo
          GetMimumModulus(table);
          MarkingsRowAndColumn(table);
 
-         // Задача: Заполните двумерный массив 3х3 числами от 1 до 9 змейкой
-         // 1 6 7
-         // 2 5 8
-         // 3 4 9
-
          Console.WriteLine("----------------------------------------------------------");
          Console.WriteLine("Заполнение двумернго массива 3х3 числами от 1 до 9 змейкой");
          Console.WriteLine("----------------------------------------------------------");
