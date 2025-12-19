@@ -709,7 +709,7 @@ namespace WrongWriteCodePartTwo
          // Метод нахождения минимального по модулю элемента
          void GetMimumModulus(int[,] scheme)
          {
-            minAbs = table[0, 0];
+            minAbs = Math.Abs(table[0, 0]);
             int i = 0;
             while (i < scheme.GetLength(0))
             {
@@ -717,7 +717,7 @@ namespace WrongWriteCodePartTwo
                while (j < scheme.GetLength(1))
                {
                   int absValue = Math.Abs(scheme[i, j]);
-                  if (absValue < minAbs)
+                  if (absValue > minAbs)
                   {
                      minAbs = absValue;
                   }
@@ -743,7 +743,7 @@ namespace WrongWriteCodePartTwo
                int j = 0;
                while (j < package.GetLength(1))
                {
-                  if (package[i, j] == minAbs)
+                  if (Math.Abs(package[i, j]) == minAbs)
                   {
                      rowsMin[i] = true;
                      colsMin[j] = true;
