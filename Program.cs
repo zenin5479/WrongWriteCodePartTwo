@@ -810,7 +810,6 @@ namespace WrongWriteCodePartTwo
          // Простая вертикальная змейка
          int[,] array = new int[3, 3];
          int num = 1;
-
          for (int col = 0; col < 3; col++)
          {
             
@@ -824,7 +823,9 @@ namespace WrongWriteCodePartTwo
             {
                // Нечетные столбцы
                for (int row = 2; row >= 0; row--)
+               {
                   array[row, col] = num++;
+               }
             }
          }
 
@@ -832,7 +833,10 @@ namespace WrongWriteCodePartTwo
          for (int i = 0; i < 3; i++)
          {
             for (int j = 0; j < 3; j++)
+            {
                Console.Write(array[i, j].ToString().PadLeft(2) + " ");
+            }
+
             Console.WriteLine();
          }
 
