@@ -812,7 +812,6 @@ namespace WrongWriteCodePartTwo
          int num = 1;
          for (int col = 0; col < 3; col++)
          {
-            
             if (col % 2 == 0) 
             {
                // Четные столбцы
