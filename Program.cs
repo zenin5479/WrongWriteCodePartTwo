@@ -717,7 +717,7 @@ namespace WrongWriteCodePartTwo
                while (j < scheme.GetLength(1))
                {
                   int absValue = Math.Abs(scheme[i, j]);
-                  if (absValue > minAbs)
+                  if (absValue < minAbs)
                   {
                      minAbs = absValue;
                   }
