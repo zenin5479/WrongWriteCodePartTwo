@@ -833,7 +833,6 @@ namespace WrongWriteCodePartTwo
                int row = 2;
                while (row >= 0)
                {
-
                   array[row, col] = num++;
                   row--;
                }
