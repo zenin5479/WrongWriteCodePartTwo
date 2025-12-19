@@ -820,9 +820,11 @@ namespace WrongWriteCodePartTwo
             if (col % 2 == 0)
             {
                // Четные столбцы
-               for (int row = 0; row < 3; row++)
+               int row = 0;
+               while ( row < 3)
                {
                   array[row, col] = num++;
+                  row++; 
                }
             }
             else
