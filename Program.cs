@@ -812,13 +812,13 @@ namespace WrongWriteCodePartTwo
          int num = 1;
          for (int col = 0; col < 3; col++)
          {
-            if (col % 2 == 0) 
+            if (col % 2 == 0)
             {
                // Четные столбцы
                for (int row = 0; row < 3; row++)
                   array[row, col] = num++;
             }
-            else 
+            else
             {
                // Нечетные столбцы
                for (int row = 2; row >= 0; row--)
