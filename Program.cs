@@ -821,18 +821,21 @@ namespace WrongWriteCodePartTwo
             {
                // Четные столбцы
                int row = 0;
-               while ( row < 3)
+               while (row < 3)
                {
                   array[row, col] = num++;
-                  row++; 
+                  row++;
                }
             }
             else
             {
                // Нечетные столбцы
-               for (int row = 2; row >= 0; row--)
+               int row = 2;
+               while (row >= 0)
                {
+
                   array[row, col] = num++;
+                  row--;
                }
             }
 
