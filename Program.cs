@@ -743,7 +743,7 @@ namespace WrongWriteCodePartTwo
                int j = 0;
                while (j < package.GetLength(1))
                {
-                  if (Math.Abs(package[i, j]) == minAbs)
+                  if (package[i, j] == minAbs)
                   {
                      rowsMin[i] = true;
                      colsMin[j] = true;
