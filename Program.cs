@@ -810,8 +810,7 @@ namespace WrongWriteCodePartTwo
          Console.WriteLine("----------------------------------------------------------");
          Console.WriteLine("Заполнение двумернго массива 3х3 числами от 1 до 9 змейкой");
          Console.WriteLine("----------------------------------------------------------");
-
-         // Простая вертикальная змейка
+         // Вертикальная змейка
          int[,] array = new int[3, 3];
          int num = 1;
          for (int col = 0; col < 3; col++)
@@ -837,7 +836,7 @@ namespace WrongWriteCodePartTwo
          {
             for (int j = 0; j < 3; j++)
             {
-               Console.Write(array[i, j].ToString().PadLeft(2) + " ");
+               Console.Write("{0}\t", array[i, j]);
             }
 
             Console.WriteLine();
