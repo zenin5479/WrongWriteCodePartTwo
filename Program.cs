@@ -813,13 +813,16 @@ namespace WrongWriteCodePartTwo
 
          for (int col = 0; col < 3; col++)
          {
-            if (col % 2 == 0) // Четные столбцы
+            
+            if (col % 2 == 0) 
             {
+               // Четные столбцы
                for (int row = 0; row < 3; row++)
                   array[row, col] = num++;
             }
-            else // Нечетные столбцы
+            else 
             {
+               // Нечетные столбцы
                for (int row = 2; row >= 0; row--)
                   array[row, col] = num++;
             }
@@ -832,7 +835,6 @@ namespace WrongWriteCodePartTwo
                Console.Write(array[i, j].ToString().PadLeft(2) + " ");
             Console.WriteLine();
          }
-
 
          Console.ReadKey();
       }
