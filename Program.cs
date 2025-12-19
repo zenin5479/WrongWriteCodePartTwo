@@ -807,6 +807,26 @@ namespace WrongWriteCodePartTwo
          // 2 5 8
          // 3 4 9
 
+         int[,] array = new int[3, 3];
+         int num = 1;
+
+         for (int col = 0; col < 3; col++)
+         {
+            if (col % 2 == 0) // Четные столбцы
+            {
+               for (int row = 0; row < 3; row++)
+                  array[row, col] = num++;
+            }
+            else // Нечетные столбцы
+            {
+               for (int row = 2; row >= 0; row--)
+                  array[row, col] = num++;
+            }
+         }
+
+
+
+
          Console.ReadKey();
       }
    }
