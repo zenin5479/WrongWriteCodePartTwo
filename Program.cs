@@ -807,6 +807,7 @@ namespace WrongWriteCodePartTwo
          // 2 5 8
          // 3 4 9
 
+         // Простая вертикальная змейка
          int[,] array = new int[3, 3];
          int num = 1;
 
@@ -824,7 +825,13 @@ namespace WrongWriteCodePartTwo
             }
          }
 
-
+         // Вывод массива
+         for (int i = 0; i < 3; i++)
+         {
+            for (int j = 0; j < 3; j++)
+               Console.Write(array[i, j].ToString().PadLeft(2) + " ");
+            Console.WriteLine();
+         }
 
 
          Console.ReadKey();
