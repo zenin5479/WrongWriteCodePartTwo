@@ -825,11 +825,11 @@ namespace WrongWriteCodePartTwo
             else
             {
                // Нечетные столбцы
-               int row = 2;
-               while (row >= 0)
+               int range = 2;
+               while (range >= 0)
                {
-                  pool[row, line] = first++;
-                  row--;
+                  pool[range, line] = first++;
+                  range--;
                }
             }
 
