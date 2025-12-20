@@ -858,8 +858,7 @@ namespace WrongWriteCodePartTwo
 
          VerticalSnake();
          ArrayOutput();
-
-
+         
          // Пример массива (можно заменить на любой другой)
          int[,] array =
          {
@@ -871,10 +870,8 @@ namespace WrongWriteCodePartTwo
 
          Console.WriteLine("Исходный массив:");
          PrintArray(array);
-
          // Замена элементов
          ReplaceArrayElements(array);
-
          Console.WriteLine("\nМассив после замены:");
          PrintArray(array);
 
