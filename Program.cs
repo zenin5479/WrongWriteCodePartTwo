@@ -806,7 +806,7 @@ namespace WrongWriteCodePartTwo
          Console.WriteLine("Заполнение двумерного массива 3х3 числами от 1 до 9 змейкой");
          Console.WriteLine("----------------------------------------------------------");
          int[,] pool = new int[3, 3];
-         
+
          // Метод вертикальная змейка
          void VerticalSnake()
          {
@@ -857,10 +857,9 @@ namespace WrongWriteCodePartTwo
                Console.WriteLine();
             }
          }
-         
+
          VerticalSnake();
          ArrayOutput();
-
 
          Console.ReadKey();
       }
