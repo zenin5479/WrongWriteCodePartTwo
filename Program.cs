@@ -807,7 +807,7 @@ namespace WrongWriteCodePartTwo
          Console.WriteLine("----------------------------------------------------------");
          // Вертикальная змейка
          int[,] pool = new int[3, 3];
-         int num = 1;
+         int first = 1;
 
          int col = 0;
          while (col < 3)
@@ -818,7 +818,7 @@ namespace WrongWriteCodePartTwo
                int row = 0;
                while (row < 3)
                {
-                  pool[row, col] = num++;
+                  pool[row, col] = first++;
                   row++;
                }
             }
@@ -828,7 +828,7 @@ namespace WrongWriteCodePartTwo
                int row = 2;
                while (row >= 0)
                {
-                  pool[row, col] = num++;
+                  pool[row, col] = first++;
                   row--;
                }
             }
