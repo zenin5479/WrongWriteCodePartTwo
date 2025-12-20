@@ -22,7 +22,7 @@ namespace WrongWriteCodePartTwo
 {
    internal class Program
    {
-      static void Main(string[] args)
+      static void Main()
       {
          Console.WriteLine("---------------------------------------------------------------------");
          Console.WriteLine("Упорядочивание по убыванию элементов каждой строки двумерного массива");
