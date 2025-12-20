@@ -815,11 +815,11 @@ namespace WrongWriteCodePartTwo
             if (line % 2 == 0)
             {
                // Четные столбцы
-               int row = 0;
-               while (row < 3)
+               int range = 0;
+               while (range < 3)
                {
-                  pool[row, line] = first++;
-                  row++;
+                  pool[range, line] = first++;
+                  range++;
                }
             }
             else
