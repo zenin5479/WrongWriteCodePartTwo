@@ -807,34 +807,45 @@ namespace WrongWriteCodePartTwo
          Console.WriteLine("----------------------------------------------------------");
          // Вертикальная змейка
          int[,] pool = new int[3, 3];
-         int first = 1;
 
-         int line = 0;
-         while (line < 3)
+
+         void VerticalSnake()
          {
-            if (line % 2 == 0)
+
+
+            int first = 1;
+            int line = 0;
+            while (line < 3)
             {
-               // Четные столбцы
-               int range = 0;
-               while (range < 3)
+               if (line % 2 == 0)
                {
-                  pool[range, line] = first++;
-                  range++;
+                  // Четные столбцы
+                  int range = 0;
+                  while (range < 3)
+                  {
+                     pool[range, line] = first++;
+                     range++;
+                  }
                }
-            }
-            else
-            {
-               // Нечетные столбцы
-               int range = 2;
-               while (range >= 0)
+               else
                {
-                  pool[range, line] = first++;
-                  range--;
+                  // Нечетные столбцы
+                  int range = 2;
+                  while (range >= 0)
+                  {
+                     pool[range, line] = first++;
+                     range--;
+                  }
                }
+
+               line++;
             }
 
-            line++;
          }
+
+
+
+
 
          // Вывод массива
          int i = 0;
