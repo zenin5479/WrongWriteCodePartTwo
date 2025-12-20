@@ -841,24 +841,27 @@ namespace WrongWriteCodePartTwo
 
          }
 
-
-
-
-
          // Вывод массива
-         int i = 0;
-         while (i < 3)
+         void ArrayOutput()
          {
-            int j = 0;
-            while (j < 3)
+            int i = 0;
+            while (i < 3)
             {
-               Console.Write("{0}\t", pool[i, j]);
-               j++;
-            }
+               int j = 0;
+               while (j < 3)
+               {
+                  Console.Write("{0}\t", pool[i, j]);
+                  j++;
+               }
 
-            i++;
-            Console.WriteLine();
+               i++;
+               Console.WriteLine();
+            }
          }
+
+
+
+
 
          Console.ReadKey();
       }
