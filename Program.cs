@@ -809,17 +809,17 @@ namespace WrongWriteCodePartTwo
          int[,] pool = new int[3, 3];
          int first = 1;
 
-         int col = 0;
-         while (col < 3)
+         int line = 0;
+         while (line < 3)
          {
-            if (col % 2 == 0)
+            if (line % 2 == 0)
             {
                // Четные столбцы
-               int rank = 0;
-               while (rank < 3)
+               int row = 0;
+               while (row < 3)
                {
-                  pool[rank, col] = first++;
-                  rank++;
+                  pool[row, line] = first++;
+                  row++;
                }
             }
             else
@@ -828,12 +828,12 @@ namespace WrongWriteCodePartTwo
                int row = 2;
                while (row >= 0)
                {
-                  pool[row, col] = first++;
+                  pool[row, line] = first++;
                   row--;
                }
             }
 
-            col++;
+            line++;
          }
 
          // Вывод массива
