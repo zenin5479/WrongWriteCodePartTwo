@@ -623,6 +623,7 @@ namespace WrongWriteCodePartTwo
          Console.WriteLine("--------------------------------------------------------");
          Console.WriteLine("Поиск минимального по модулю элемента двумерного массива");
          Console.WriteLine("--------------------------------------------------------");
+
          // Метод ввода количества строк
          int DimensionLine()
          {
@@ -858,7 +859,122 @@ namespace WrongWriteCodePartTwo
          VerticalSnake();
          ArrayOutput();
 
+
+         // Пример массива (можно заменить на любой другой)
+         int[,] array =
+         {
+            { 1, 2, 3, 4 },
+            { 5, 6, 7, 8 },
+            { 9, 10, 11, 12 },
+            { 13, 14, 15, 16 }
+         };
+
+         Console.WriteLine("Исходный массив:");
+         PrintArray(array);
+
+         // Замена элементов
+         ReplaceArrayElements(array);
+
+         Console.WriteLine("\nМассив после замены:");
+         PrintArray(array);
+
          Console.ReadKey();
+      }
+
+      static void ReplaceArrayElements(int[,] array)
+      {
+         int rows = array.GetLength(0);
+         int cols = array.GetLength(1);
+
+         // 1. Заменяем первую строку элементами главной диагонали
+         for (int j = 0; j < cols; j++)
+         {
+            // Главная диагональ: элемент существует, если строка = столбец
+            // Но так как в первой строке мы заменяем все элементы,
+            // то для каждого столбца j берем элемент [j,j], если он существует
+            if (j < rows && j < cols) // Проверка, что элемент главной диагонали существует
+            {
+               array[0, j] = array[j, j];
+            }
+         }
+
+         // 2. Заменяем последнюю строку элементами побочной диагонали
+         int lastRow = rows - 1;
+         for (int j = 0; j < cols; j++)
+         {
+            // Побочная диагональ: для строки i, столбец = cols - 1 - i
+            // Находим, из какой строки брать элемент для текущего столбца j
+            int i = cols - 1 - j;
+
+            // Проверяем, что строка i существует в массиве
+            if (i >= 0 && i < rows)
+            {
+               array[lastRow, j] = array[i, j];
+            }
+         }
+      }
+
+      // Альтернативная реализация с явным сохранением диагоналей
+      static void ReplaceArrayElementsAlternative(int[,] array)
+      {
+         int rows = array.GetLength(0);
+         int cols = array.GetLength(1);
+
+         // Сохраняем элементы главной диагонали
+         int minDim = Math.Min(rows, cols);
+         int[] mainDiagonal = new int[minDim];
+
+         for (int i = 0; i < minDim; i++)
+         {
+            mainDiagonal[i] = array[i, i];
+         }
+
+         // Сохраняем элементы побочной диагонали
+         int[] secondaryDiagonal = new int[Math.Min(rows, cols)];
+
+         for (int i = 0; i < Math.Min(rows, cols); i++)
+         {
+            int col = cols - 1 - i;
+            if (col >= 0)
+            {
+               secondaryDiagonal[i] = array[i, col];
+            }
+         }
+
+         // Заменяем первую строку
+         for (int j = 0; j < cols; j++)
+         {
+            if (j < mainDiagonal.Length)
+            {
+               array[0, j] = mainDiagonal[j];
+            }
+         }
+
+         // Заменяем последнюю строку
+         int lastRow = rows - 1;
+         for (int j = 0; j < cols; j++)
+         {
+            if (j < secondaryDiagonal.Length)
+            {
+               array[lastRow, j] = secondaryDiagonal[j];
+            }
+         }
+      }
+
+      static void PrintArray(int[,] array)
+      {
+         int rows = array.GetLength(0);
+         int cols = array.GetLength(1);
+
+         for (int i = 0; i < rows; i++)
+         {
+            for (int j = 0; j < cols; j++)
+            {
+               Console.Write($"{array[i, j],4}");
+            }
+
+            Console.WriteLine();
+         }
       }
    }
 }
