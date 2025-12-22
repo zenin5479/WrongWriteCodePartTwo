@@ -859,7 +859,7 @@ namespace WrongWriteCodePartTwo
          VerticalSnake();
          ArrayOutput();
          
-         // Пример массива (можно заменить на любой другой)
+         // Пример массива
          int[,] array =
          {
             { 1, 2, 3, 4 , 7},
