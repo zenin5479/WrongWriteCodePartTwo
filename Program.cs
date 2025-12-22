@@ -910,54 +910,7 @@ namespace WrongWriteCodePartTwo
             }
          }
       }
-
-      // Альтернативная реализация с явным сохранением диагоналей
-      static void ReplaceArrayElementsAlternative(int[,] array)
-      {
-         int rows = array.GetLength(0);
-         int cols = array.GetLength(1);
-
-         // Сохраняем элементы главной диагонали
-         int minDim = Math.Min(rows, cols);
-         int[] mainDiagonal = new int[minDim];
-
-         for (int i = 0; i < minDim; i++)
-         {
-            mainDiagonal[i] = array[i, i];
-         }
-
-         // Сохраняем элементы побочной диагонали
-         int[] secondaryDiagonal = new int[Math.Min(rows, cols)];
-
-         for (int i = 0; i < Math.Min(rows, cols); i++)
-         {
-            int col = cols - 1 - i;
-            if (col >= 0)
-            {
-               secondaryDiagonal[i] = array[i, col];
-            }
-         }
-
-         // Заменяем первую строку
-         for (int j = 0; j < cols; j++)
-         {
-            if (j < mainDiagonal.Length)
-            {
-               array[0, j] = mainDiagonal[j];
-            }
-         }
-
-         // Заменяем последнюю строку
-         int lastRow = rows - 1;
-         for (int j = 0; j < cols; j++)
-         {
-            if (j < secondaryDiagonal.Length)
-            {
-               array[lastRow, j] = secondaryDiagonal[j];
-            }
-         }
-      }
-
+      
       static void PrintArray(int[,] array)
       {
          int rows = array.GetLength(0);
