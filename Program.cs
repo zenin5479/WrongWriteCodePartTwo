@@ -860,44 +860,7 @@ namespace WrongWriteCodePartTwo
          ArrayOutput();
 
 
-         // Пример прямоугольного массива 4x5
-         int[,] serial =
-         {
-            { 1,  2,  3,  4,  5 },
-            { 6,  7,  8,  9,  10 },
-            { 11,  12,  13,  14, 15 },
-            { 16, 17, 18, 19, 20 }
-         };
-
-         int n = serial.GetLength(0); // количество строк
-         int m = serial.GetLength(1); // количество столбцов
-
-         int minDim = Math.Min(n, m); // длина диагонали
-
-         // Заменяем первую строку на элементы главной диагонали
-         for (int j = 0; j < minDim; j++)
-         {
-            serial[0, j] = serial[j, j];
-         }
-         // Если столбцов больше, чем minDim, оставшиеся элементы первой строки не меняем
-
-         // Заменяем последнюю строку на элементы "побочной диагонали" (от правого верхнего угла)
-         for (int j = 0; j < minDim; j++)
-         {
-            serial[n - 1, j] = serial[j, m - 1 - j];
-         }
-         // Если столбцов больше, чем minDim, оставшиеся элементы последней строки не меняем
-
-         // Выводим результат
-         Console.WriteLine("Изменённая матрица:");
-         for (int i = 0; i < n; i++)
-         {
-            for (int j = 0; j < m; j++)
-            {
-               Console.Write(serial[i, j] + "\t");
-            }
-            Console.WriteLine();
-         }
+        
 
 
          Console.ReadKey();
