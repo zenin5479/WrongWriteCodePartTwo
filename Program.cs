@@ -859,14 +859,7 @@ namespace WrongWriteCodePartTwo
          VerticalSnake();
          ArrayOutput();
          
-         // Пример массива
-         int[,] array =
-         {
-            { 1, 2, 3, 4 , 7},
-            { 5, 6, 7, 8 , 8},
-            { 9, 10, 11, 12 , 9},
-            { 13, 14, 15, 16 , 10}
-         };
+         
 
          Console.WriteLine("Исходный массив:");
          PrintArray(array);
