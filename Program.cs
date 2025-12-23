@@ -954,18 +954,20 @@ namespace WrongWriteCodePartTwo
          int minDim = Math.Min(rows, cols);
          for (int i = 0; i < minDim; i++)
          {
-            Console.WriteLine("  [{0},{1}] = {2}", i, i, array[i, i]);
+            Console.WriteLine("[{0},{1}] = {2}", i, i, array[i, i]);
          }
 
          Console.WriteLine("Побочная диагональ (для замены последней строки):");
          for (int i = 0; i < minDim; i++)
          {
             int col = cols - 1 - i;
-            Console.WriteLine("  [{0},{1}] = {2}", i, col, array[i, col]);
+            Console.WriteLine("[{0},{1}] = {2}", i, col, array[i, col]);
          }
 
-         Console.WriteLine($"\nПервая строка заменена на: {array[0, 0]}, {array[0, 1]}, {array[0, 2]}, {array[0, 3]}, {array[0, 4]}");
-         Console.WriteLine($"Последняя строка заменена на: {array[rows - 1, 0]}, {array[rows - 1, 1]}, {array[rows - 1, 2]}, {array[rows - 1, 3]}, {array[rows - 1, 4]}");
+         Console.WriteLine("Первая строка заменена на: {0}, {1}, {2}, {3}, {4}", 
+            array[0, 0], array[0, 1], array[0, 2], array[0, 3], array[0, 4]);
+         Console.WriteLine("Последняя строка заменена на: {0}, {1}, {2}, {3}, {4}", 
+            array[rows - 1, 0], array[rows - 1, 1], array[rows - 1, 2], array[rows - 1, 3], array[rows - 1, 4]);
       }
    }
 }
