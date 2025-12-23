@@ -957,11 +957,11 @@ namespace WrongWriteCodePartTwo
             Console.WriteLine("  [{0},{1}] = {2}", i, i, array[i, i]);
          }
 
-         Console.WriteLine("\nПобочная диагональ (для замены последней строки):");
+         Console.WriteLine("Побочная диагональ (для замены последней строки):");
          for (int i = 0; i < minDim; i++)
          {
             int col = cols - 1 - i;
-            Console.WriteLine($"  [{i},{col}] = {array[i, col]}");
+            Console.WriteLine("  [{0},{1}] = {2}", i, col, array[i, col]);
          }
 
          Console.WriteLine($"\nПервая строка заменена на: {array[0, 0]}, {array[0, 1]}, {array[0, 2]}, {array[0, 3]}, {array[0, 4]}");
