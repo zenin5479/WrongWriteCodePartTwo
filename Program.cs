@@ -860,7 +860,7 @@ namespace WrongWriteCodePartTwo
          ArrayOutput();
 
 
-         // Пример прямоугольного массива 3x5
+         // Пример прямоугольного массива 4x5
          int[,] matr = 
          {
             { 1,  2,  3,  4,  5 },
