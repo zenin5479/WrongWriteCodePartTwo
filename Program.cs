@@ -410,120 +410,33 @@ namespace WrongWriteCodePartTwo
          Console.WriteLine("Замена в двумерном массиве элементов первой строки элементами главной диагонали\n" +
                            "и элементов последней строки, элементами побочной диагонали");
          Console.WriteLine("---------------------------------------------------------------------------------");
-         Console.WriteLine("Введите размерность массива");
+         // Создаем массив 4x5
+         int[,] array = {
+            { 1, 2, 3, 4, 5 },
+            { 6, 7, 8, 9, 10 },
+            { 11, 12, 13, 14, 15 },
+            { 16, 17, 18, 19, 20 }
+         };
 
-         // Метод ввода количества строк
-         int DimensionRow()
-         {
-            int n;
-            do
-            {
-               Console.Write("Введите количество строк массива: ");
-               int.TryParse(Console.ReadLine(), out n);
-               if (n <= 0 || n > 20)
-               {
-                  Console.WriteLine("Введено неверное значение");
-               }
-            } while (n <= 0 || n > 20);
 
-            return n;
-         }
 
-         // Метод ввода количества столбцов и проверка на прямоугольность массива
-         int DimensionColumn(int rank)
-         {
-            int m;
-            do
-            {
-               Console.Write("Введите количество столбцов массива: ");
-               int.TryParse(Console.ReadLine(), out m);
-               // Проверка на прямоугольность массива
-               if (rank == m)
-               {
-                  Console.WriteLine("Количество строк массива равно количеству столбцов: матрица");
-               }
-               else if (m <= 0 || m > 20)
-               {
-                  Console.WriteLine("Введено неверное значение");
-               }
-            } while (m <= 0 || m > 20 || rank == m);
 
-            return m;
-         }
+         Console.WriteLine("Исходный массив 4x5:");
+         PrintArray(array);
 
-         int argument = DimensionRow();
-         int tower = DimensionColumn(argument);
-         int[,] formation = new int[argument, tower];
+         // Замена элементов
+         ReplaceArrayElements(array);
 
-         // Метод заполения массива
-         void FillingArray(int[,] set)
-         {
-            Random sporadic = new Random();
-            int row = set.GetLength(0);
-            int column = set.GetLength(1);
-            int i = 0;
-            while (i < row)
-            {
-               int j = 0;
-               while (j < column)
-               {
-                  set[i, j] = sporadic.Next(-10, 11);
-                  j++;
-               }
+         Console.WriteLine("Массив после замены:");
+         PrintArray(array);
 
-               i++;
-            }
-         }
+         Console.WriteLine("Объяснение:");
+         ExplainChanges(array);
 
-         // Метод замены строк в массиве
-         void ReplacementRows(int[,] set)
-         {
-            int temp = 0;
-            int line = set.GetLength(0);
-            int item = set.GetLength(1);
-            var j = 0;
-            while (j < item)
-            {
-               if (j > line - 1)
-               {
-                  break;
-               }
 
-               temp = set[line - 1 - j, j];
-               set[0, j] = set[j, j];
-               set[line - 1, j] = set[line - 1 - j, j];
-               j++;
-            }
 
-            set[line - 1, j - 1] = temp;
-         }
 
-         // Метод вывода массива
-         void PrintingArray(int[,] set)
-         {
-            int row = set.GetLength(0);
-            int column = set.GetLength(1);
-            int i = 0;
-            while (i < row)
-            {
-               int j = 0;
-               while (j < column)
-               {
-                  Console.Write(set[i, j] + "\t");
-                  j++;
-               }
 
-               i++;
-               Console.WriteLine();
-            }
-         }
-
-         FillingArray(formation);
-         Console.WriteLine("Исходный массив");
-         PrintingArray(formation);
-         Console.WriteLine("Упорядоченный массив c заменой строк");
-         ReplacementRows(formation);
-         PrintingArray(formation);
 
          Console.WriteLine("----------------------------------------------------------------------------------");
          Console.WriteLine("Расчет частоты вхождения каждого числа двумерного массива с использованием словаря");
@@ -859,25 +772,6 @@ namespace WrongWriteCodePartTwo
          VerticalSnake();
          ArrayOutput();
 
-         // Создаем массив 4x5
-         int[,] array = {
-            { 1, 2, 3, 4, 5 },
-            { 6, 7, 8, 9, 10 },
-            { 11, 12, 13, 14, 15 },
-            { 16, 17, 18, 19, 20 }
-         };
-
-         Console.WriteLine("Исходный массив 4x5:");
-         PrintArray(array);
-
-         // Замена элементов
-         ReplaceArrayElements(array);
-
-         Console.WriteLine("Массив после замены:");
-         PrintArray(array);
-
-         Console.WriteLine("Объяснение:");
-         ExplainChanges(array);
 
          Console.ReadKey();
       }
