@@ -954,7 +954,7 @@ namespace WrongWriteCodePartTwo
          int minDim = Math.Min(rows, cols);
          for (int i = 0; i < minDim; i++)
          {
-            Console.WriteLine($"  [{i},{i}] = {array[i, i]}");
+            Console.WriteLine("  [{0},{1}] = {2}", i, i, array[i, i]);
          }
 
          Console.WriteLine("\nПобочная диагональ (для замены последней строки):");
