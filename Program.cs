@@ -859,9 +859,25 @@ namespace WrongWriteCodePartTwo
          VerticalSnake();
          ArrayOutput();
 
+         // Создаем массив 4x5
+         int[,] array = {
+            { 1, 2, 3, 4, 5 },
+            { 6, 7, 8, 9, 10 },
+            { 11, 12, 13, 14, 15 },
+            { 16, 17, 18, 19, 20 }
+         };
 
-        
+         Console.WriteLine("Исходный массив 4x5:");
+         PrintArray(array);
 
+         // Замена элементов
+         ReplaceArrayElements(array);
+
+         Console.WriteLine("\nМассив после замены:");
+         PrintArray(array);
+
+         Console.WriteLine("\nОбъяснение:");
+         ExplainChanges(array);
 
          Console.ReadKey();
       }
