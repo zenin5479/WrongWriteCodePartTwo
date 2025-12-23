@@ -475,7 +475,7 @@ namespace WrongWriteCodePartTwo
             {
                for (int j = 0; j < cols; j++)
                {
-                  Console.Write("{0,4}", group[i, j]);
+                  Console.Write("{0}\t", group[i, j]);
                }
 
                Console.WriteLine();
