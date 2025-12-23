@@ -473,7 +473,7 @@ namespace WrongWriteCodePartTwo
             }
          }
 
-         void PrintArray(int[,] group)
+         void PrintPackage(int[,] group)
          {
             int row = group.GetLength(0);
             int cols = group.GetLength(1);
@@ -515,7 +515,7 @@ namespace WrongWriteCodePartTwo
          }
 
          Console.WriteLine("Исходный массив 4x5:");
-         PrintArray(package);
+         PrintPackage(package);
 
          Console.WriteLine("Объяснение:");
          ExplainChanges(package);
@@ -524,7 +524,7 @@ namespace WrongWriteCodePartTwo
          ReplacePackageElements(package);
 
          Console.WriteLine("Массив после замены:");
-         PrintArray(package);
+         PrintPackage(package);
 
          Console.WriteLine("----------------------------------------------------------------------------------");
          Console.WriteLine("Расчет частоты вхождения каждого числа двумерного массива с использованием словаря");
