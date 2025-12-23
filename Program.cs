@@ -433,8 +433,6 @@ namespace WrongWriteCodePartTwo
             while (i < minDim)
             {
                mainDiagonal[i] = group[i, i];
-
-
                i++;
             }
 
