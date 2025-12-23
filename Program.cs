@@ -881,5 +881,100 @@ namespace WrongWriteCodePartTwo
 
          Console.ReadKey();
       }
+
+      static void ReplaceArrayElements(int[,] array)
+      {
+         int rows = array.GetLength(0);
+         int cols = array.GetLength(1);
+
+         // 1. Сохраняем элементы главной диагонали
+         // Главная диагональ: [0,0], [1,1], [2,2], [3,3]
+         // Для массива 4x5 главная диагональ будет иметь 4 элемента (по минимальному измерению)
+         int minDim = Math.Min(rows, cols);
+         int[] mainDiagonal = new int[minDim];
+
+         for (int i = 0; i < minDim; i++)
+         {
+            mainDiagonal[i] = array[i, i];
+         }
+
+         // 2. Сохраняем элементы побочной диагонали
+         // Побочная диагональ: для строки i, столбец = cols - 1 - i
+         // Для массива 4x5: 
+         //   строка 0, столбец 4 (элемент 5)
+         //   строка 1, столбец 3 (элемент 9)
+         //   строка 2, столбец 2 (элемент 13)
+         //   строка 3, столбец 1 (элемент 17)
+         int[] secondaryDiagonal = new int[minDim];
+
+         for (int i = 0; i < minDim; i++)
+         {
+            int col = cols - 1 - i;
+            secondaryDiagonal[i] = array[i, col];
+         }
+
+         // 3. Заменяем первую строку элементами главной диагонали
+         for (int j = 0; j < cols; j++)
+         {
+            if (j < mainDiagonal.Length)
+            {
+               array[0, j] = mainDiagonal[j];
+            }
+            // Если столбцов больше, чем элементов в главной диагонали,
+            // оставляем исходный элемент (по условию задачи не указано)
+            // Или можно установить в 0 или другое значение
+            // В данном примере оставляем как есть
+         }
+
+         // 4. Заменяем последнюю строку элементами побочной диагонали
+         int lastRow = rows - 1;
+         for (int j = 0; j < cols; j++)
+         {
+            if (j < secondaryDiagonal.Length)
+            {
+               array[lastRow, j] = secondaryDiagonal[j];
+            }
+            // Аналогично для побочной диагонали
+            // Оставляем исходный элемент
+         }
+      }
+
+      static void PrintArray(int[,] array)
+      {
+         int rows = array.GetLength(0);
+         int cols = array.GetLength(1);
+
+         for (int i = 0; i < rows; i++)
+         {
+            for (int j = 0; j < cols; j++)
+            {
+               Console.Write($"{array[i, j],4}");
+            }
+            Console.WriteLine();
+         }
+      }
+
+      static void ExplainChanges(int[,] array)
+      {
+         int rows = array.GetLength(0);
+         int cols = array.GetLength(1);
+
+         Console.WriteLine("Главная диагональ (для замены первой строки):");
+         int minDim = Math.Min(rows, cols);
+         for (int i = 0; i < minDim; i++)
+         {
+            Console.WriteLine($"  [{i},{i}] = {array[i, i]}");
+         }
+
+         Console.WriteLine("\nПобочная диагональ (для замены последней строки):");
+         for (int i = 0; i < minDim; i++)
+         {
+            int col = cols - 1 - i;
+            Console.WriteLine($"  [{i},{col}] = {array[i, col]}");
+         }
+
+         Console.WriteLine($"\nПервая строка заменена на: {array[0, 0]}, {array[0, 1]}, {array[0, 2]}, {array[0, 3]}, {array[0, 4]}");
+         Console.WriteLine($"Последняя строка заменена на: {array[rows - 1, 0]}, {array[rows - 1, 1]}, {array[rows - 1, 2]}, {array[rows - 1, 3]}, {array[rows - 1, 4]}");
+      }
    }
 }
