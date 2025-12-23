@@ -419,7 +419,7 @@ namespace WrongWriteCodePartTwo
             { 16, 17, 18, 19, 20 }
          };
 
-         void ReplaceArrayElements(int[,] group)
+         void ReplacePackageElements(int[,] group)
          {
             int row = group.GetLength(0);
             int cols = group.GetLength(1);
@@ -521,7 +521,7 @@ namespace WrongWriteCodePartTwo
          ExplainChanges(package);
 
          // Замена элементов
-         ReplaceArrayElements(package);
+         ReplacePackageElements(package);
 
          Console.WriteLine("Массив после замены:");
          PrintArray(package);
