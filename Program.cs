@@ -429,14 +429,13 @@ namespace WrongWriteCodePartTwo
             // Для массива 4x5 главная диагональ будет иметь 4 элемента (по минимальному измерению)
             int minDim = Math.Min(row, cols);
             int[] mainDiagonal = new int[minDim];
-
-            while (expression)
-            {
-               
-            }
-            for (int i = 0; i < minDim; i++)
+            int i = 0;
+            while (i < minDim)
             {
                mainDiagonal[i] = group[i, i];
+
+
+               i++;
             }
 
             // Сохраняем элементы побочной диагонали
