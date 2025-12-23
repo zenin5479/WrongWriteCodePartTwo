@@ -448,17 +448,15 @@ namespace WrongWriteCodePartTwo
             }
 
             // Заменяем первую строку элементами главной диагонали
-
-            while ()
-            {
-               
-            }
-            for (int k = 0; k < cols; k++)
+            int k = 0;
+            while (k < cols)
             {
                if (k < mainDiagonal.Length)
                {
                   group[0, k] = mainDiagonal[k];
                }
+
+               k++;
             }
 
             // Заменяем последнюю строку элементами побочной диагонали
