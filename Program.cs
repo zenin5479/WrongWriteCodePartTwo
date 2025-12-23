@@ -510,11 +510,11 @@ namespace WrongWriteCodePartTwo
          Console.WriteLine("Исходный массив 4x5:");
          PrintArray(package);
 
-         // Замена элементов
-         ReplaceArrayElements(package);
-
          Console.WriteLine("Объяснение:");
          ExplainChanges(package);
+
+         // Замена элементов
+         ReplaceArrayElements(package);
 
          Console.WriteLine("Массив после замены:");
          PrintArray(package);
