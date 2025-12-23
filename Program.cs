@@ -906,20 +906,16 @@ namespace WrongWriteCodePartTwo
             secondaryDiagonal[i] = array[i, col];
          }
 
-         // 3. Заменяем первую строку элементами главной диагонали
+         // Заменяем первую строку элементами главной диагонали
          for (int j = 0; j < cols; j++)
          {
             if (j < mainDiagonal.Length)
             {
                array[0, j] = mainDiagonal[j];
             }
-            // Если столбцов больше, чем элементов в главной диагонали,
-            // оставляем исходный элемент (по условию задачи не указано)
-            // Или можно установить в 0 или другое значение
-            // В данном примере оставляем как есть
          }
 
-         // 4. Заменяем последнюю строку элементами побочной диагонали
+         // Заменяем последнюю строку элементами побочной диагонали
          int lastRow = rows - 1;
          for (int j = 0; j < cols; j++)
          {
@@ -927,8 +923,6 @@ namespace WrongWriteCodePartTwo
             {
                array[lastRow, j] = secondaryDiagonal[j];
             }
-            // Аналогично для побочной диагонали
-            // Оставляем исходный элемент
          }
       }
 
@@ -941,7 +935,7 @@ namespace WrongWriteCodePartTwo
          {
             for (int j = 0; j < cols; j++)
             {
-               Console.Write($"{array[i, j],4}");
+               Console.Write(string.Format("{0,4}", array[i, j]));
             }
             Console.WriteLine();
          }
