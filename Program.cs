@@ -461,12 +461,15 @@ namespace WrongWriteCodePartTwo
 
             // Заменяем последнюю строку элементами побочной диагонали
             int lastRow = row - 1;
-            for (int l = 0; l < cols; l++)
+            int l = 0;
+            while (l < cols)
             {
                if (l < secondaryDiagonal.Length)
                {
                   group[lastRow, l] = secondaryDiagonal[l];
                }
+
+               l++;
             }
          }
 
