@@ -492,10 +492,8 @@ namespace WrongWriteCodePartTwo
          void ExplainChanges(int[,] group)
          {
              Console.WriteLine("Объяснение:");
-            
             int row = group.GetLength(0);
             int cols = group.GetLength(1);
-
             Console.WriteLine("Главная диагональ (для замены первой строки):");
             int minDim = Math.Min(row, cols);
             for (int i = 0; i < minDim; i++)
@@ -518,13 +516,9 @@ namespace WrongWriteCodePartTwo
 
          Console.WriteLine("Исходный массив 4x5:");
          PrintPackage(package);
-
-        
          ExplainChanges(package);
-
          // Замена элементов
          ReplacePackageElements(package);
-
          Console.WriteLine("Массив после замены:");
          PrintPackage(package);
 
