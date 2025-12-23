@@ -873,7 +873,7 @@ namespace WrongWriteCodePartTwo
          // Замена элементов
          ReplaceArrayElements(array);
 
-         Console.WriteLine("\nМассив после замены:");
+         Console.WriteLine("Массив после замены:");
          PrintArray(array);
 
          Console.ReadKey();
