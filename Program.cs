@@ -491,6 +491,8 @@ namespace WrongWriteCodePartTwo
 
          void ExplainChanges(int[,] group)
          {
+             Console.WriteLine("Объяснение:");
+            
             int row = group.GetLength(0);
             int cols = group.GetLength(1);
 
@@ -517,7 +519,7 @@ namespace WrongWriteCodePartTwo
          Console.WriteLine("Исходный массив 4x5:");
          PrintPackage(package);
 
-         Console.WriteLine("Объяснение:");
+        
          ExplainChanges(package);
 
          // Замена элементов
