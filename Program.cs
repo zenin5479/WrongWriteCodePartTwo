@@ -512,14 +512,12 @@ namespace WrongWriteCodePartTwo
 
          // Замена элементов
          ReplaceArrayElements(package);
+
          Console.WriteLine("Объяснение:");
          ExplainChanges(package);
 
-
          Console.WriteLine("Массив после замены:");
          PrintArray(package);
-
-
 
          Console.WriteLine("----------------------------------------------------------------------------------");
          Console.WriteLine("Расчет частоты вхождения каждого числа двумерного массива с использованием словаря");
