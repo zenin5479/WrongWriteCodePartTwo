@@ -467,10 +467,10 @@ namespace WrongWriteCodePartTwo
 
          void PrintArray(int[,] group)
          {
-            int rows = group.GetLength(0);
+            int row = group.GetLength(0);
             int cols = group.GetLength(1);
 
-            for (int i = 0; i < rows; i++)
+            for (int i = 0; i < row; i++)
             {
                for (int j = 0; j < cols; j++)
                {
@@ -483,11 +483,11 @@ namespace WrongWriteCodePartTwo
 
          void ExplainChanges(int[,] group)
          {
-            int rows = group.GetLength(0);
+            int row = group.GetLength(0);
             int cols = group.GetLength(1);
 
             Console.WriteLine("Главная диагональ (для замены первой строки):");
-            int minDim = Math.Min(rows, cols);
+            int minDim = Math.Min(row, cols);
             for (int i = 0; i < minDim; i++)
             {
                Console.WriteLine("[{0},{1}] = {2}", i, i, group[i, i]);
@@ -503,9 +503,8 @@ namespace WrongWriteCodePartTwo
             Console.WriteLine("Первая строка заменена на: {0}, {1}, {2}, {3}, {4}",
                group[0, 0], group[0, 1], group[0, 2], group[0, 3], group[0, 4]);
             Console.WriteLine("Последняя строка заменена на: {0}, {1}, {2}, {3}, {4}",
-               group[rows - 1, 0], group[rows - 1, 1], group[rows - 1, 2], group[rows - 1, 3], group[rows - 1, 4]);
+               group[row - 1, 0], group[row - 1, 1], group[row - 1, 2], group[row - 1, 3], group[row - 1, 4]);
          }
-
 
          Console.WriteLine("Исходный массив 4x5:");
          PrintArray(array);
