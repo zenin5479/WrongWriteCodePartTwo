@@ -430,6 +430,10 @@ namespace WrongWriteCodePartTwo
             int minDim = Math.Min(row, cols);
             int[] mainDiagonal = new int[minDim];
 
+            while (expression)
+            {
+               
+            }
             for (int i = 0; i < minDim; i++)
             {
                mainDiagonal[i] = group[i, i];
@@ -440,28 +444,28 @@ namespace WrongWriteCodePartTwo
 
             int[] secondaryDiagonal = new int[minDim];
 
-            for (int i = 0; i < minDim; i++)
+            for (int j = 0; j < minDim; j++)
             {
-               int col = cols - 1 - i;
-               secondaryDiagonal[i] = group[i, col];
+               int col = cols - 1 - j;
+               secondaryDiagonal[j] = group[j, col];
             }
 
             // Заменяем первую строку элементами главной диагонали
-            for (int j = 0; j < cols; j++)
+            for (int k = 0; k < cols; k++)
             {
-               if (j < mainDiagonal.Length)
+               if (k < mainDiagonal.Length)
                {
-                  group[0, j] = mainDiagonal[j];
+                  group[0, k] = mainDiagonal[k];
                }
             }
 
             // Заменяем последнюю строку элементами побочной диагонали
             int lastRow = row - 1;
-            for (int j = 0; j < cols; j++)
+            for (int l = 0; l < cols; l++)
             {
-               if (j < secondaryDiagonal.Length)
+               if (l < secondaryDiagonal.Length)
                {
-                  group[lastRow, j] = secondaryDiagonal[j];
+                  group[lastRow, l] = secondaryDiagonal[l];
                }
             }
          }
