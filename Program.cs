@@ -900,7 +900,7 @@ namespace WrongWriteCodePartTwo
 
          // Сохраняем элементы побочной диагонали
          // Побочная диагональ:[0,4], [1,3], [2,2], [3,1]
-        
+
          int[] secondaryDiagonal = new int[minDim];
 
          for (int i = 0; i < minDim; i++)
@@ -964,9 +964,9 @@ namespace WrongWriteCodePartTwo
             Console.WriteLine("[{0},{1}] = {2}", i, col, array[i, col]);
          }
 
-         Console.WriteLine("Первая строка заменена на: {0}, {1}, {2}, {3}, {4}", 
+         Console.WriteLine("Первая строка заменена на: {0}, {1}, {2}, {3}, {4}",
             array[0, 0], array[0, 1], array[0, 2], array[0, 3], array[0, 4]);
-         Console.WriteLine("Последняя строка заменена на: {0}, {1}, {2}, {3}, {4}", 
+         Console.WriteLine("Последняя строка заменена на: {0}, {1}, {2}, {3}, {4}",
             array[rows - 1, 0], array[rows - 1, 1], array[rows - 1, 2], array[rows - 1, 3], array[rows - 1, 4]);
       }
    }
