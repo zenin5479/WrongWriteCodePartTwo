@@ -411,7 +411,7 @@ namespace WrongWriteCodePartTwo
                            "и элементов последней строки, элементами побочной диагонали");
          Console.WriteLine("---------------------------------------------------------------------------------");
          // Создаем массив 4x5
-         int[,] array = {
+         int[,] package = {
             { 1, 2, 3, 4, 5 },
             { 6, 7, 8, 9, 10 },
             { 11, 12, 13, 14, 15 },
@@ -507,16 +507,16 @@ namespace WrongWriteCodePartTwo
          }
 
          Console.WriteLine("Исходный массив 4x5:");
-         PrintArray(array);
+         PrintArray(package);
 
          // Замена элементов
-         ReplaceArrayElements(array);
+         ReplaceArrayElements(package);
 
          Console.WriteLine("Массив после замены:");
-         PrintArray(array);
+         PrintArray(package);
 
          Console.WriteLine("Объяснение:");
-         ExplainChanges(array);
+         ExplainChanges(package);
 
          Console.WriteLine("----------------------------------------------------------------------------------");
          Console.WriteLine("Расчет частоты вхождения каждого числа двумерного массива с использованием словаря");
