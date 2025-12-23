@@ -876,9 +876,6 @@ namespace WrongWriteCodePartTwo
          Console.WriteLine("\nМассив после замены:");
          PrintArray(array);
 
-         Console.WriteLine("\nОбъяснение:");
-         ExplainChanges(array);
-
          Console.ReadKey();
       }
 
