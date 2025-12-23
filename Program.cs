@@ -876,6 +876,9 @@ namespace WrongWriteCodePartTwo
          Console.WriteLine("Массив после замены:");
          PrintArray(array);
 
+         Console.WriteLine("Объяснение:");
+         ExplainChanges(array);
+
          Console.ReadKey();
       }
 
@@ -935,8 +938,9 @@ namespace WrongWriteCodePartTwo
          {
             for (int j = 0; j < cols; j++)
             {
-               Console.Write(string.Format("{0,4}", array[i, j]));
+               Console.Write("{0,4}", array[i, j]);
             }
+
             Console.WriteLine();
          }
       }
