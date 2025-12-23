@@ -865,40 +865,6 @@ namespace WrongWriteCodePartTwo
 
          Console.ReadKey();
       }
-
-      static void ReplaceArrayElements(int[,] array)
-      {
-         int rows = array.GetLength(0);
-         int cols = array.GetLength(1);
-
-         // 1. Заменяем первую строку элементами главной диагонали
-         for (int j = 0; j < cols; j++)
-         {
-            // Главная диагональ: элемент существует, если строка = столбец
-            // Но так как в первой строке мы заменяем все элементы,
-            // то для каждого столбца j берем элемент [j,j], если он существует
-            // Проверка, что элемент главной диагонали существует
-            if (j < rows && j < cols) 
-            {
-               array[0, j] = array[j, j];
-            }
-         }
-
-         // 2. Заменяем последнюю строку элементами побочной диагонали
-         int lastRow = rows - 1;
-         for (int j = 0; j < cols; j++)
-         {
-            // Побочная диагональ: для строки i, столбец = cols - 1 - i
-            // Находим, из какой строки брать элемент для текущего столбца j
-            int i = cols - 1 - j;
-
-            // Проверяем, что строка i существует в массиве
-            if (i >= 0 && i < rows)
-            {
-               array[lastRow, j] = array[i, j];
-            }
-         }
-      }
       
       static void PrintArray(int[,] array)
       {
