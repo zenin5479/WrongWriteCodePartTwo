@@ -670,7 +670,7 @@ namespace WrongWriteCodePartTwo
          int minAbs;
 
          // Метод заполнения массива
-         void FillingsTable(int[,] grouping)
+         void FillingsTable(int[,] series)
          {
             Random blind = new Random();
             int i = 0;
@@ -679,7 +679,7 @@ namespace WrongWriteCodePartTwo
                int j = 0;
                while (j < entry)
                {
-                  grouping[i, j] = blind.Next(-99, 100);
+                  series[i, j] = blind.Next(-99, 100);
                   j++;
                }
 
@@ -733,19 +733,19 @@ namespace WrongWriteCodePartTwo
             Console.WriteLine($"Минимальный элемент по модулю: {minAbs}");
          }
 
-         void MarkingsRowAndColumn(int[,] package)
+         void MarkingsRowAndColumn(int[,] series)
          {
             // Создаем массивы для отметки строк и столбцов
-            bool[] rowsMin = new bool[package.GetLength(0)];
-            bool[] colsMin = new bool[package.GetLength(1)];
+            bool[] rowsMin = new bool[series.GetLength(0)];
+            bool[] colsMin = new bool[series.GetLength(1)];
             // Отмечаем строки и столбцы, содержащие минимальный по модулю элемент
             int i = 0;
-            while (i < package.GetLength(0))
+            while (i < series.GetLength(0))
             {
                int j = 0;
-               while (j < package.GetLength(1))
+               while (j < series.GetLength(1))
                {
-                  if (Math.Abs(package[i, j]) == minAbs)
+                  if (Math.Abs(series[i, j]) == minAbs)
                   {
                      rowsMin[i] = true;
                      colsMin[j] = true;
@@ -760,15 +760,15 @@ namespace WrongWriteCodePartTwo
             // Выводим результаты
             Console.WriteLine("Строки, содержащие минимальный по модулю элемент:");
             int k = 0;
-            while (k < package.GetLength(0))
+            while (k < series.GetLength(0))
             {
                if (rowsMin[k])
                {
                   Console.Write("Строка {0}: ", k + 1);
                   int l = 0;
-                  while (l < package.GetLength(1))
+                  while (l < series.GetLength(1))
                   {
-                     Console.Write("{0} ", package[k, l]);
+                     Console.Write("{0} ", series[k, l]);
                      l++;
                   }
 
@@ -780,15 +780,15 @@ namespace WrongWriteCodePartTwo
 
             Console.WriteLine("Столбцы, содержащие минимальный по модулю элемент:");
             int m = 0;
-            while (m < package.GetLength(1))
+            while (m < series.GetLength(1))
             {
                if (colsMin[m])
                {
                   Console.Write("Столбец {0}: ", m + 1);
                   int n = 0;
-                  while (n < package.GetLength(0))
+                  while (n < series.GetLength(0))
                   {
-                     Console.Write("{0} ", package[n, m]);
+                     Console.Write("{0} ", series[n, m]);
                      n++;
                   }
 
