@@ -486,9 +486,9 @@ namespace WrongWriteCodePartTwo
                   Console.Write("{0}\t", group[i, j]);
                   j++;
                }
+
                i++;
                Console.WriteLine();
-
             }
          }
 
