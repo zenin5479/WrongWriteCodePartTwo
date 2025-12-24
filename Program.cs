@@ -510,12 +510,14 @@ namespace WrongWriteCodePartTwo
             int j = 0;
             while (j < minDim)
             {
-
-            }
-            for (; j++)
-            {
                int col = cols - 1 - j;
                Console.WriteLine("[{0},{1}] = {2}", j, col, group[j, col]);
+
+               j++;
+            }
+            for ( )
+            {
+
             }
 
             Console.WriteLine("Первая строка заменена на: {0}, {1}, {2}, {3}, {4}",
