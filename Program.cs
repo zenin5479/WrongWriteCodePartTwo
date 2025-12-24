@@ -514,10 +514,6 @@ namespace WrongWriteCodePartTwo
                Console.WriteLine("[{0},{1}] = {2}", j, col, group[j, col]);
                j++;
             }
-            for ( )
-            {
-
-            }
 
             Console.WriteLine("Первая строка заменена на: {0}, {1}, {2}, {3}, {4}",
                group[0, 0], group[0, 1], group[0, 2], group[0, 3], group[0, 4]);
