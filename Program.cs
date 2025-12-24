@@ -483,15 +483,12 @@ namespace WrongWriteCodePartTwo
                int j = 0;
                while (j < cols)
                {
-
                   Console.Write("{0}\t", group[i, j]);
                   j++;
                }
-               
-
+               i++;
                Console.WriteLine();
 
-               i++;
             }
          }
 
