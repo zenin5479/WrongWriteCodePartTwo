@@ -477,8 +477,8 @@ namespace WrongWriteCodePartTwo
          {
             int row = group.GetLength(0);
             int cols = group.GetLength(1);
-
-            for (int i = 0; i < row; i++)
+            int i = 0;
+            while (i < row)
             {
                for (int j = 0; j < cols; j++)
                {
@@ -486,12 +486,14 @@ namespace WrongWriteCodePartTwo
                }
 
                Console.WriteLine();
+
+               i++;
             }
          }
 
          void ExplainChanges(int[,] group)
          {
-             Console.WriteLine("Объяснение:");
+            Console.WriteLine("Объяснение:");
             int row = group.GetLength(0);
             int cols = group.GetLength(1);
             Console.WriteLine("Главная диагональ (для замены первой строки):");
