@@ -506,16 +506,13 @@ namespace WrongWriteCodePartTwo
 
                i++;
             }
-            for ( )
-            {
-
-            }
+           
 
             Console.WriteLine("Побочная диагональ (для замены последней строки):");
-            for (int i = 0; i < minDim; i++)
+            for (int j = 0; j < minDim; j++)
             {
-               int col = cols - 1 - i;
-               Console.WriteLine("[{0},{1}] = {2}", i, col, group[i, col]);
+               int col = cols - 1 - j;
+               Console.WriteLine("[{0},{1}] = {2}", j, col, group[j, col]);
             }
 
             Console.WriteLine("Первая строка заменена на: {0}, {1}, {2}, {3}, {4}",
