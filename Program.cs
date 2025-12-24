@@ -512,7 +512,6 @@ namespace WrongWriteCodePartTwo
             {
                int col = cols - 1 - j;
                Console.WriteLine("[{0},{1}] = {2}", j, col, group[j, col]);
-
                j++;
             }
             for ( )
