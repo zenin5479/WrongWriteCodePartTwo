@@ -507,12 +507,12 @@ namespace WrongWriteCodePartTwo
             }
 
             Console.WriteLine("Побочная диагональ (для замены последней строки):");
-
-            while ()
+            int j = 0;
+            while (j < minDim)
             {
-               
+
             }
-            for (int j = 0; j < minDim; j++)
+            for (; j++)
             {
                int col = cols - 1 - j;
                Console.WriteLine("[{0},{1}] = {2}", j, col, group[j, col]);
