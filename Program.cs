@@ -480,9 +480,16 @@ namespace WrongWriteCodePartTwo
             int i = 0;
             while (i < row)
             {
-               for (int j = 0; j < cols; j++)
+               int j = 0;
+               while (j < cols)
                {
+
                   Console.Write("{0}\t", group[i, j]);
+                  j++;
+               }
+               for ( )
+               {
+                  
                }
 
                Console.WriteLine();
