@@ -688,18 +688,18 @@ namespace WrongWriteCodePartTwo
          }
 
          // Метод для вывода матрицы
-         void PrintSet(int[,] selection)
+         void PrintSet(int[,] series)
          {
             Console.WriteLine("Исходная матрица:");
-            int row = selection.GetLength(0);
-            int column = selection.GetLength(1);
+            int row = series.GetLength(0);
+            int column = series.GetLength(1);
             int i = 0;
             while (i < row)
             {
                int j = 0;
                while (j < column)
                {
-                  Console.Write("{0}\t", selection[i, j]);
+                  Console.Write("{0}\t", series[i, j]);
                   j++;
                }
 
@@ -709,16 +709,16 @@ namespace WrongWriteCodePartTwo
          }
 
          // Метод нахождения минимального по модулю элемента
-         void GetMimumModulus(int[,] scheme)
+         void GetMimumModulus(int[,] series)
          {
             minAbs = Math.Abs(table[0, 0]);
             int i = 0;
-            while (i < scheme.GetLength(0))
+            while (i < series.GetLength(0))
             {
                int j = 0;
-               while (j < scheme.GetLength(1))
+               while (j < series.GetLength(1))
                {
-                  int absValue = Math.Abs(scheme[i, j]);
+                  int absValue = Math.Abs(series[i, j]);
                   if (absValue < minAbs)
                   {
                      minAbs = absValue;
