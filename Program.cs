@@ -499,14 +499,16 @@ namespace WrongWriteCodePartTwo
             int cols = group.GetLength(1);
             Console.WriteLine("Главная диагональ (для замены первой строки):");
             int minDim = Math.Min(row, cols);
-
-            while ()
-            {
-               
-            }
-            for (int i = 0; i < minDim; i++)
+            int i = 0;
+            while (i < minDim)
             {
                Console.WriteLine("[{0},{1}] = {2}", i, i, group[i, i]);
+
+               i++;
+            }
+            for ( )
+            {
+
             }
 
             Console.WriteLine("Побочная диагональ (для замены последней строки):");
