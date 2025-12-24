@@ -438,12 +438,12 @@ namespace WrongWriteCodePartTwo
 
             // Сохраняем элементы побочной диагонали
             // Побочная диагональ:[0,4], [1,3], [2,2], [3,1]
-            int[] SideDiagonal = new int[minDim];
+            int[] sideDiagonal = new int[minDim];
             int j = 0;
             while (j < minDim)
             {
                int col = cols - 1 - j;
-               SideDiagonal[j] = group[j, col];
+               sideDiagonal[j] = group[j, col];
                j++;
             }
 
@@ -464,9 +464,9 @@ namespace WrongWriteCodePartTwo
             int l = 0;
             while (l < cols)
             {
-               if (l < SideDiagonal.Length)
+               if (l < sideDiagonal.Length)
                {
-                  group[lastRow, l] = SideDiagonal[l];
+                  group[lastRow, l] = sideDiagonal[l];
                }
 
                l++;
