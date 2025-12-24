@@ -805,7 +805,7 @@ namespace WrongWriteCodePartTwo
          MarkingsRowAndColumn(table);
 
          Console.WriteLine("-----------------------------------------------------------");
-         Console.WriteLine("Заполнение двумерного массива 3х3 числами от 1 до 9 змейкой");
+         Console.WriteLine("Заполнение двумерного массива 3х3 числами от 1 до 9 вертикальной змейкой");
          Console.WriteLine("-----------------------------------------------------------");
          int[,] pool = new int[3, 3];
 
